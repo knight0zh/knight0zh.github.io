@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="Knight0zh">
-<meta name="keywords" content="算法,数据结构,Data Structures,Algorithms">
+  <meta name="description" content="什么是消息队列在计算机科学中，消息队列（英语：Message queue）是一种进程间通信或同一进程的不同线程间的通信方式，软件的贮列用来处理一系列的输入，通常是来自使用者。消息队列提供了异步的通信协议，每一个贮列中的纪录包含详细说明的资料，包含发生的时间，输入装置的种类，以及特定的输入参数，也就是说：消息的发送者和接收者不需要同时与消息队列互交。消息会保存在队列中，直到接收者取回它。 一个 WI">
+<meta name="keywords" content="中间件,队列,异步通讯,Message queue,工具">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《PHP 7 Data Structures And Algorithms》翻译 - 理解与实现树结构">
-<meta property="og:url" content="http://knight0zh.github.io/2019/03/22/php7-data-structures-and-algorithms/index.html">
+<meta property="og:title" content="RabbitMQ安装">
+<meta property="og:url" content="http://knight0zh.github.io/2019/03/28/rabbitmq/index.html">
 <meta property="og:site_name" content="Knight0zh">
-<meta property="og:description" content="Knight0zh">
+<meta property="og:description" content="什么是消息队列在计算机科学中，消息队列（英语：Message queue）是一种进程间通信或同一进程的不同线程间的通信方式，软件的贮列用来处理一系列的输入，通常是来自使用者。消息队列提供了异步的通信协议，每一个贮列中的纪录包含详细说明的资料，包含发生的时间，输入装置的种类，以及特定的输入参数，也就是说：消息的发送者和接收者不需要同时与消息队列互交。消息会保存在队列中，直到接收者取回它。 一个 WI">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-22T09:56:31.000Z">
+<meta property="og:updated_time" content="2019-04-02T04:19:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《PHP 7 Data Structures And Algorithms》翻译 - 理解与实现树结构">
-<meta name="twitter:description" content="Knight0zh">
+<meta name="twitter:title" content="RabbitMQ安装">
+<meta name="twitter:description" content="什么是消息队列在计算机科学中，消息队列（英语：Message queue）是一种进程间通信或同一进程的不同线程间的通信方式，软件的贮列用来处理一系列的输入，通常是来自使用者。消息队列提供了异步的通信协议，每一个贮列中的纪录包含详细说明的资料，包含发生的时间，输入装置的种类，以及特定的输入参数，也就是说：消息的发送者和接收者不需要同时与消息队列互交。消息会保存在队列中，直到接收者取回它。 一个 WI">
 
 
 
@@ -116,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="http://knight0zh.github.io/2019/03/22/php7-data-structures-and-algorithms/">
+  <link rel="canonical" href="http://knight0zh.github.io/2019/03/28/rabbitmq/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>《PHP 7 Data Structures And Algorithms》翻译 - 理解与实现树结构 | Knight0zh</title>
+  <title>RabbitMQ安装 | Knight0zh</title>
   
 
 
@@ -312,7 +312,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://knight0zh.github.io/2019/03/22/php7-data-structures-and-algorithms/">
+    <link itemprop="mainEntityOfPage" href="http://knight0zh.github.io/2019/03/28/rabbitmq/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Knight Zhang">
@@ -329,7 +329,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">《PHP 7 Data Structures And Algorithms》翻译 - 理解与实现树结构
+          <h2 class="post-title" itemprop="name headline">RabbitMQ安装
 
               
             
@@ -355,12 +355,24 @@
                 
               
 
-              <time title="创建时间：2019-03-22 17:49:37 / 修改时间：17:56:31" itemprop="dateCreated datePublished" datetime="2019-03-22T17:49:37+08:00">2019-03-22</time>
+              <time title="创建时间：2019-03-28 09:10:58" itemprop="dateCreated datePublished" datetime="2019-03-28T09:10:58+08:00">2019-03-28</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-02 12:19:27" itemprop="dateModified" datetime="2019-04-02T12:19:27+08:00">2019-04-02</time>
               
             
           </span>
@@ -377,7 +389,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/others/" itemprop="url" rel="index"><span itemprop="name">others</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/消息队列/" itemprop="url" rel="index"><span itemprop="name">消息队列</span></a></span>
 
                 
                 
@@ -396,8 +408,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/03/22/php7-data-structures-and-algorithms/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/22/php7-data-structures-and-algorithms/" itemprop="commentCount"></span>
+                <a href="/2019/03/28/rabbitmq/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/28/rabbitmq/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -405,7 +417,7 @@
 
           
           
-            <span id="/2019/03/22/php7-data-structures-and-algorithms/" class="leancloud_visitors" data-flag-title="《PHP 7 Data Structures And Algorithms》翻译 - 理解与实现树结构">
+            <span id="/2019/03/28/rabbitmq/" class="leancloud_visitors" data-flag-title="RabbitMQ安装">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -443,7 +455,14 @@
       
 
       
-        
+        <h2 id="什么是消息队列"><a href="#什么是消息队列" class="headerlink" title="什么是消息队列"></a>什么是消息队列</h2><p>在计算机科学中，消息队列（英语：Message queue）是一种进程间通信或同一进程的不同线程间的通信方式，软件的贮列用来处理一系列的输入，通常是来自使用者。消息队列提供了异步的通信协议，每一个贮列中的纪录包含详细说明的资料，包含发生的时间，输入装置的种类，以及特定的输入参数，也就是说：消息的发送者和接收者不需要同时与消息队列互交。消息会保存在队列中，直到接收者取回它。</p>
+<p>一个 WIMP 环境像是 Microsoft Windows，借由优先的某些形式（通常是事件的时间或是重要性的顺序）来储存使用者产生的事件到一个 事件贮列 中。系统把每个事件从事件贮列中传递给目标的应用程式。<br>(以上是维基上的定义)</p>
+<p>用通俗的话来讲，设计优良的消息队列是以异步的方式进行不同软件系统间的通信，通过这种方式对服务进行解耦，生产者不必关心消费者是否存在或者有多少个的问题反之亦然，并起到缓存消息的作用可以减少高并发带来的压力。</p>
+<h2 id="安装RabbitMQ"><a href="#安装RabbitMQ" class="headerlink" title="安装RabbitMQ"></a>安装RabbitMQ</h2><p>1.进入/usr/local，并创建rabbitmq目录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local</span><br><span class="line">mkdir rabbitmq &amp;&amp; cd rabbitmq</span><br></pre></td></tr></table></figure></p>
+<p>2.下载rabbitmq源码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 这里是用的编译后的二进制包</span><br><span class="line">wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.7.13/rabbitmq-server-generic-unix-3.7.13.tar.xz</span><br><span class="line"># 由于是.xz结尾，先用xz解压</span><br><span class="line">xz -d rabbitmq-server-generic-unix-3.7.13.tar.xz</span><br><span class="line"># 解压tar</span><br><span class="line">tar -zxvf rabbitmq-server-generic-unix-3.7.13.tar</span><br></pre></td></tr></table></figure></p>
+<p>3.运行rabbit服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cd sbin</span><br><span class="line">./rabbitmq-server</span><br><span class="line">  ##  ##</span><br><span class="line">  ##  ##      RabbitMQ 3.7.13. Copyright (C) 2007-2019 Pivotal Software, Inc.</span><br><span class="line">  ##########  Licensed under the MPL.  See http://www.rabbitmq.com/</span><br><span class="line">  ######  ##</span><br><span class="line">  ##########  Logs: /usr/local/rabbitmq/var/log/rabbitmq/rabbit@knight0zh.log</span><br><span class="line">                    /usr/local/rabbitmq/var/log/rabbitmq/rabbit@knight0zh_upgrade.log</span><br><span class="line"></span><br><span class="line">              Starting broker...</span><br><span class="line"> completed with 0 plugins.</span><br></pre></td></tr></table></figure></p>
+<p>这里需要注意如果没有<a href="http://www.erlang.org/downloads" target="_blank" rel="noopener">安装erlang</a>, 会报错<br><code>./rabbitmq-server: line 187: erl: command not found</code></p>
+
       
     </div>
 
@@ -466,13 +485,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/算法/" rel="tag"># 算法</a>
+            <a href="/tags/中间件/" rel="tag"># 中间件</a>
           
-            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+            <a href="/tags/队列/" rel="tag"># 队列</a>
           
-            <a href="/tags/Data-Structures/" rel="tag"># Data Structures</a>
+            <a href="/tags/异步通讯/" rel="tag"># 异步通讯</a>
           
-            <a href="/tags/Algorithms/" rel="tag"># Algorithms</a>
+            <a href="/tags/Message-queue/" rel="tag"># Message queue</a>
+          
+            <a href="/tags/工具/" rel="tag"># 工具</a>
           
         </div>
       
@@ -485,8 +506,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/19/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/03/22/php7-data-structures-and-algorithms/" rel="next" title="《PHP 7 Data Structures And Algorithms》翻译 - 理解与实现树结构">
+                <i class="fa fa-chevron-left"></i> 《PHP 7 Data Structures And Algorithms》翻译 - 理解与实现树结构
               </a>
             
           </div>
@@ -495,8 +516,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/28/rabbitmq/" rel="prev" title="RabbitMQ安装">
-                RabbitMQ安装 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/02/mysqlbinlog/" rel="prev" title="Mac环境 MYSQL 5.7 开启binlog日志">
+                Mac环境 MYSQL 5.7 开启binlog日志 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -545,8 +566,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -675,6 +705,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是消息队列"><span class="nav-number">1.</span> <span class="nav-text">什么是消息队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装RabbitMQ"><span class="nav-number">2.</span> <span class="nav-text">安装RabbitMQ</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
