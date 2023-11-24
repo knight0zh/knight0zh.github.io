@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>超级浩码</title>
+    <link>https://vastzh.com/</link>
+    <description>Recent content on 超级浩码</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2023 超级浩码</copyright>
+    <lastBuildDate>Tue, 21 Nov 2023 16:22:12 +0800</lastBuildDate><atom:link href="https://vastzh.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>出海日记——单机版应用如何做数据同步</title>
+      <link>https://vastzh.com/devnote/local_sync/</link>
+      <pubDate>Tue, 21 Nov 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/devnote/local_sync/</guid>
+      <description>不想接服务器，开发单机应用APP如何做数据同步？</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vastzh.com/devnote/local_sync/featured.png" />
+    </item>
+    
+    <item>
+      <title>出海日记——Admob完成这个操作否则明年可能没有广告收入</title>
+      <link>https://vastzh.com/devnote/gdpr_message/</link>
+      <pubDate>Wed, 15 Nov 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/devnote/gdpr_message/</guid>
+      <description>Admob完成这个操作否则明年可能没有广告收入</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vastzh.com/devnote/gdpr_message/featured.png" />
+    </item>
+    
+    <item>
+      <title>出海日记——填写谷歌税务表单</title>
+      <link>https://vastzh.com/devnote/tax_form/</link>
+      <pubDate>Thu, 19 Oct 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/devnote/tax_form/</guid>
+      <description>教你填写谷歌税务表单</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vastzh.com/devnote/tax_form/featured.png" />
+    </item>
+    
+    <item>
+      <title>想做独立开发赚钱的朋友，你想了解的都在这里</title>
+      <link>https://vastzh.com/devnote/you_want_know/</link>
+      <pubDate>Wed, 11 Oct 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/devnote/you_want_know/</guid>
+      <description>想做独立开发赚钱的朋友，你想了解的都在这里</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vastzh.com/devnote/you_want_know/featured.png" />
+    </item>
+    
+    <item>
+      <title>此夜无眠，聊聊为什么爱玩核桃</title>
+      <link>https://vastzh.com/essay/hetao/</link>
+      <pubDate>Sun, 01 Oct 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/essay/hetao/</guid>
+      <description>聊聊为什么爱玩核桃</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vastzh.com/essay/hetao/featured.png" />
+    </item>
+    
+    <item>
+      <title>后知后觉之尽早布局个人IP</title>
+      <link>https://vastzh.com/essay/personal_ip/</link>
+      <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://vastzh.com/essay/personal_ip/</guid>
+      <description>后知后觉之尽早布局个人IP</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vastzh.com/essay/personal_ip/featured.png" />
+    </item>
+    
+    <item>
+      <title>Now</title>
+      <link>https://vastzh.com/now/</link>
+      <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://vastzh.com/now/</guid>
+      <description> Now 页面会随着时间和当下生活的优先级而更新，用来让别人看见这个人现在生活的重点是什么，和提醒自己专注于当下最重要的事。 正在做 # 通过 JavaScript Info 复习 JavaScript 学习 Tailwind 学习 React 正在读 # 《当下的力量》 《如何为爱立界限》 《厌女》 当下生活的重心 # 掌握 HTML、CSS、JavaScript、Tailwind、React、Java 和 SQL 开发前端项目，并创建自己的 Portfolio 网页 将日语口语提高到能工作的水平 能用 Java 和 MySQL 实现基本的增删改查 </description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://vastzh.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vastzh.com/about/</guid>
+      <description>About Me # 小綿尾巴是网名，你也可以叫我小绵或 Mia。 我从 2022-07 开始写博客，第一篇博客是 独立博客过时后，为什么开始写博客了？ 学习日语中，目前已通过 N2，正在为了去东京工作而努力。 我关心前端技术、UI/UX 设计、生产力工具、书籍、女性主义、个人成长、亲密关系、数字生活和一切让人觉得美好的事物。 About Site # 本站生日：2022-08-30 使用 Hugo 搭建，部署在 GitHub Pages 上： 如何用 GitHub Pages + Hugo 搭建个人博客 Now 页面的灵感来自 Derek Sivers Don&amp;rsquo;t be shy, let&amp;rsquo;s connect!</description>
+      
+    </item>
+    
+  </channel>
+</rss>

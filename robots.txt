@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vastzh.com/sitemap.xml
