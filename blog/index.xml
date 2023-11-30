@@ -7,6 +7,86 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2023 超级浩码</copyright>
-    <atom:link href="https://vastzh.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Nov 2023 09:22:12 +0800</lastBuildDate><atom:link href="https://vastzh.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何搭建零成本个人博客</title>
+      <link>https://vastzh.com/blog/how_build_blog/</link>
+      <pubDate>Thu, 30 Nov 2023 09:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/how_build_blog/</guid>
+      <description>介绍如何使用一个博客源仓库和一个GitHub Pages仓库，使用 GitHub Pages 和 Hugo 搭建个人博客。</description>
+      
+    </item>
+    
+    <item>
+      <title>聊聊我如何一个月把抖音小红书粉丝累积到3万的“反面教材”</title>
+      <link>https://vastzh.com/blog/self_media/</link>
+      <pubDate>Mon, 27 Nov 2023 15:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/self_media/</guid>
+      <description>自媒体涨粉个人心得</description>
+      
+    </item>
+    
+    <item>
+      <title>出海日记——单机版应用如何做数据同步</title>
+      <link>https://vastzh.com/blog/local_sync/</link>
+      <pubDate>Tue, 21 Nov 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/local_sync/</guid>
+      <description>不想接服务器，开发单机应用APP如何做数据同步？</description>
+      
+    </item>
+    
+    <item>
+      <title>出海日记——Admob完成这个操作否则明年可能没有广告收入</title>
+      <link>https://vastzh.com/blog/gdpr_message/</link>
+      <pubDate>Wed, 15 Nov 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/gdpr_message/</guid>
+      <description>Admob完成这个操作否则明年可能没有广告收入</description>
+      
+    </item>
+    
+    <item>
+      <title>出海日记——填写谷歌税务表单</title>
+      <link>https://vastzh.com/blog/tax_form/</link>
+      <pubDate>Thu, 19 Oct 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/tax_form/</guid>
+      <description>教你填写谷歌税务表单</description>
+      
+    </item>
+    
+    <item>
+      <title>想做独立开发赚钱的朋友，你想了解的都在这里</title>
+      <link>https://vastzh.com/blog/you_want_know/</link>
+      <pubDate>Wed, 11 Oct 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/you_want_know/</guid>
+      <description>想做独立开发赚钱的朋友，你想了解的都在这里</description>
+      
+    </item>
+    
+    <item>
+      <title>此夜无眠，聊聊为什么爱玩核桃</title>
+      <link>https://vastzh.com/blog/hetao/</link>
+      <pubDate>Sun, 01 Oct 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/hetao/</guid>
+      <description>聊聊为什么爱玩核桃</description>
+      
+    </item>
+    
+    <item>
+      <title>后知后觉之尽早布局个人IP</title>
+      <link>https://vastzh.com/blog/personal_ip/</link>
+      <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://vastzh.com/blog/personal_ip/</guid>
+      <description>后知后觉之尽早布局个人IP</description>
+      
+    </item>
+    
   </channel>
 </rss>

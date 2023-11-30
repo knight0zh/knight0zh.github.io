@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>教程 on 超级浩码</title>
+    <link>https://vastzh.com/tags/%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 教程 on 超级浩码</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2023 超级浩码</copyright>
+    <lastBuildDate>Thu, 30 Nov 2023 09:22:12 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何搭建零成本个人博客</title>
+      <link>https://vastzh.com/blog/how_build_blog/</link>
+      <pubDate>Thu, 30 Nov 2023 09:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/how_build_blog/</guid>
+      <description>介绍如何使用一个博客源仓库和一个GitHub Pages仓库，使用 GitHub Pages 和 Hugo 搭建个人博客。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

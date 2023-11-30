@@ -10,12 +10,32 @@
     <lastBuildDate>Tue, 21 Nov 2023 16:22:12 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>出海日记——单机版应用如何做数据同步</title>
+      <link>https://vastzh.com/blog/local_sync/</link>
+      <pubDate>Tue, 21 Nov 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/local_sync/</guid>
+      <description>不想接服务器，开发单机应用APP如何做数据同步？</description>
+      
+    </item>
+    
+    <item>
+      <title>出海日记——单机版应用如何做数据同步</title>
       <link>https://vastzh.com/devnote/local_sync/</link>
       <pubDate>Tue, 21 Nov 2023 16:22:12 +0800</pubDate>
       
       <guid>https://vastzh.com/devnote/local_sync/</guid>
       <description>不想接服务器，开发单机应用APP如何做数据同步？</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vastzh.com/devnote/local_sync/featured.png" />
+    </item>
+    
+    <item>
+      <title>出海日记——Admob完成这个操作否则明年可能没有广告收入</title>
+      <link>https://vastzh.com/blog/gdpr_message/</link>
+      <pubDate>Wed, 15 Nov 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/gdpr_message/</guid>
+      <description>Admob完成这个操作否则明年可能没有广告收入</description>
+      
     </item>
     
     <item>
@@ -30,12 +50,32 @@
     
     <item>
       <title>出海日记——填写谷歌税务表单</title>
+      <link>https://vastzh.com/blog/tax_form/</link>
+      <pubDate>Thu, 19 Oct 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/tax_form/</guid>
+      <description>教你填写谷歌税务表单</description>
+      
+    </item>
+    
+    <item>
+      <title>出海日记——填写谷歌税务表单</title>
       <link>https://vastzh.com/devnote/tax_form/</link>
       <pubDate>Thu, 19 Oct 2023 16:22:12 +0800</pubDate>
       
       <guid>https://vastzh.com/devnote/tax_form/</guid>
       <description>教你填写谷歌税务表单</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vastzh.com/devnote/tax_form/featured.png" />
+    </item>
+    
+    <item>
+      <title>想做独立开发赚钱的朋友，你想了解的都在这里</title>
+      <link>https://vastzh.com/blog/you_want_know/</link>
+      <pubDate>Wed, 11 Oct 2023 16:22:12 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/you_want_know/</guid>
+      <description>想做独立开发赚钱的朋友，你想了解的都在这里</description>
+      
     </item>
     
     <item>
