@@ -14,7 +14,329 @@
       <pubDate>Tue, 21 Nov 2023 16:22:12 +0800</pubDate>
       
       <guid>https://vastzh.com/blog/local_sync/</guid>
-      <description>不想接服务器，开发单机应用APP如何做数据同步？</description>
+      <description>&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/sync.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;br&gt;
+如果你是刚入门  &lt;strong&gt;独立开发&lt;/strong&gt;  ，你可能有过这样的思考，我做的APP会不会有人用？  刚开始会不会有盈利？  有没有必要把数据保存在服务端？&lt;br&gt;
+&lt;br&gt;
+其实在一切条件都允许的情况，我认为一个应用必然  &lt;strong&gt;要有一个服务器&lt;/strong&gt;的，有了服务器，用户的数据更安全不会因为更新卸载应用而导致数据丢失，同时也方便开发者通过观察用户数据去更新和迭代应用。也能更好的对应用进行控制，如权限，公告，内购的折扣等等。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;当然，服务器也会带来很多&lt;strong&gt;额外的成本&lt;/strong&gt;，比如运维，安全，服务器费用，接口开发等等。你需要考虑服务器的配置，一般双11各大云厂商都有2~5折优惠，但是&lt;strong&gt;续费&lt;/strong&gt;时吓死人，同时你可能也要考虑避免服务器被攻击等问题。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;以我个人为例，开发了10来个工具类的应用。有时候为了更好的增加用户粘性，也会增加像打卡签到，用户日常数据的记录。有趣的是，我的这些应用都没有接服务器，原因就像上面所说。刚开始我更希望的是，APP开发完成了，就&lt;strong&gt;不再需要额外的维护成本&lt;/strong&gt;，除非我想加新的功能。这样我才有更多时间去专注下一个APP，  虽然干了9年后端，前期还是不想有额外的负担。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;进入正题，如果你和我想法一样，那么单机版应用要如何做数据同步？答案是，做云同步或者说类似于用用户自己的网盘去同步。接下来说一下我的&lt;br&gt;
+&lt;strong&gt;Flutter方案&lt;/strong&gt;。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;目前我的APP都发布在  &lt;strong&gt;Google Play&lt;/strong&gt;，所以这里也是举例海外的一套方案，你完全可以照葫芦画瓢开发一套适应国内的方案。不过我建议如果你想针对你的某个APP发力做精品还是接个服务器会比较好。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Google  OAuth + Drive&lt;/strong&gt;这是一套谷歌方案，你可能常常看到国外的APP上看到同步的功能，一般先登录谷歌账号，之后定期自动同步。虽然不清楚老外怎么实现的，用没用上服务器。但是我自己摸索的这套方案，也能做到同样的效果，也不需要维护服务器。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;可能有人会有疑问，Drive只是一个网盘怎么备份应用的数据。其实方法也不难，一般工具类APP，即使记录了一年的用户数据，数据量也是非常小的。可以写一个工具类把数据转成json存储到文件里，再写个方法把json解析成数据对象回写到你的存储引擎。或者更省事，你可以使用&lt;strong&gt;sqlite&lt;/strong&gt;，直接把整个sql文件给上传了。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;步骤&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;步骤 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%ad%a5%e9%aa%a4&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;打开  &lt;strong&gt;Google Cloud Platform API manager&lt;/strong&gt; [https://console.cloud.google.com/apis/dashboard]，点击启用API和服务&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/8b1bddb0d675fed1c4277d608808b9ec.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;搜索drive关键期，选择Google Drive API添加&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/ba056a9dfc6439867397fdfc7a23e271.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;添加API凭据，这里我是通过&lt;br&gt;
+&lt;strong&gt;Firebase&lt;/strong&gt;自动生成。&lt;/p&gt;
+&lt;p&gt;所以也可以去&lt;br&gt;
+&lt;strong&gt;Firebase&lt;/strong&gt;中创建项目（之后我会写篇Firebase如何创建项目的文章）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/b76c4a5d42c4fec09eccea3204669e3b.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;创建完项目和应用后，需要在Authentication模块中加入登入验证方式。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/004d79734dda2917deeb4c846b7073dc.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;要求填入Oauth客户端ID&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/29cbaafaffadc6a41ac6b06fba941d27.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;这是可以返回刚才Google Cloud Platform API manager [https://console.cloud.google.com/apis/dashboard]，已经自动创建的Oauth客户端信息复制ID和密钥。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/dc18d14a6e273b625d7d900bc931a1fd.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;到这，配置就差不多了，来看下主要代码&lt;/p&gt;
+&lt;p&gt;在pubspec.yaml中添加依赖：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  google_sign_in: ^6.1.4
+  googleapis: ^11.2.0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;创建用来登录的变量&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  import &amp;#39;package:googleapis/drive/v3.dart&amp;#39; as drive;
+  import &amp;#39;package:google_sign_in/google_sign_in.dart&amp;#39;;
+  
+  GoogleSignInAccount? account;
+  ...
+  // 调用此方法可以让APP出现登入弹窗
+  account = await GoogleSignIn.standard(scopes: [drive.DriveApi.driveScope])
+          .signIn();
+          
+  // 注销登入  
+  await GoogleSignIn.standard(scopes: [
+                                drive.DriveApi.driveScope
+                                    ]).signOut();      
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;根据自己的业务逻辑使用登入登出功能。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/beb972b89ca12cc63a94404659035286.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;到这里我们拿到了用于调用drive接口所需的验签。&lt;/p&gt;
+&lt;p&gt;再来看一下drive上传和下载的方法。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import &amp;#39;package:googleapis/drive/v3.dart&amp;#39; as drive;
+
+
+ // 获取driveApiClient
+ final driveApi =
+          drive.DriveApi(GoogleAuthClient(await account!.authHeaders));
+ 
+ 
+ // 上传db文件
+ final dbMedia =
+    drive.Media(File(dbPath).openRead(), File(dbPath).lengthSync());
+ final file = drive.File()
+   ..name = dbPath.split(&amp;#39;/&amp;#39;).last
+   ..parents = [parentFolderId]
+   ..description = dbVersion.toString(); 
+ await driveApi.files.create(file, uploadMedia: dbMedia);
+
+ // 下载本地更新
+ final dbMedia = await driveApi.files.get(dbFileId,
+              downloadOptions: drive.DownloadOptions.fullMedia) as drive.Media;
+  List&amp;lt;int&amp;gt; contentBytes = [];
+  await dbMedia.stream.listen((bytes) {
+    contentBytes.addAll(bytes);
+  }).asFuture();
+  await File(dbPath).writeAsBytes(contentBytes, flush: true);
+  Logger().i(&amp;#39;本地更新&amp;#39;);
+ 
+ 
+          
+ // 封装一个带验签的http client
+ class GoogleAuthClient extends BaseClient {
+  final Map&amp;lt;String, String&amp;gt; headers;
+  final Client client = Client();
+
+  GoogleAuthClient(this.headers);
+
+  @override
+  Future&amp;lt;StreamedResponse&amp;gt; send(BaseRequest request) {
+    return client.send(request..headers.addAll(headers));
+  }
+}         
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这里只演示如何上传和下载，同步逻辑请根据自身需要来实现。&lt;/p&gt;
+&lt;p&gt;如果你是&lt;br&gt;
+&lt;strong&gt;安卓开发&lt;/strong&gt;，那么需要使用Android对应的SDK即可，配置应该都是一样的。&lt;/p&gt;
+&lt;p&gt;强调一下，我在使用sqlite的时候，其实使用了&lt;strong&gt;多个db文件&lt;/strong&gt;。原因是我不希望所有的数据都需要同步。例如下次我们开发了一个新的功能，在数据库中增加了新字段B来控制或记录这个功能。这是如果用全套db同步的方案，B字段会因为同步而消失从而导致问题。&lt;/p&gt;
+&lt;p&gt;不是所有的数据都需要同步备份，精简出业务所需的用户功能数据来进行备份，这样才能减少问题。&lt;strong&gt;所以具体怎么同步根据不同的需求去设计。&lt;/strong&gt;&lt;/p&gt;
+&lt;div id=&#34;引用&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;引用 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%bc%95%e7%94%a8&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://pub.dev/packages/google_sign_in
+https://pub.dev/packages/googleapis
+https://cloud.google.com/docs/authentication?hl=zh_CN&amp;amp;_ga=2.156109883.-1604196893.1667810752
+https://firebase.google.com/docs/flutter/setup?hl=zh-cn&amp;amp;platform=android
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;!-- &lt;img src=&#34;../../../img/wc-search.png&#34; alt=&#34;公众号&#34; style=&#34;width:80%; display:block; margin:auto;&#34;&gt; --&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
       
     </item>
     
@@ -24,7 +346,311 @@
       <pubDate>Wed, 15 Nov 2023 16:22:12 +0800</pubDate>
       
       <guid>https://vastzh.com/blog/gdpr_message/</guid>
-      <description>Admob完成这个操作否则明年可能没有广告收入</description>
+      <description>&lt;p&gt;出海的第N天，打开手机想看下昨天Admob的广告收入，打开网页弹出了一个大大的框遮挡了一切，画风完全不同。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/e1b700e64936af3f230523186c9c9d77.jpeg&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定眼一看&lt;/strong&gt;&lt;br&gt;
+原来是要我&lt;strong&gt;创建GDPR用户意见征求&lt;/strong&gt;的消息。其实GDPR的提示框，在几个月前，就在电脑网页版的admob最上方显示。当时问了一些朋友，说是没什么影响&lt;br&gt;
+可以放一放。毕竟要&lt;strong&gt;2024年1月16生效&lt;/strong&gt;  。&lt;/p&gt;
+&lt;p&gt;以前手机访问没有这个框，直接看看收入就完事了。现在每次打开网页必须选择其中一项什么也看不到了，当时也不知道这些选项什么意思会不会踩坑，迫于无奈只能把GDPR这件事提前折腾了。&lt;/p&gt;
+&lt;div id=&#34;什么是gdpr&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;什么是GDPR 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%bb%80%e4%b9%88%e6%98%afgdpr&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2018 年 5 月 25 日生效的《通用数据保护条例》(GDPR) 是一项全面的数据隐私法律，为个人数据的收集、处理、存储和传输建立了一个框架。它要求以安全的方式处理所有个人数据，并包括对不遵守这些要求的企业的罚款和处罚。它还为个人提供了一些有关其个人数据的权利。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我的理解是个性化广告会通过Cookie收集用户的个人数据，在使用广告类SDK时，如Admob，也会收集用户的信息。在&lt;strong&gt;欧洲经济区和英国境内&lt;/strong&gt;&lt;br&gt;
+的用户就需要向用户征求意见。&lt;/p&gt;
+&lt;p&gt;创建GDPR消息，也就是在APP打开时弹出对话框，告知用户APP的隐私政策以及应用中的个性化广告会获取用户数据，用户可以选择同意或不同意。&lt;/p&gt;
+&lt;div id=&#34;具体步骤&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;具体步骤 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%85%b7%e4%bd%93%e6%ad%a5%e9%aa%a4&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;1.点击&lt;strong&gt;开始&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/e2b885f4388b83c32bafaa6029582c49.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;2.选择要&lt;strong&gt;创建GDPR消息&lt;/strong&gt;的应用，并设置&lt;strong&gt;用户选项&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/dcd70a8e84445b667617bd33026c7e29.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;3.设置&lt;strong&gt;隐私政策网址&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/5594a1087b526d1fab24d71c31d3776c.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;4.在应用中设置&lt;strong&gt;GDPR消息弹出的代码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在代码最初的initState中加入代码：****&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; final params = ConsentRequestParameters(
+      consentDebugSettings: debugSettings,
+    );
+    ConsentInformation.instance.requestConsentInfoUpdate(
+      params,
+      () async {
+        if (await ConsentInformation.instance.isConsentFormAvailable()) {
+          loadForm();
+        }
+      },
+      (FormError error) {
+        // Handle the error
+      },
+    );
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;要呈现同意书，请使用类&lt;strong&gt;show()&lt;/strong&gt;&lt;br&gt;
+上的方法&lt;strong&gt;ConsentForm&lt;/strong&gt;&lt;br&gt;
+。&lt;br&gt;
+必须在提交表格之前确定用户是否需要同意。要检查是否需要同意，请调用getConsentStatus()&lt;br&gt;
+该 ConsentInformation&lt;br&gt;
+对象，该对象返回类型为 的枚举ConsentStatus&lt;br&gt;
+。有四个可能的值ConsentStatus&lt;br&gt;
+：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;unknown&lt;/strong&gt;&lt;br&gt;
+：未知的同意状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;required&lt;/strong&gt;&lt;br&gt;
+：需要但尚未获得用户同意。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;notRequired&lt;/strong&gt;&lt;br&gt;
+：不需要用户同意。例如，用户不在欧洲经济区或英国。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;obtained&lt;/strong&gt;&lt;br&gt;
+：已获得用户同意。个性化未定义。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;loadForm&lt;br&gt;
+像这样改变你的方法：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  void loadForm() {
+    ConsentForm.loadConsentForm(
+      (ConsentForm consentForm) async {
+        var status = await ConsentInformation.instance.getConsentStatus();
+        // 在不同的状态下写各自的逻辑。
+        if (status == ConsentStatus.required) {
+          consentForm.show(
+            (FormError? formError) {
+              // 呈现同意书
+              loadForm();
+            },
+          );
+        } else if (status == ConsentStatus.obtained) {
+            // 添加同意后的逻辑
+        }
+      },
+      (formError) {
+          // 错误处理
+      },
+    );
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;5.本地调试&lt;/p&gt;
+&lt;p&gt;如何你设置的GDPR消息只对欧盟地区弹出消息框，则可以&lt;strong&gt;强制地理&lt;/strong&gt;&lt;br&gt;
+进行调试。&lt;/p&gt;
+&lt;p&gt;增加如下代码：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ConsentDebugSettings debugSettings = ConsentDebugSettings(
+  debugGeography: DebugGeography.debugGeographyEea,
+  testIdentifiers: [&amp;#39;TEST-DEVICE-HASHED-ID&amp;#39;]);
+
+ConsentRequestParameters params = ConsentRequestParameters(
+  consentDebugSettings: debugSettings);
+  
+// 省略后面内容
+  ...
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;应用程序的调试设置中提供测试设备的哈希 ID 才能使用调试功能，用ID来代替&lt;strong&gt;TEST-DEVICE-HASHED-ID&lt;/strong&gt;&lt;br&gt;
+内容。&lt;/p&gt;
+&lt;p&gt;如果你之前的项目已经集成了Admob，则在调试运行的日志中&lt;strong&gt;搜索关键字&lt;/strong&gt;就可以看到&lt;strong&gt;测试设备的哈希 ID&lt;/strong&gt;&lt;br&gt;
+。如下图：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/b501f534a30e0a581505cc70c0360c75.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;最后，热更新一下应用就可以呈现&lt;strong&gt;GDPR弹窗&lt;/strong&gt;了。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/bb61ccec215743bc2b246968927f7048.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;div id=&#34;最后附上参考资料&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;最后附上参考资料 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%9c%80%e5%90%8e%e9%99%84%e4%b8%8a%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;div id=&#34;创建gdpr消息文档地址如下&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h4 class=&#34;relative group&#34;&gt;创建GDPR消息文档地址如下： 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%88%9b%e5%bb%bagdpr%e6%b6%88%e6%81%af%e6%96%87%e6%a1%a3%e5%9c%b0%e5%9d%80%e5%a6%82%e4%b8%8b&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://support.google.com/admob/answer/10113207?hl=zh-Hans&amp;amp;ref_topic=10105230&amp;amp;sjid=1600386979072872981-AP&#34;   target=&#34;_blank&#34;&gt;
+    https://support.google.com/admob/answer/10113207?hl=zh-Hans&amp;ref_topic=10105230&amp;sjid=1600386979072872981-AP&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;flutter集成文档&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h4 class=&#34;relative group&#34;&gt;Flutter集成文档： 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#flutter%e9%9b%86%e6%88%90%e6%96%87%e6%a1%a3&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.cn/admob/flutter/eu-consent?hl=zh-cn&#34;   target=&#34;_blank&#34;&gt;
+    https://developers.google.cn/admob/flutter/eu-consent?hl=zh-cn&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
       
     </item>
     

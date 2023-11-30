@@ -14,7 +14,285 @@
       <pubDate>Mon, 27 Nov 2023 15:22:12 +0800</pubDate>
       
       <guid>https://vastzh.com/blog/self_media/</guid>
-      <description>自媒体涨粉个人心得</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;作为一个有大把时间折腾的人，除了折腾开发APP外，有时也会思考其他赚钱的方法，或许将来也能给自己多一份收入。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前段时间，我花了些一个多月的时间实践如何做原创短视频，并把抖音和小红书的粉丝积攒到3W，也算起号成功。还经常有粉丝在后台问我收不收徒。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你应该不会想到，明明起号成功了，我却不想再维护这个账号了。能申明的是，制作的每一个视频没有任何违规或不合法，只是单纯的不想运营下去了。在接下来的文章中我会分享是怎么起号成功，以及为什么不想再维护了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你对我的自媒体短视频账号有兴趣，可以在公众号回复「自媒体」即可看到我的账号。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;小红书
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/self_media/WechatIMG668.jpg&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;抖音
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/self_media/WechatIMG669.jpg&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你和我一样想做自媒体，如做了一段时间却粉丝数不理想，或者有想法但还没开始执行的。希望通过我的复盘，能对你有所启发。&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;背景&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;背景 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%83%8c%e6%99%af&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;在过去几个月，&lt;strong&gt;ChatGPT&lt;/strong&gt;横空出世。当时我关注了很多AI领域相关的博主。每天都是&lt;strong&gt;Prompt&lt;/strong&gt;，&lt;strong&gt;Stable Diffuison&lt;/strong&gt;，&lt;strong&gt;Midjounry&lt;/strong&gt;，&lt;strong&gt;AIGC&lt;/strong&gt;，各种大语言模型，AI新工具的信息。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;当时最大的感触是 —— 每个人都是&lt;strong&gt;超级个体&lt;/strong&gt;的时代已经来了（其实还没完全到来。。）
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;那会我就想通过&lt;strong&gt;AIGC&lt;/strong&gt;来做短视频。把自身的弱项交给AI去完成。通过AI来生成文案。再通过文案生成视频，就是“&lt;strong&gt;图文成片&lt;/strong&gt;”的方式来制作。&lt;/p&gt;
+&lt;div id=&#34;调研&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;调研 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%b0%83%e7%a0%94&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;刚好在抖音刷到一个叫「&lt;strong&gt;不略&lt;/strong&gt;」的博主非常火，他做的书单号。以三分钟读一本书的形式，加上卡通的图文讲解，介绍每本书。当时看到他分享的《&lt;strong&gt;纳瓦尔宝典&lt;/strong&gt;》视频让我很有感触。。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;我尝试让chatGPT去解读《纳瓦尔宝典》这本书。输入适当的prompt。确实得到有关：“三分钟读一本书，今天我们分享《纳瓦尔宝典》。。”这样的文案内容。但是相较于博主不略的文案，&lt;strong&gt;AI生成的太过生硬，文案用词也太多呆板&lt;/strong&gt;。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;有关&lt;strong&gt;TTS(文字转语音)&lt;/strong&gt;，那会也恶趣味的用&lt;strong&gt;不略&lt;/strong&gt;的声音，周杰伦的声音，去做训练，效果不是很满意。并且可能有法律责任就放弃了。不过也找到不错的现成的产品。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;市面上的&lt;strong&gt;图文成片&lt;/strong&gt;，最好的或许就是&lt;strong&gt;剪映&lt;/strong&gt;自带的，但效果不能让我满意，感觉这样的视频很难火起来。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;短视频做的好不好很重要的一个因素是有没有&lt;strong&gt;视觉冲击&lt;/strong&gt;，抓住用户的眼球。对于书单号来说，当视频里说到某些知识点的时候，需要在视频里即时的出现对应的内容支撑与之呼应，这其实也是一种反馈机制。这样用户才更愿意看下去不划走。&lt;/p&gt;
+&lt;p&gt;可能因为有一些强迫症，我不愿意完全为了节省时间而牺牲视频质量。最后我选择以一种白板动画的形式去做好视频。调研了如Videoscribe、Doodly、万彩等等，最后我选择了Videoscribe，效果如下：
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/self_media/explainer-video-animation-2.gif&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;所以现在我的视频制作流程变成：&lt;br&gt;
+&lt;strong&gt;选一本书 -&amp;gt; 让chatgpt生成文案 -&amp;gt; 通过tts生成音频 -&amp;gt; 在Videoscribe导入音频做动画脚本 -&amp;gt; 校对音频和动画的帧 -&amp;gt; 导入剪映生成字幕 -&amp;gt; 发布各大平台&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;上面说的过程做了一些简化。&lt;/p&gt;
+&lt;div id=&#34;涨粉&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;涨粉 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%b6%a8%e7%b2%89&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;div id=&#34;发布周期&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;发布周期 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%8f%91%e5%b8%83%e5%91%a8%e6%9c%9f&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;说到涨粉问题，有一个前提，就是要&lt;strong&gt;坚持不懈&lt;/strong&gt;的发视频。如果你是三分钟热度那想做好短视频几乎不可能。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;特别是刚开始，要知道 &lt;u&gt;当用户在关注一个博主前，大概率会点进你的头像，看你的一些信息，例如你有多少粉丝，你有多少个作品，你的自我介绍等等，前提尽快把作品数量堆满9个以上，因为一屏是可以展示9个作品，超过一屏显的作品也会比较多一些。&lt;/u&gt;
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;你可以设定一个周期，例如：每天的下午17点发，或者每周一三五，不要三天打鱼两天晒网。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;发视频的频率我建议根据制作&lt;strong&gt;视频的难度&lt;/strong&gt;。如果你是记录健身，并且你每天都这么做，那每天发就行。如果你和我一样，做一个视频要花几个小时。那就根据自己的情况而定。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;我是每周一三五发视频，发的时间可以是下班高峰，晚饭后的一个时间段。我认为具体可以根据你的目标用户的一个作息时间来定。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;制作合集&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;制作合集 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%88%b6%e4%bd%9c%e5%90%88%e9%9b%86&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;建议做的视频，根据细分门类放到不同的合集里。这样当用户看完一个视频，有一定概率可以通过合集继续看你的视频。&lt;/p&gt;
+&lt;div id=&#34;发布&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;发布 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%8f%91%e5%b8%83&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;建议使用网页版的抖音来发布作品。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/self_media/1701089144973.jpg&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+因为对视频有更好的能力加持，例如：章节（对视频内容增加锚点）、标签（类似于seo提升排名），关联热点等等。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;视频长度&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;视频长度 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%a7%86%e9%a2%91%e9%95%bf%e5%ba%a6&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;建议视频长度不要太长，控制在&lt;strong&gt;1分钟左右&lt;/strong&gt;。因为如果视频太长，就会影响你的&lt;strong&gt;完播率&lt;/strong&gt;。&lt;u&gt;在这个浮躁的世界，很少有人静下心来看完整个视频。即使你的视频做的很棒。但比较是短视频平台，做的太长没有任何意义。&lt;/u&gt;这也是我不想运营我的账号原因之一。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;追热点&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;追热点 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%bf%bd%e7%83%ad%e7%82%b9&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;网上有很多追踪热点视频的方法，我们可以追踪相同领域的爆款视频。不要怕模仿，如果没有好的素材就可以去模仿别人的爆款，我们开始最需要的就是流量，有了流量才有涨粉的机会，粉丝多了流量才会越来越多。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;推广&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;推广 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%8e%a8%e5%b9%bf&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;当你的视频数量达到10个以上。同时我们在后台&lt;strong&gt;数据中心&lt;/strong&gt;，关注有数据不错的视频作品。这时候可以适当的使用&lt;strong&gt;抖加&lt;/strong&gt;。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;抖加&lt;/strong&gt;相当于是一个&lt;strong&gt;流量放大器&lt;/strong&gt;，也是抖音赚钱的重要手段。&lt;u&gt;可以观察一些刚刚起号成功的账号（1～10w）粉丝的账号。你会发现，这些账号一般都是靠着特别的视频火起来的，并不是说每个视频的播放量都很平均，一定是有几个播放量特别高的视频。&lt;/u&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;前期堆热门视频，蹭热点视频。把账号视频做到起码10个以上。然后观察播放量比较高的视频，以及每个视频的指标，如：&lt;strong&gt;5秒完播率，3秒退出率&lt;/strong&gt;等等。再测试最低价位推广来看效果，效果好则可以反复推广几次。目的是为了撬动下一层的流量池。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;我就是一个例子，其实能累积到3万的粉丝，主要也是靠几个视频。经过测试推广了这些效果比较好的视频。连续投了几次100元的抖加。&lt;u&gt;一般来说投一次抖加我可以获得100～200个精准粉丝，1000～2000的播放量。但也有可能获得几十万的播放量甚至更多。我当时就是在一次推广时视频的播放量达到了50万。原因是进入了下一层的流量池，自然就获得了大量的流量。在网上可以找到流量池的图表这里就不再展示了。&lt;/u&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;总之&lt;strong&gt;以少量推广去撬动巨大流量&lt;/strong&gt;是快速起号的一个重要手段。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;视频门类&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;视频门类 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%a7%86%e9%a2%91%e9%97%a8%e7%b1%bb&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我们在发视频时，需要抓住一个特定的领域。切记不要什么类型的视频都去拍。要知道，如果你什么都想做，就可能什么也做不好。拿抖音举例，每个账号都有自己的标签，比如做科普的，健身的，vlog，解说类的等等等。&lt;u&gt;如果你什么类型都做，抖音就没办法给你打标签，也没办法把你的视频推送给目标用户，自然刷到你的视频也大概率不喜欢了。&lt;/u&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;我们可以做一些泛垂直的尝试。比如，你是健身的也可以发跑步的，打球的。同样的，我做的书单视频，从事也会拍心理学的，认知类的内容。只要输出的形式不变还是可以抓住用户。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;不同平台&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;不同平台 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%b8%8d%e5%90%8c%e5%b9%b3%e5%8f%b0&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;现在各个平台都在占领市场，比如抖音也开始做类似小红书的图文笔记。小红书也做起来短视频以及电商。既然，我们创作了内容，内容就可以在不同的平台发布。来增加我们的曝光率。因为每个用户一天就这么多时间，他花了一个小时刷抖音，同样的他就少了一个小时时间看小红书。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;同样的短视频平台都已经达到了饱和，谁的视频能抓人眼球，平台给的流量就多。我们可以尽量在平台尝试新玩法的时候较早的涉入其中因为这些时候都有流量扶持。不要等饱和了再去尝试那样就晚了。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;不再维护&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;不再维护 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%b8%8d%e5%86%8d%e7%bb%b4%e6%8a%a4&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;一开始我说过，不再维护我的短视频账号。有一个很重要的原因：我当时选错了领域。其实我并不适合做书单和认知类的视频。因为我看书不多，这不是我擅长的事，每天做的都很难，当没有足够的正反馈，也不能赚钱时，往往就需要为爱发电，没有兴趣就会很煎熬。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;做书单号我的初衷是大量依靠AI的力量，但经过实践，无论是AI的文案能力，还是做视频能力，或者是TTS都没有达到我想要的水准。于是有大量的工作，还是靠我自己手动完成。有时做一个视频，从选题到查阅资料写文案再到做动画，往往可能会花3-4小时。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;写在最后&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;写在最后 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%86%99%e5%9c%a8%e6%9c%80%e5%90%8e&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;虽然视频起号成功了，没有再维护下去让我很遗憾，都是也放松了许多。如果你看到这里，那么我最想告诉你，做自媒体，最好是找自己喜欢感兴趣的领域。这样才能长期以往的坚持下去。无论有没有粉丝，都可以为爱发电！就像此时开始练习写文章的我一样。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;如果你对我的自媒体短视频账号有兴趣，可以在公众号回复「自媒体」即可看到我的账号。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
       
     </item>
     
@@ -24,7 +302,109 @@
       <pubDate>Sun, 01 Oct 2023 16:22:12 +0800</pubDate>
       
       <guid>https://vastzh.com/blog/hetao/</guid>
-      <description>聊聊为什么爱玩核桃</description>
+      <description>&lt;p&gt;
+
+
+
+
+  
+  
+  
+    &lt;figure&gt;
+      &lt;img class=&#34;my-0 rounded-md&#34; src=&#34;44acdf0d01fa71726e6ac79cb4256e21.jpeg&#34; alt=&#34;&#34; /&gt;
+      
+    &lt;/figure&gt;
+  
+
+&lt;br&gt;
+(图为我的小蛤蟆头手串，重新穿绳时拍的)
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;今天又又又失眠了，手里盘起核桃，索性聊聊我的这个爱好。
+每当回首往昔，总觉得时间飞逝，度年如秒。不是错觉，记忆在脑海中可以任意的快进，倒退，只要是印象深刻的人和事，也容易单曲循环几遍。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;在这些零零碎碎时间的汇总里，总有人会问我，你手里那两个蛋是什么？这两个蛋有什么好玩的？&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/hetao/94539717cd441ee3672387026ffb49b2.jpeg&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;br&gt;
+​&lt;/p&gt;
+&lt;p&gt;说实话我也不知道。但如果你问我什么时候玩，我会告诉你，发呆的时候，想事儿的时候，心烦的时候，开心的时候，边走在路上口袋里，边揣着一个玩意儿。有时候吃饭，一只手空着照样玩。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;这样一算，好像一天中大部分时候我都在揉着两个蛋两个木头。除非太忙，双手都被占用，一只也腾不出来。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;所以文玩核桃，我到底在玩什么？我只记得，一天中情绪的跌宕起伏和思绪的统筹规划，都围绕着两个圆周运动而发生。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;同时，核桃和人一样，都在不断的变化。所以我们玩的是留住时间。这对木头经过一遍遍的揉搓，时间的洗礼，渐渐的留下岁月的记号。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;如同酒越陈越香，核桃经过三冬两夏，慢慢从白茬褪去它的返碱，上色，挂瓷，包浆。最后这个老物件成为时间的见证者，也称得上是个艺术品。美不胜收。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/hetao/4124222bfda2f115dbffaa65d7dcc4a4.jpeg&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
       
     </item>
     
@@ -34,7 +414,106 @@
       <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://vastzh.com/blog/personal_ip/</guid>
-      <description>后知后觉之尽早布局个人IP</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;正式开始前，先说一下网络暴力，为什么？因为它的杀伤力非常大。如一个恶意的评论，先不论它的真实性。只要在网络曝光，有人认可也有人反对，这取决于每个人的认知，重要的是平台让每个人都有了曝光的可能，不容小视，它拉近了人与人，  微博，小红书，抖音，朋友圈。你在网上的言论可能被任何人看到，只要你想。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;网络平台还存在复利性，一时的言论会不断被人看到，影响是长久的。&lt;br&gt;
+这两天遇到的事正好拿来讲讲，每年中秋，我都会拿到雪月饼的票子，兑换时，只是想要一个保温袋，天气热离家远，店员说没有保温袋（边上明明有不少）往年也都给，老婆在大众点评上写了经过。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;到了第二天，那边就联系表示歉意，又送了几个月饼，希望我们删除评论。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/personal_ip/0c0caecbf3350a7baf585eb52ee75954.jpeg&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;br&gt;
+ &lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/personal_ip/b22633e9e9e75d6d363df738cc4cc6f6.jpeg&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;我认为网络社交平台是一个可以利用起来的工具。进一步说，如果能利用好这个工具，对我们的生活来说会有很多便利，甚至有更多的路和选择。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;尽早的打造个人的IP。其实也是为自己多谋一条道路。可以尝试着在闲暇之余发一下自媒体，记录vlog，发布一些小红书笔记，点评上写一些个人体验，直播互动带货。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;最初我们需要依靠外部热点来链接我们，当你的粉丝达到一定的数量后，往往你的一些言论可以影响到很多人，不光言论，自媒体现在成了年轻人选择的热门行业。如果做起来了，比起给别人打工难道不香吗。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;为什么说要趁早，因为做自媒体和打造个人IP不是一朝一夕的事，需要有长期累积的过程，可能长时间得不到正面反馈，慢慢就失去了兴致。人往往是反馈越多你的野心就越多。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;我是一个后知后觉的人，在今年五月份才想到尝试自媒体，经过3个月抖音积累了8000多个粉丝，小红书的粉丝也有2w多个了。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;这个战果不牛逼，牛逼的人大有人在，不过，算得上起号成功，毕竟如果通过自媒体捞钱，必须先要达到一定的粉丝数量才可开通的，各个平台都是这样的，你的粉丝越多流量也就越多，平台也会想你倾斜，在我摸索的过程中，也累积了一些经验，如果想了解我的自媒体账号，可以私信我的。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;据我的观察，现在各大平台都在抢占市场，例如，抖音也开始做图文笔记，小红书也做起直播带货短视频，都是殊途同归。不过小红书用户的购买力相比抖音会更强一些。我有一个书单号在粉丝不多的时候，笔记带货的下单量一件非常客观了，比抖音多不少。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;再说复利，一件事只做了一遍，反复的获利，完完全全的字面意思，比如我开发一个APP里面有广告或付费业务，只要持续有人使用，我就会一直拿到收益。就像一个自动赚钱的机器那般。短视频和带货笔记也是同样的道理。当把一件事做起来，可以有更多的时间去做别的事。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;闲的时候，建议看到这里的人，可以把个人IP做起来，现在流量为王的时代，只要你有流量，平台资源就会向你倾斜，你的货自然也就卖的快。只要有流量也不怕被公司裁员了。虽然都是废话，但是很多人也只停留在观望不是吗。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;当人在排斥一件事的时候，总是可以找到理由的，这很正常。也就很难走出自己的认知。探索自己未知的领悟还是挺有趣的，不妨试试。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
       
     </item>
     

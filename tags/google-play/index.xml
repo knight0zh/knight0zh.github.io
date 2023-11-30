@@ -14,7 +14,329 @@
       <pubDate>Tue, 21 Nov 2023 16:22:12 +0800</pubDate>
       
       <guid>https://vastzh.com/blog/local_sync/</guid>
-      <description>不想接服务器，开发单机应用APP如何做数据同步？</description>
+      <description>&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/sync.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;br&gt;
+如果你是刚入门  &lt;strong&gt;独立开发&lt;/strong&gt;  ，你可能有过这样的思考，我做的APP会不会有人用？  刚开始会不会有盈利？  有没有必要把数据保存在服务端？&lt;br&gt;
+&lt;br&gt;
+其实在一切条件都允许的情况，我认为一个应用必然  &lt;strong&gt;要有一个服务器&lt;/strong&gt;的，有了服务器，用户的数据更安全不会因为更新卸载应用而导致数据丢失，同时也方便开发者通过观察用户数据去更新和迭代应用。也能更好的对应用进行控制，如权限，公告，内购的折扣等等。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;当然，服务器也会带来很多&lt;strong&gt;额外的成本&lt;/strong&gt;，比如运维，安全，服务器费用，接口开发等等。你需要考虑服务器的配置，一般双11各大云厂商都有2~5折优惠，但是&lt;strong&gt;续费&lt;/strong&gt;时吓死人，同时你可能也要考虑避免服务器被攻击等问题。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;以我个人为例，开发了10来个工具类的应用。有时候为了更好的增加用户粘性，也会增加像打卡签到，用户日常数据的记录。有趣的是，我的这些应用都没有接服务器，原因就像上面所说。刚开始我更希望的是，APP开发完成了，就&lt;strong&gt;不再需要额外的维护成本&lt;/strong&gt;，除非我想加新的功能。这样我才有更多时间去专注下一个APP，  虽然干了9年后端，前期还是不想有额外的负担。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;进入正题，如果你和我想法一样，那么单机版应用要如何做数据同步？答案是，做云同步或者说类似于用用户自己的网盘去同步。接下来说一下我的&lt;br&gt;
+&lt;strong&gt;Flutter方案&lt;/strong&gt;。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;目前我的APP都发布在  &lt;strong&gt;Google Play&lt;/strong&gt;，所以这里也是举例海外的一套方案，你完全可以照葫芦画瓢开发一套适应国内的方案。不过我建议如果你想针对你的某个APP发力做精品还是接个服务器会比较好。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Google  OAuth + Drive&lt;/strong&gt;这是一套谷歌方案，你可能常常看到国外的APP上看到同步的功能，一般先登录谷歌账号，之后定期自动同步。虽然不清楚老外怎么实现的，用没用上服务器。但是我自己摸索的这套方案，也能做到同样的效果，也不需要维护服务器。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;可能有人会有疑问，Drive只是一个网盘怎么备份应用的数据。其实方法也不难，一般工具类APP，即使记录了一年的用户数据，数据量也是非常小的。可以写一个工具类把数据转成json存储到文件里，再写个方法把json解析成数据对象回写到你的存储引擎。或者更省事，你可以使用&lt;strong&gt;sqlite&lt;/strong&gt;，直接把整个sql文件给上传了。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;步骤&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;步骤 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%ad%a5%e9%aa%a4&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;打开  &lt;strong&gt;Google Cloud Platform API manager&lt;/strong&gt; [https://console.cloud.google.com/apis/dashboard]，点击启用API和服务&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/8b1bddb0d675fed1c4277d608808b9ec.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;搜索drive关键期，选择Google Drive API添加&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/ba056a9dfc6439867397fdfc7a23e271.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;添加API凭据，这里我是通过&lt;br&gt;
+&lt;strong&gt;Firebase&lt;/strong&gt;自动生成。&lt;/p&gt;
+&lt;p&gt;所以也可以去&lt;br&gt;
+&lt;strong&gt;Firebase&lt;/strong&gt;中创建项目（之后我会写篇Firebase如何创建项目的文章）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/b76c4a5d42c4fec09eccea3204669e3b.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;创建完项目和应用后，需要在Authentication模块中加入登入验证方式。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/004d79734dda2917deeb4c846b7073dc.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;要求填入Oauth客户端ID&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/29cbaafaffadc6a41ac6b06fba941d27.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;这是可以返回刚才Google Cloud Platform API manager [https://console.cloud.google.com/apis/dashboard]，已经自动创建的Oauth客户端信息复制ID和密钥。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/dc18d14a6e273b625d7d900bc931a1fd.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;到这，配置就差不多了，来看下主要代码&lt;/p&gt;
+&lt;p&gt;在pubspec.yaml中添加依赖：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  google_sign_in: ^6.1.4
+  googleapis: ^11.2.0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;创建用来登录的变量&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  import &amp;#39;package:googleapis/drive/v3.dart&amp;#39; as drive;
+  import &amp;#39;package:google_sign_in/google_sign_in.dart&amp;#39;;
+  
+  GoogleSignInAccount? account;
+  ...
+  // 调用此方法可以让APP出现登入弹窗
+  account = await GoogleSignIn.standard(scopes: [drive.DriveApi.driveScope])
+          .signIn();
+          
+  // 注销登入  
+  await GoogleSignIn.standard(scopes: [
+                                drive.DriveApi.driveScope
+                                    ]).signOut();      
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;根据自己的业务逻辑使用登入登出功能。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/local_sync/beb972b89ca12cc63a94404659035286.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;到这里我们拿到了用于调用drive接口所需的验签。&lt;/p&gt;
+&lt;p&gt;再来看一下drive上传和下载的方法。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import &amp;#39;package:googleapis/drive/v3.dart&amp;#39; as drive;
+
+
+ // 获取driveApiClient
+ final driveApi =
+          drive.DriveApi(GoogleAuthClient(await account!.authHeaders));
+ 
+ 
+ // 上传db文件
+ final dbMedia =
+    drive.Media(File(dbPath).openRead(), File(dbPath).lengthSync());
+ final file = drive.File()
+   ..name = dbPath.split(&amp;#39;/&amp;#39;).last
+   ..parents = [parentFolderId]
+   ..description = dbVersion.toString(); 
+ await driveApi.files.create(file, uploadMedia: dbMedia);
+
+ // 下载本地更新
+ final dbMedia = await driveApi.files.get(dbFileId,
+              downloadOptions: drive.DownloadOptions.fullMedia) as drive.Media;
+  List&amp;lt;int&amp;gt; contentBytes = [];
+  await dbMedia.stream.listen((bytes) {
+    contentBytes.addAll(bytes);
+  }).asFuture();
+  await File(dbPath).writeAsBytes(contentBytes, flush: true);
+  Logger().i(&amp;#39;本地更新&amp;#39;);
+ 
+ 
+          
+ // 封装一个带验签的http client
+ class GoogleAuthClient extends BaseClient {
+  final Map&amp;lt;String, String&amp;gt; headers;
+  final Client client = Client();
+
+  GoogleAuthClient(this.headers);
+
+  @override
+  Future&amp;lt;StreamedResponse&amp;gt; send(BaseRequest request) {
+    return client.send(request..headers.addAll(headers));
+  }
+}         
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这里只演示如何上传和下载，同步逻辑请根据自身需要来实现。&lt;/p&gt;
+&lt;p&gt;如果你是&lt;br&gt;
+&lt;strong&gt;安卓开发&lt;/strong&gt;，那么需要使用Android对应的SDK即可，配置应该都是一样的。&lt;/p&gt;
+&lt;p&gt;强调一下，我在使用sqlite的时候，其实使用了&lt;strong&gt;多个db文件&lt;/strong&gt;。原因是我不希望所有的数据都需要同步。例如下次我们开发了一个新的功能，在数据库中增加了新字段B来控制或记录这个功能。这是如果用全套db同步的方案，B字段会因为同步而消失从而导致问题。&lt;/p&gt;
+&lt;p&gt;不是所有的数据都需要同步备份，精简出业务所需的用户功能数据来进行备份，这样才能减少问题。&lt;strong&gt;所以具体怎么同步根据不同的需求去设计。&lt;/strong&gt;&lt;/p&gt;
+&lt;div id=&#34;引用&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;引用 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%bc%95%e7%94%a8&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://pub.dev/packages/google_sign_in
+https://pub.dev/packages/googleapis
+https://cloud.google.com/docs/authentication?hl=zh_CN&amp;amp;_ga=2.156109883.-1604196893.1667810752
+https://firebase.google.com/docs/flutter/setup?hl=zh-cn&amp;amp;platform=android
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;!-- &lt;img src=&#34;../../../img/wc-search.png&#34; alt=&#34;公众号&#34; style=&#34;width:80%; display:block; margin:auto;&#34;&gt; --&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
       
     </item>
     
@@ -24,7 +346,311 @@
       <pubDate>Wed, 15 Nov 2023 16:22:12 +0800</pubDate>
       
       <guid>https://vastzh.com/blog/gdpr_message/</guid>
-      <description>Admob完成这个操作否则明年可能没有广告收入</description>
+      <description>&lt;p&gt;出海的第N天，打开手机想看下昨天Admob的广告收入，打开网页弹出了一个大大的框遮挡了一切，画风完全不同。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/e1b700e64936af3f230523186c9c9d77.jpeg&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定眼一看&lt;/strong&gt;&lt;br&gt;
+原来是要我&lt;strong&gt;创建GDPR用户意见征求&lt;/strong&gt;的消息。其实GDPR的提示框，在几个月前，就在电脑网页版的admob最上方显示。当时问了一些朋友，说是没什么影响&lt;br&gt;
+可以放一放。毕竟要&lt;strong&gt;2024年1月16生效&lt;/strong&gt;  。&lt;/p&gt;
+&lt;p&gt;以前手机访问没有这个框，直接看看收入就完事了。现在每次打开网页必须选择其中一项什么也看不到了，当时也不知道这些选项什么意思会不会踩坑，迫于无奈只能把GDPR这件事提前折腾了。&lt;/p&gt;
+&lt;div id=&#34;什么是gdpr&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;什么是GDPR 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%bb%80%e4%b9%88%e6%98%afgdpr&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2018 年 5 月 25 日生效的《通用数据保护条例》(GDPR) 是一项全面的数据隐私法律，为个人数据的收集、处理、存储和传输建立了一个框架。它要求以安全的方式处理所有个人数据，并包括对不遵守这些要求的企业的罚款和处罚。它还为个人提供了一些有关其个人数据的权利。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我的理解是个性化广告会通过Cookie收集用户的个人数据，在使用广告类SDK时，如Admob，也会收集用户的信息。在&lt;strong&gt;欧洲经济区和英国境内&lt;/strong&gt;&lt;br&gt;
+的用户就需要向用户征求意见。&lt;/p&gt;
+&lt;p&gt;创建GDPR消息，也就是在APP打开时弹出对话框，告知用户APP的隐私政策以及应用中的个性化广告会获取用户数据，用户可以选择同意或不同意。&lt;/p&gt;
+&lt;div id=&#34;具体步骤&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;具体步骤 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%85%b7%e4%bd%93%e6%ad%a5%e9%aa%a4&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;1.点击&lt;strong&gt;开始&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/e2b885f4388b83c32bafaa6029582c49.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;2.选择要&lt;strong&gt;创建GDPR消息&lt;/strong&gt;的应用，并设置&lt;strong&gt;用户选项&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/dcd70a8e84445b667617bd33026c7e29.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;3.设置&lt;strong&gt;隐私政策网址&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/5594a1087b526d1fab24d71c31d3776c.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;4.在应用中设置&lt;strong&gt;GDPR消息弹出的代码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在代码最初的initState中加入代码：****&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; final params = ConsentRequestParameters(
+      consentDebugSettings: debugSettings,
+    );
+    ConsentInformation.instance.requestConsentInfoUpdate(
+      params,
+      () async {
+        if (await ConsentInformation.instance.isConsentFormAvailable()) {
+          loadForm();
+        }
+      },
+      (FormError error) {
+        // Handle the error
+      },
+    );
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;要呈现同意书，请使用类&lt;strong&gt;show()&lt;/strong&gt;&lt;br&gt;
+上的方法&lt;strong&gt;ConsentForm&lt;/strong&gt;&lt;br&gt;
+。&lt;br&gt;
+必须在提交表格之前确定用户是否需要同意。要检查是否需要同意，请调用getConsentStatus()&lt;br&gt;
+该 ConsentInformation&lt;br&gt;
+对象，该对象返回类型为 的枚举ConsentStatus&lt;br&gt;
+。有四个可能的值ConsentStatus&lt;br&gt;
+：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;unknown&lt;/strong&gt;&lt;br&gt;
+：未知的同意状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;required&lt;/strong&gt;&lt;br&gt;
+：需要但尚未获得用户同意。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;notRequired&lt;/strong&gt;&lt;br&gt;
+：不需要用户同意。例如，用户不在欧洲经济区或英国。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;obtained&lt;/strong&gt;&lt;br&gt;
+：已获得用户同意。个性化未定义。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;loadForm&lt;br&gt;
+像这样改变你的方法：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  void loadForm() {
+    ConsentForm.loadConsentForm(
+      (ConsentForm consentForm) async {
+        var status = await ConsentInformation.instance.getConsentStatus();
+        // 在不同的状态下写各自的逻辑。
+        if (status == ConsentStatus.required) {
+          consentForm.show(
+            (FormError? formError) {
+              // 呈现同意书
+              loadForm();
+            },
+          );
+        } else if (status == ConsentStatus.obtained) {
+            // 添加同意后的逻辑
+        }
+      },
+      (formError) {
+          // 错误处理
+      },
+    );
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;5.本地调试&lt;/p&gt;
+&lt;p&gt;如何你设置的GDPR消息只对欧盟地区弹出消息框，则可以&lt;strong&gt;强制地理&lt;/strong&gt;&lt;br&gt;
+进行调试。&lt;/p&gt;
+&lt;p&gt;增加如下代码：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ConsentDebugSettings debugSettings = ConsentDebugSettings(
+  debugGeography: DebugGeography.debugGeographyEea,
+  testIdentifiers: [&amp;#39;TEST-DEVICE-HASHED-ID&amp;#39;]);
+
+ConsentRequestParameters params = ConsentRequestParameters(
+  consentDebugSettings: debugSettings);
+  
+// 省略后面内容
+  ...
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;应用程序的调试设置中提供测试设备的哈希 ID 才能使用调试功能，用ID来代替&lt;strong&gt;TEST-DEVICE-HASHED-ID&lt;/strong&gt;&lt;br&gt;
+内容。&lt;/p&gt;
+&lt;p&gt;如果你之前的项目已经集成了Admob，则在调试运行的日志中&lt;strong&gt;搜索关键字&lt;/strong&gt;就可以看到&lt;strong&gt;测试设备的哈希 ID&lt;/strong&gt;&lt;br&gt;
+。如下图：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/b501f534a30e0a581505cc70c0360c75.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;最后，热更新一下应用就可以呈现&lt;strong&gt;GDPR弹窗&lt;/strong&gt;了。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/gdpr_message/bb61ccec215743bc2b246968927f7048.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;div id=&#34;最后附上参考资料&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;最后附上参考资料 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%9c%80%e5%90%8e%e9%99%84%e4%b8%8a%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;div id=&#34;创建gdpr消息文档地址如下&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h4 class=&#34;relative group&#34;&gt;创建GDPR消息文档地址如下： 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%88%9b%e5%bb%bagdpr%e6%b6%88%e6%81%af%e6%96%87%e6%a1%a3%e5%9c%b0%e5%9d%80%e5%a6%82%e4%b8%8b&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://support.google.com/admob/answer/10113207?hl=zh-Hans&amp;amp;ref_topic=10105230&amp;amp;sjid=1600386979072872981-AP&#34;   target=&#34;_blank&#34;&gt;
+    https://support.google.com/admob/answer/10113207?hl=zh-Hans&amp;ref_topic=10105230&amp;sjid=1600386979072872981-AP&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;flutter集成文档&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h4 class=&#34;relative group&#34;&gt;Flutter集成文档： 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#flutter%e9%9b%86%e6%88%90%e6%96%87%e6%a1%a3&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.cn/admob/flutter/eu-consent?hl=zh-cn&#34;   target=&#34;_blank&#34;&gt;
+    https://developers.google.cn/admob/flutter/eu-consent?hl=zh-cn&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
       
     </item>
     
@@ -34,7 +660,364 @@
       <pubDate>Thu, 19 Oct 2023 16:22:12 +0800</pubDate>
       
       <guid>https://vastzh.com/blog/tax_form/</guid>
-      <description>教你填写谷歌税务表单</description>
+      <description>&lt;p&gt;
+
+
+
+
+  
+  
+  
+    &lt;figure&gt;
+      &lt;img class=&#34;my-0 rounded-md&#34; src=&#34;1ae416ec57d0a2b2f9c34719af8cf16e.jpeg&#34; alt=&#34;&#34; /&gt;
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;关于出海，这里说的出海是指发展海外业务，这里尤其指Google Play商店的APP开发上架及运营。&lt;/p&gt;
+&lt;p&gt;我是一个程序员，裁员之后成了独立开发体验师，或者说是一个无业游民，想靠着仅有的写代码手艺干出一番事业。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;所以，我出海了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;为什么选择出海，主要的原因是如果想在国内上架APP实在是阻碍太大了。比如要想上架到华为、小米等应用商城，需要的资质就不少。&lt;br&gt;
+既要有营业执照，又要申请软著，现在又多了一个APP备案等等一系列的繁杂琐事。其中的坑还不少，每一个都可以单独领出来写一篇文章。&lt;/p&gt;
+&lt;p&gt;网上的资料确实也比较少，我寻思着把这些坑写出来分享给每一个即将成功独立开发体验者的人，让大家少走弯路。&lt;/p&gt;
+&lt;p&gt;当然，出海只是第一步，将来我也会进军国内市场，总要一步步来。接下来我们进入正题。&lt;/p&gt;
+&lt;p&gt;当突然有一天，你的GooglePlay Console 打开后顶部出现这样的提示。&lt;br&gt;
+那么恭喜你。你的第一位付费用户有了！&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/1d2bb734b0c9486243a3803ca94c5e74.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;需要尽快的提交税务表单信息。这样用户给你的支付款才会再下个月进入你的银行账户。&lt;/p&gt;
+&lt;p&gt;不用着急，其实填的内容并不复杂。只要照着我的步骤一步步填写即可。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/ae3f770ed96bb1a936b23626d428f864.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;我们以独立开发中为例，选择“个人”。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/4e350bcb9fff836d86356d9bcff2991d.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;根据字面意思，选择第一个。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/e6d5a28c15674355eb82b069483604ba.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;地址当时没有截图网上找了张图可以参考。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/8d95b5e846095f659bb15d360bba2edb.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;为了省事，我勾选了：邮寄地址与永久地址相同&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/5f14bf17711794ebec7dfaa85a1a5a0f.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;您是否要依据税收条约申请降低预扣税率？这里我点是。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/fe37a9ecffe91ec4c37a582a3a722cc8.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/b76fef77a2b039881a936fa19a011d5b.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/4147fd9eb1833a02ed1cd71c107d724c.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/e5b4205fa6e16e1114ed7f0156d8e7c4.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;照着填就完了。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/be4caff2b62abb791577bbcbb098c2c0.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/1f2e97a2330898c2d3bbe44faa9a1597.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;到这里就设置完成了。&lt;/p&gt;
+&lt;p&gt;最后附上我的第一个付费用户付费截图 。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/tax_form/fd927b77d04f75393c743f535c877236.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
       
     </item>
     
@@ -44,7 +1027,95 @@
       <pubDate>Wed, 11 Oct 2023 16:22:12 +0800</pubDate>
       
       <guid>https://vastzh.com/blog/you_want_know/</guid>
-      <description>想做独立开发赚钱的朋友，你想了解的都在这里</description>
+      <description>&lt;p&gt;最近一年多，迫于大环境的萧条。很多开发者都领了盒饭。想找一份稳定的工作，难度也越来越大。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;程序员是一个吃青春饭的工种。不久前我也领了盒饭，趁着这个时机我有了开发自己产品的想法，不再为别人打工。在一步步验证自己的想法的过程中也踩了不少坑，希望能用我遇到一些经验帮助和我有相同想法的朋友。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;今天简单的分享下目前自己做独立产品遇到的经验和想法。&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;一前提的准备&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;一、前提的准备 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%b8%80%e5%89%8d%e6%8f%90%e7%9a%84%e5%87%86%e5%a4%87&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;当有了做自己产品的想法时，&lt;strong&gt;建议尽早的去执行和验证你的想法&lt;/strong&gt;。验证这件事不一定要等你离职后。因为成功与否需要经受时间的考验，要不断优化迭代。&lt;/p&gt;
+&lt;p&gt;很少有人可以一步登天。刚起步时，需要有用户的反馈，来慢慢优化产品，另外积累用户也需要一定的时间。所以有了想法和觉悟，在空余时间尽早的尝试吧。&lt;/p&gt;
+&lt;div id=&#34;二学习一门前端语言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;二、学习一门前端语言 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%ba%8c%e5%ad%a6%e4%b9%a0%e4%b8%80%e9%97%a8%e5%89%8d%e7%ab%af%e8%af%ad%e8%a8%80&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;做独立产品是后端的短板，需要尽早的学习一门前端编程语言，来丰富自己的技术栈。相信大部分后端开发者和我一样，平时主要的工作是设计数据库和写接口的业务逻辑。但不可否认的是，&lt;br&gt;
+做独立开发者前端比后端更重要，你的界面是否好看，交互是否流畅，这都和前端息息相关。&lt;/p&gt;
+&lt;p&gt;选一门生态好，易用，跨平台的前端语言。最好是适合自己的。比如有一些前端基础可以考虑学习vue react常见的语言。根据自己的情况选择。我选择了flutter，因为我没有前端基础，对我来说学习flutter学习成本比较低没有历史包袱，跨平台性也比较好，将来一套代码苹果安卓都可以用。&lt;/p&gt;
+&lt;div id=&#34;三申请软著注册公司&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;三、申请软著注册公司 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%b8%89%e7%94%b3%e8%af%b7%e8%bd%af%e8%91%97%e6%b3%a8%e5%86%8c%e5%85%ac%e5%8f%b8&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;上架到国内的应用市场，目前国内流量最大的莫过于手机厂商自己摸应用市场。&lt;/p&gt;
+&lt;p&gt;华为，小米，OPPO和vivo四个应用市场。但是他们都需要企业资质和软著。申请一个软著正常流程下来需要三个月时间。我之前在某宝找人代办申请三个软著等了三个月都失败了。现在自己重新还在申请中。建议有时间的还是自己去申请，其实不难，就是时间特别长，所以建议提早申请。&lt;br&gt;
+注册公司虽然也比较麻烦但是用不了这么久半个月也就够了。&lt;/p&gt;
+&lt;div id=&#34;四海外google-play和apple-store市场&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;四、海外Google Play和Apple Store市场 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%9b%9b%e6%b5%b7%e5%a4%96google-play%e5%92%8capple-store%e5%b8%82%e5%9c%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;由于上述原因上架国内所花的时间会比较长，所以我们可以先申请需要的资质。当流程已经在走的时候，我们也不要闲着，可以先上架GooglePlay和苹果市场。&lt;/p&gt;
+&lt;p&gt;GooglePlay 开发者账号是需要付费的25美金永久性账号。开通需要信用卡是visa卡或者master卡。银联卡无法支付，如果没有的话，可以办理一个。GooglePlay上架比较容易，曾经有小伙伴应用只有一个界面都上架成功了。不需要软著，个人和公司都可以。&lt;/p&gt;
+&lt;p&gt;在海外市场同样可以验证产品的优劣。后期也可以加入广告和内购来获得收益。广告可以通过集成Admob收益比国内好很多。内购的话可以用iSDK库去集成。后期我会专门出一篇文章更详细的介绍。&lt;/p&gt;
+&lt;p&gt;****当广告收入达到&lt;strong&gt;地址验证最低限额10美元&lt;/strong&gt;时，会向您的 AdSense 帐号中的收款人地址邮寄PIN码。耐心等待2-4周。当将收到的PIN码输入到 AdSense 帐号后，谷歌才会付款。&lt;br&gt;
+内购和Admob一样，可以绑定国内普通银行卡，每个月18号会自动电汇到你的银行卡，满一刀起付。相比于国内特别简单，不管是内购接入还是广告接入方式。&lt;/p&gt;
+&lt;p&gt;另外如果想上架App Store，成为开发者费用是每年99刀，也就是差不多700块钱。目前我只上架过两个产品，和GooglePlay 一样，也是非常适合上手的。广告接入也是使用的Admob，内购是使用苹果的支付SDK，好像是150刀起付，我在苹果上架比较晚，收入没达到要求，具体还不是很了解，等达到起付标准后再做分享。&lt;/p&gt;
+&lt;div id=&#34;写在最后&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;写在最后 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%86%99%e5%9c%a8%e6%9c%80%e5%90%8e&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;对于新手来说，很多人可能会觉得上架后没有人下载怎么办，其实我觉得没必要担心这个事。先把应用开发出来，应用没开发出来想这想哪是没用的。&lt;/p&gt;
+&lt;p&gt;至少目前我上架的应用都有自然流量，无非是多与少的区别。做独立开发者想要赚钱，最重要的是你的执行力要强，想再多产品开发不出来都是没用的。等有了产品再慢慢优化。刚开始我们更需要的是从0到1开发一款产品到上架的知识和技能。&lt;/p&gt;
+&lt;p&gt;一款好的产品从来都不是技术有多牛，而是解决用户的痛点。&lt;br&gt;
+当你了解这些，这时你发现一个用户痛点时，想开发一款新的产品就容易的多。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
       
     </item>
     
