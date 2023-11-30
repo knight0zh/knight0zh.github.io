@@ -21,25 +21,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://vastzh.com/essay/why_blog/</loc>
-    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://vastzh.com/blog/self_media/</loc>
-    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://vastzh.com/essay/self_media/</loc>
-    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://vastzh.com/essay/</loc>
     <lastmod>2023-11-27T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -51,25 +33,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://vastzh.com/devnote/local_sync/</loc>
-    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://vastzh.com/devnote/</loc>
-    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://vastzh.com/blog/gdpr_message/</loc>
-    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://vastzh.com/devnote/gdpr_message/</loc>
     <lastmod>2023-11-24T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -81,19 +45,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://vastzh.com/devnote/tax_form/</loc>
-    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://vastzh.com/blog/you_want_know/</loc>
-    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://vastzh.com/devnote/you_want_know/</loc>
     <lastmod>2023-11-24T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -105,19 +57,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://vastzh.com/essay/hetao/</loc>
-    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://vastzh.com/blog/personal_ip/</loc>
-    <lastmod>2023-09-25T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://vastzh.com/essay/personal_ip/</loc>
     <lastmod>2023-09-25T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

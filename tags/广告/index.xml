@@ -7,17 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2023 超级浩码</copyright>
-    <lastBuildDate>Wed, 15 Nov 2023 16:22:12 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/%E5%B9%BF%E5%91%8A/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>出海日记——Admob完成这个操作否则明年可能没有广告收入</title>
-      <link>https://vastzh.com/devnote/gdpr_message/</link>
-      <pubDate>Wed, 15 Nov 2023 16:22:12 +0800</pubDate>
-      
-      <guid>https://vastzh.com/devnote/gdpr_message/</guid>
-      <description>Admob完成这个操作否则明年可能没有广告收入</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vastzh.com/devnote/gdpr_message/featured.png" />
-    </item>
-    
+    <lastBuildDate>Thu, 19 Oct 2023 16:22:12 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/%E5%B9%BF%E5%91%8A/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>出海日记——填写谷歌税务表单</title>
       <link>https://vastzh.com/blog/tax_form/</link>
@@ -26,16 +16,6 @@
       <guid>https://vastzh.com/blog/tax_form/</guid>
       <description>教你填写谷歌税务表单</description>
       
-    </item>
-    
-    <item>
-      <title>出海日记——填写谷歌税务表单</title>
-      <link>https://vastzh.com/devnote/tax_form/</link>
-      <pubDate>Thu, 19 Oct 2023 16:22:12 +0800</pubDate>
-      
-      <guid>https://vastzh.com/devnote/tax_form/</guid>
-      <description>教你填写谷歌税务表单</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vastzh.com/devnote/tax_form/featured.png" />
     </item>
     
   </channel>
