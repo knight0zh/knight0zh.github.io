@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>v2ex on 超级浩码</title>
+    <link>https://vastzh.com/tags/v2ex/</link>
+    <description>Recent content in v2ex on 超级浩码</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2023 超级浩码</copyright>
+    <lastBuildDate>Mon, 11 Dec 2023 16:33:51 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/v2ex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>上周v2ex发了个帖子火了，顺便观察了一下v友们关心的话题</title>
+      <link>https://vastzh.com/blog/v2ex_topic/</link>
+      <pubDate>Mon, 11 Dec 2023 16:33:51 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/v2ex_topic/</guid>
+      <description>&lt;div id=&#34;前言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;前言 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上周，我在v2ex上发表了一篇文章，题目是《聊聊我在一个月抖音小红书粉丝累积到3万最后不再维护的事》。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;帖子在&lt;strong&gt;v站&lt;/strong&gt;火了，差不多连续四五天在节点榜首，也有不少人点赞收藏。我很少在v站上发帖，我记得再上一篇还是在2019年8月。
+在v站发帖是因为经常看到做独立开发的小伙伴在v站推广APP，来积累种子用户。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;所以我想着通过爬虫爬取了v站上所有的帖子和评论，来对其做一些研究。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v1.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v2.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+那些天，打开v站的消息提醒，全都是有关这个帖子的留言，感谢或者是收藏，差不多有500多条。要知道v站的用户总数其实并不多。每天同一时刻在线用户差不多是4000～6000左右。数据算是比较可观了。&lt;/p&gt;
+&lt;p&gt;可能有些网友不知道，&lt;strong&gt;v站&lt;/strong&gt;是什么，来看下维基百科。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v3.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+也就是说&lt;strong&gt;v站&lt;/strong&gt;是一个面向程序员，极客人群分享交流的社区。这也同时说明这里的用户画像都是基于程序员和极客人群的。
+这让我猛然产生了好奇心，我想知道这类的人群，当下的大环境关心哪些话题，所以我想着通过爬虫爬取了v站上所有的帖子和评论，来做一些数据分析。&lt;/p&gt;
+&lt;div id=&#34;如何分析&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;如何分析 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%a6%82%e4%bd%95%e5%88%86%e6%9e%90&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;我的计划很简单，就是爬取v站所有的内容。要想写这样一个爬虫其实也比较花时间，我在Github调研了很多爬虫脚本和框架，在此要感谢为爱发电的开源力量。我使用了名为&lt;a href=&#34;https://github.com/oldshensheep/v2ex_scrapy&#34;   target=&#34;_blank&#34;&gt;
+    v2ex_scrapy&lt;/a&gt;的爬虫脚本进行了内容收集，用起来非常舒服，非常感谢作者。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v4.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v5.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;同时我尝试了使用 &lt;strong&gt;Chatgpt&lt;/strong&gt; 最新的 gpts 功能，尝试把爬下来的整个 &lt;strong&gt;sqlite&lt;/strong&gt; 作为 gpts 的数据库，想让gpts来为我做数据分析的业务。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v6.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+很可惜 &lt;strong&gt;Chatgpt&lt;/strong&gt; 对中文分词的支持能力比较差，没法完成任务。不过也根据提示了解到 &lt;strong&gt;Python&lt;/strong&gt; 的 jieba 库来做分词。于是调研了一下 &lt;code&gt;jieba&lt;/code&gt; 和 &lt;code&gt;wordclound&lt;/code&gt; 开始敲代码。&lt;/p&gt;
+&lt;div id=&#34;词云图&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;词云图 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%af%8d%e4%ba%91%e5%9b%be&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;先来看看v友们平时都聊的话题。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v7.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+我们根据词云图中内容的大小了解到，词频的频率。&lt;br&gt;
+从图上可以看出排名靠前的词都是和程序员有关的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;上一张词图是所有帖子的，现在把时间锁定到新冠爆发半年后开始(经济开始下行)。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v8.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+乍一看好像没有明显的变化还是围绕着程序员相关。我发现两个有趣的地方，一、开始流行一个词&lt;code&gt;迫于&lt;/code&gt;大多流行在二手交易节点。二、Mac苹果系始终是这群人的焦点。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;最后这张词云图把时间锁定在了去年十一月之后，chatgpt横空出世。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v9.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+在这一时段，出现大量的Chatgpt，会员，API，openAI等新的词汇。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;每月新增&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;每月新增 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%af%8f%e6%9c%88%e6%96%b0%e5%a2%9e&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;接下来我们看一下每月新增帖子和评论数量。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v10.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+可以看到大多数人还是以一个看热闹的心态在v站闲逛，回复数要远高于发帖数。&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;按小时聚合&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;按小时聚合 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%8c%89%e5%b0%8f%e6%97%b6%e8%81%9a%e5%90%88&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;另外，我统计了所有的帖子和回复评论的发布时间段，有个很有趣的现象。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v11.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v12.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+细心的你一定发现了，抛开0-7点睡眠时间外，上午是逛v站的高峰，中午饭点有所下降，下午又一波小高峰直到下班时间开始下降。&lt;br&gt;&lt;br&gt;
+有人会说很多都是周末数据，其实我已经把周六周日的数据给过滤了。&lt;br&gt;
+&lt;strong&gt;澄清一下，这些数据只是相对来说逛论坛的分析，不代表所有人都在这些时间点摸鱼，这是所有数据的总和。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;前十数据&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;前十数据 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%89%8d%e5%8d%81%e6%95%b0%e6%8d%ae&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;最后，看看所有帖子排名靠前的都是哪些。&lt;/p&gt;
+&lt;div id=&#34;感谢最多的前十&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h4 class=&#34;relative group&#34;&gt;感谢最多的前十 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%84%9f%e8%b0%a2%e6%9c%80%e5%a4%9a%e7%9a%84%e5%89%8d%e5%8d%81&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v13.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;div id=&#34;收藏最多的前十&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h4 class=&#34;relative group&#34;&gt;收藏最多的前十 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%94%b6%e8%97%8f%e6%9c%80%e5%a4%9a%e7%9a%84%e5%89%8d%e5%8d%81&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v14.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;div id=&#34;点击最多的前十&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h4 class=&#34;relative group&#34;&gt;点击最多的前十 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%82%b9%e5%87%bb%e6%9c%80%e5%a4%9a%e7%9a%84%e5%89%8d%e5%8d%81&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v15.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;div id=&#34;投票最多的前十&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h4 class=&#34;relative group&#34;&gt;投票最多的前十 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%8a%95%e7%a5%a8%e6%9c%80%e5%a4%9a%e7%9a%84%e5%89%8d%e5%8d%81&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/v2ex_topic/v16.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;总结 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;总的来说，&lt;code&gt;v2ex&lt;/code&gt; 还是很有意思的一个&lt;strong&gt;社区&lt;/strong&gt;，在这里包罗了所有&lt;strong&gt;程序员、极客，工作和生活上的有趣的内容&lt;/strong&gt;。也是这个群里摸鱼的一个好去处，当然在这里你也能看到一些，学到一些。
+我也常常在v站潜水。最近发帖才知道，原来帖子发出后有一个保护期超过这个时间后，帖子将无法修改也无法删除，所以在这里发言还是要慎重一些。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一些 Tips：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文的数据来源都是&lt;a href=&#34;https://github.com/oldshensheep/v2ex_scrapy&#34;   target=&#34;_blank&#34;&gt;
+    v2ex_scrapy&lt;/a&gt;开源项目中获得。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于个人电脑原因我爬取的时间经常在半夜中断，时间也比较长最后选择之后了作者之前爬取更新至2023-7-22为止的数据。我用自己写的脚本对数据进行二次加工进行最终分析统计。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;部分图表是把脚本跑完的数据传给chatgpt，最终由gpt生成。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
