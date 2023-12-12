@@ -15,6 +15,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://vastzh.com/blog/data_inspector/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://vastzh.com/blog/v2ex_topic/</loc>
     <lastmod>2023-12-11T16:33:51+08:00</lastmod>
     <changefreq>daily</changefreq>

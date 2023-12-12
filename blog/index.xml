@@ -7,7 +7,178 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2023 超级浩码</copyright>
-    <lastBuildDate>Mon, 11 Dec 2023 16:33:51 +0800</lastBuildDate><atom:link href="https://vastzh.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Dec 2023 15:30:20 +0800</lastBuildDate><atom:link href="https://vastzh.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Android Studio，在PC上调试Flutter应用的SQLite数据库</title>
+      <link>https://vastzh.com/blog/data_inspector/</link>
+      <pubDate>Tue, 12 Dec 2023 15:30:20 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/data_inspector/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;对于我这个独立开发小白来说，很多开发中的技巧都需要自己去摸索。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;毕竟一个人的精力时有限的，所以很多时候，经验是互相交流出来的，特别是在工作中。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;很可惜我之前做了8年后端开发，大多数的技巧也只适用于后端，所以我想把开发过程中的经验和技巧通过这种形式让更多人看到。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;自从上次研究&lt;a href=&#34;https://vastzh.com/blog/local_sync/&#34;   target=&#34;_blank&#34;&gt;
+    《单机版应用如何做数据同步》&lt;/a&gt;后，应用中的本地数据我都从&lt;code&gt;Hive&lt;/code&gt;转到了&lt;code&gt;SQLite&lt;/code&gt;。
+但无论是&lt;code&gt;Hive&lt;/code&gt;还是&lt;code&gt;SQLite&lt;/code&gt;，进行真机调试的时候都不够方便。原因是无法实时看到CRUD后的数据。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;经过我的一番搜索，发现强大的 &lt;strong&gt;Android Studio&lt;/strong&gt; 本身就是支持&lt;code&gt;SQLite&lt;/code&gt;调试的。之前用&lt;code&gt;VsCode&lt;/code&gt;，装上了&lt;code&gt;Flutter&lt;/code&gt;和&lt;code&gt;Dart&lt;/code&gt;插件也算够用，虽然一直不喜欢它的主题，但是比它轻量啊，不占电脑资源，用惯也就惯了。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;因为&lt;code&gt;SQLite&lt;/code&gt;调试又用回了&lt;code&gt;JetBrains&lt;/code&gt;系的 IDEA。顺便安利下我一直用的&lt;code&gt;Dracula Theme&lt;/code&gt;主题，个人认为配色很棒。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/data_inspector/d1.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/data_inspector/d2.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;其实 &lt;strong&gt;Android Studio&lt;/strong&gt; 在2020年发布的版本已经有了这个功能，只是用过的不多，中文搜索资料也比较少，先来看一下&lt;a href=&#34;https://developer.android.com/studio/preview/features?hl=zh-cn#database-inspector&#34;   target=&#34;_blank&#34;&gt;
+    官方文档&lt;/a&gt;。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/data_inspector/d3.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;选择 &lt;strong&gt;View&lt;/strong&gt; -&amp;gt; &lt;strong&gt;Tool Windows&lt;/strong&gt; -&amp;gt; &lt;strong&gt;App Inspection&lt;/strong&gt; -&amp;gt; 选择设备 -&amp;gt; &lt;strong&gt;Database Inspector&lt;/strong&gt;
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/data_inspector/d4.gif&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;这里有四个按钮分别是：&lt;strong&gt;刷新，查询（写SQL），DB连接保活，导出&lt;/strong&gt;。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/data_inspector/d5.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;很方便，如果你的设备性能还不错，不妨用 &lt;strong&gt;Android Studio&lt;/strong&gt; 试试。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
     <item>
       <title>上周v2ex发了个帖子火了，顺便观察了一下v友们关心的话题</title>
       <link>https://vastzh.com/blog/v2ex_topic/</link>
@@ -522,6 +693,30 @@
 &lt;blockquote&gt;
 &lt;p&gt;部分图表是把脚本跑完的数据传给chatgpt，最终由gpt生成。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
 </description>
       
     </item>
