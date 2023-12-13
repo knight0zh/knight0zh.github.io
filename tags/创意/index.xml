@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>创意 on 超级浩码</title>
+    <link>https://vastzh.com/tags/%E5%88%9B%E6%84%8F/</link>
+    <description>Recent content in 创意 on 超级浩码</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2023 超级浩码</copyright>
+    <lastBuildDate>Wed, 13 Dec 2023 11:20:15 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/%E5%88%9B%E6%84%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>分享一个点子</title>
+      <link>https://vastzh.com/blog/share_think/</link>
+      <pubDate>Wed, 13 Dec 2023 11:20:15 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/share_think/</guid>
+      <description>&lt;div id=&#34;前言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;前言 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;昨天有个想法从脑海里一闪而过。想法不一定成熟，所以想借此宝地分享这个点子，和更多的人交流完善。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;正文&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;正文 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%ad%a3%e6%96%87&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;当你点进这个主题时，相信一定是被标题所吸引。这很正常也是我的目的，v站大多数的用户都是开发者或者极客人士。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;进入正题作为一个开发者，缺的一定不是技术而是点子。经常能在各个群或者论坛中看到“想做一个应用，但是不知道做什么”这样的言论。很多需求好像都已经存在，不再是蓝海。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;我们要如何挖掘一些细分垂直领域的需求？这个需求一定不是所有人的需求，是特定的人群，如果你不身处其中，那永远不知道还有那样的需求。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;现在回到一个上帝视角。我们看到了&lt;strong&gt;一群有着各种技术但是不知道做点什么的开发者&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;相对的还有另 &lt;strong&gt;一个群体有着迫切痛点和需求的用户&lt;/strong&gt; 在应用商店，搜索引擎搜半天就是找不到合适的产品。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;我的点子需求&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;我的点子（需求） 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%88%91%e7%9a%84%e7%82%b9%e5%ad%90%e9%9c%80%e6%b1%82&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;所以我想能不能这样一个产品来衔接这两个需求方，做到规范化。&lt;br&gt;
+这个产品的用户：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;需求者&lt;/strong&gt; ：可以发布自己点需求和点子。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开发者&lt;/strong&gt; ：根据点子结合自身条件选择项目。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;需求者&lt;/strong&gt; 的点子可以操作：&lt;strong&gt;认同&lt;/strong&gt;、&lt;strong&gt;追加需求&lt;/strong&gt; 或者 &lt;strong&gt;@已有产品&lt;/strong&gt;。点子不能被任何人看到，需要&lt;strong&gt;开发者&lt;/strong&gt;支付一定货币。
+&lt;strong&gt;开发者&lt;/strong&gt; 不是所有的开发者都能看到所有点子，会有一定的限制。如：之前领取的点子没有实现则会进行一定货币扣除。&lt;/p&gt;
+&lt;p&gt;我没有细想，比如怎么判断一个点子的好坏，点子过度曝光等问题。因为这个点子也是我刚想到的，有兴趣的网友可以发表看法。&lt;/p&gt;
+&lt;p&gt;这就类似于BOSS直聘，有求职者也就招聘的企业。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;和接私活网站的区别&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;和接私活网站的区别 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%92%8c%e6%8e%a5%e7%a7%81%e6%b4%bb%e7%bd%91%e7%ab%99%e7%9a%84%e5%8c%ba%e5%88%ab&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;我认为最大的区别在于，平台的使用。这里的&lt;strong&gt;需求方&lt;/strong&gt; 就是一个普通人，他不需要为这个产品买单，他只是有一个迫切的需求，并且如果有更多同样需求的用户可以为其点赞。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;同样的&lt;strong&gt;开发者&lt;/strong&gt; 并不是通过开发一个产品交付给用户，产品的所有权是开发者自己的。所以开发者觉得这是蓝海才会去开发，开发后也需要自己维护自己产品。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;百度知道&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;百度知道 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%99%be%e5%ba%a6%e7%9f%a5%e9%81%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;相信很多人在十年前都用过 &lt;strong&gt;百度知道&lt;/strong&gt; 这个产品。当时互联网刚刚兴起，人们遇到问题时，开始在网络上寻求答案。 &lt;strong&gt;百度知道&lt;/strong&gt; 在当时提供了一个很好的解决方案。我想说的是用户找到了一个窗口可以去发表自己的问题痛点。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;载体&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;载体 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%bd%bd%e4%bd%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;我认为一些论坛贴吧，就是一个不错的平台。但是不够标准化，功能也不够全面，比如再说的细一点，我们可以为以上两种用户添加标签，需求方是什么领域的要想解决什么问题等等，头脑风暴一下可以想到很多功能是论坛还无法实现的。&lt;/p&gt;
+&lt;p&gt;其实各大应用商城是一个不错的载体，当用户无法搜索到满意的产品时，最直接的方式时通过应用商城上的需求或者点子模块，让用户有一个发表的窗口，同样的，作为开发者也会特别关注这里模块。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;最后&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;最后 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%9c%80%e5%90%8e&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;期待有开发者能做出这样的产品，这样会更开放和自由，而不是应用商城。希望有兴趣网友说出自己的想法。&lt;br&gt;&lt;br&gt;
+最后，用这个标题还有一个原因，想看看有多少人会被&lt;strong&gt;点子&lt;/strong&gt;这样的标题吸引。这何尝不是代表一种需求。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
