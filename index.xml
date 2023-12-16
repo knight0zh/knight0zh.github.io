@@ -7,7 +7,75 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2023 超级浩码</copyright>
-    <lastBuildDate>Wed, 13 Dec 2023 11:20:15 +0800</lastBuildDate><atom:link href="https://vastzh.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Dec 2023 12:27:55 +0800</lastBuildDate><atom:link href="https://vastzh.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不会写代码能不能开发APP</title>
+      <link>https://vastzh.com/blog/wont_code_to_app/</link>
+      <pubDate>Sat, 16 Dec 2023 12:27:55 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/wont_code_to_app/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;最近后台有些人给我留言，问:不会写代码能不能开发App？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最初我回复是可以的，转念一想这事其实因人而异。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;于是我又回复我捋一捋回头写篇文章来说清楚这件事。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如今越来越多的程序员受大环境的影响，开始考虑新的出路。有些尝试做独立开发者，开发自己的App。如果做得好可以多一份收入，万一寒潮席卷到自己也多一个抗风险能力。其中也不乏一些非程序员职能的人，想借助AI的能力开发自己的应用。那么到底不会写代码能不能开发应用？今天就来从几个方面聊聊这个话题。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;首先，来了解下目前最强的 AI ———— ChatGPT 的编码能力。我认为 ChatGPT 的编码能力确实很强。但也仅限于某些条件下。比如，你对GPT说，为我写一个记账程序。ChatGPT一定完成不了任务。因为ChatGPT更擅长的单一相对独立得小任务。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;在确定自己想做程序后，我们需要有一个大致的框架。
+&lt;u&gt;比例：你想开发的程序有哪些功能模块，每个模块里显示什么内容，有哪些按钮，是如何交互的。数据怎么存储，怎么设计表结构等等。&lt;/u&gt;
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;等这些都做完再问 ChatGPT，这样更容易得到我们想要的答案。不过此时GPT的回答，也并非一定是正确答案，很有可能当你把答案复制到编辑器运行后出现报错。这时你再把报错扔给GPT回答，有很大的可能GPT的回答无法解决问题。&lt;u&gt;要知道ChatGPT使用Transformer架构，它的回答逻辑是根据上下语预测的&lt;/u&gt;，因此就需要你有一定得编码能力能看出问题在哪里，再引导GPT纠正错误。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;目前大部分的编辑器都有AI辅助功能，比如VS Code，有智能提示，代码补全等功能。这些功能可以很大程度上减少我们写代码的重复工作。但是这些功能也需要我们有一定的编程能力，才能使用得心应手。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;总的来说，AI更擅长解决单一问题，需要我们能自己把零件一个个的组装起来，拼装代码，同样也需要一定的代码能力，否则会非常痛苦，随随便便就出现报错。看到这里也许你会祈祷更强的AI出现，具体什么时候现在还不好说。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;说完了AI我们再聊聊什么人适合自己开发程序。我认为排在第一的还是程序员本行，无论你是前端后端，毕竟有编码基础，语言都是相通的，学起来也更快一些。再说说不会写代码的人群。如果这类人群满足我说的一到两个条件也挺适合。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;产品经理我认为比较适合。他们擅长将需求转化为产品，优秀的产品经理能设计出优雅产品，既能满足用户需求又能让人用的非常舒服。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;UI设计类，他们有较好的视觉审美，并且能做出产品原型。一个产品有哪些页面哪些交互他们会更清晰也省去设计得步骤做出来得程序ui更漂亮。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;还有一类，了解自己行业或某个领域痛点需求的相对极客的人群。这类人热衷前沿科技，或电子设备等等。这群人在当下AI浪潮下也一定熟悉了解AI得各类工具的使用。如果还了解一些蓝海需求那就很适合。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;所以不会写代码，其实没有关系，只要愿意去学再借助AI的能力还是能比较快上手的。建议可以先去网上找一门用于开发APP语言的教学视频看一遍，跟着视频做一个项目，边看边敲代码。不需要很精通，因为比较深的问题可以借助ChatGPT。当你熟悉了整个开发流程后，再考虑如何实现自己想要的程序。
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;另外，不要想着靠APP赚钱，据我了解，大多数独立开发者中真正赚到钱的比例并不高。一个应用能否赚到钱这是多方面因素决定的事，即使你问APP做的比较成功的开发者，也很难说清成功的要素。所以要沉得住气静下心来慢慢打磨。
+最好是你有一个需求而市面上的APP都满足不了，再有&lt;strong&gt;兴趣驱动&lt;/strong&gt;。这样你自己就是受众用户，根据自己的需求一点一点完善功能。当你找到有相同需求的群体时，你的程序也就慢慢起来了。在这个过程中你会得到很多成就感，也更容易坚持下去。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;总的来说，不会写代码能不能开发APP，答案是肯定可以的。但是前提是你要有足够的兴趣，并且能坚持下来。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
     <item>
       <title>分享一个点子</title>
       <link>https://vastzh.com/blog/share_think/</link>
