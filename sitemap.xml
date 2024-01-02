@@ -9,13 +9,19 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://vastzh.com/blog/wont_code_to_app/</loc>
-    <lastmod>2023-12-16T12:27:55+08:00</lastmod>
+    <loc>https://vastzh.com/blog/ccopyright/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://vastzh.com/</loc>
+    <lastmod>2023-12-16T12:27:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vastzh.com/blog/wont_code_to_app/</loc>
     <lastmod>2023-12-16T12:27:55+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

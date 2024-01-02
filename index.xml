@@ -6,8 +6,263 @@
     <description>Recent content on 超级浩码</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>© 2023 超级浩码</copyright>
-    <lastBuildDate>Sat, 16 Dec 2023 12:27:55 +0800</lastBuildDate><atom:link href="https://vastzh.com/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2024 超级浩码</copyright>
+    <lastBuildDate>Tue, 02 Jan 2024 15:38:15 +0800</lastBuildDate><atom:link href="https://vastzh.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>别再找代理，申请计算机软件著作登记(软著)了</title>
+      <link>https://vastzh.com/blog/ccopyright/</link>
+      <pubDate>Tue, 02 Jan 2024 15:38:15 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/ccopyright/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;如果你想做自己的产品，软件著作权是必不可少的，尤其是在国内。比如，你做了一个软件，想让用户使用你的软件，就需要发布到软件市场，软著是必备的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div id=&#34;前言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;前言 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;个人开发者的道路是坎坷的，特别是在国内，先不说研发一款产品本身的门槛。假设我们已经完成了这一步骤，依然是无法让用户使用的你软件的。因为还没有把应用发布到应用市场。而发布应用市场就需要软著，备案等等。&lt;/p&gt;
+&lt;p&gt;尤其是软著，申请流程非常繁琐，需要很多资料。所以很多开发者为了能更专心开发产品，选择让第三方代理申请软著。我也一样，曾经找了两波代理申请，但是都失败了。浪费了大量的时间。因为申请软著一般需要等待2～3个月时间，无论成功失败。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/ccopyright/c1.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;我为此花了半年时间，损失惨重。第一次申请了多个软著均都失败，耗时3个月。后来在个人开发群找了群友推荐的代理重新申请均失败。花了半年时间，气得差点一口老血喷出。&lt;/p&gt;
+&lt;p&gt;最后我选择自己亲手办理。没想到花了2个多月时间，申请了四个软著，均成功。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;为什么要自己申请&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;为什么要自己申请？ 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e8%87%aa%e5%b7%b1%e7%94%b3%e8%af%b7&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;有人可能会说，我看到某宝上申请代理的评价基本都能拿到，评价都很好为什么浪费时间自己申请呢？因为你压根看不到那些申请没通过的。就拿我来说，申请软著没通过后，代理商会给我两个选择：1. 再提交一次。这意味着再等待3个月。2. 退款。退还代购订单一半的金额。没错，花了一半的金额，还浪费了时间。我选择的是退款及时止损再自己申请，需要先关闭订单，代理商才会再退款给我。由于订单已经退回失效了，也就无法进行评论了。&lt;/p&gt;
+&lt;div id=&#34;申请流程&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;申请流程 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%94%b3%e8%af%b7%e6%b5%81%e7%a8%8b&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;div id=&#34;1官网填表&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;1.官网填表 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#1%e5%ae%98%e7%bd%91%e5%a1%ab%e8%a1%a8&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;进入&lt;a href=&#34;https://register.ccopyright.com.cn/registration.html#/registerSoft&#34;   target=&#34;_blank&#34;&gt;
+    软著申请官网&lt;/a&gt;，选择 &lt;strong&gt;R11 计算机软件著作权登记申请&lt;/strong&gt;.
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/ccopyright/c2.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/li&gt;
+&lt;li&gt;选择 &lt;strong&gt;我是申请人&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;填写开发的基本信息，包括开发的硬件环境，操作系统，开发语言等等。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;2程序鉴别材料&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;2.程序鉴别材料 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#2%e7%a8%8b%e5%ba%8f%e9%89%b4%e5%88%ab%e6%9d%90%e6%96%99&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;这部分需要我们提交登记软件源程序连续的前30页和连续的后30页的软件源码。&lt;/p&gt;
+&lt;p&gt;这里推荐一个开源程序，我就是用这个程序来提取源码的。非常感谢作者🙏。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;举个例子&lt;/strong&gt;&lt;br/&gt;
+以django-guardian项目为例来说明pyerz的用法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;克隆代码&lt;/strong&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone git@github.com:django-guardian/django-guardian.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;生成文档&lt;/strong&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pyerz -i django-guardian -o django-guardian.docx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;由于官网要求我们需要转pdf，我们直接通过本地&lt;strong&gt;打印&lt;/strong&gt;转换pdf格式。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/soultoolman/pyerz&#34;   target=&#34;_blank&#34;&gt;
+    https://github.com/soultoolman/pyerz&lt;/a&gt;
+主页有详细的文档，这里不再赘述。&lt;/p&gt;
+&lt;div id=&#34;3文档鉴别材料&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;3.文档鉴别材料 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#3%e6%96%87%e6%a1%a3%e9%89%b4%e5%88%ab%e6%9d%90%e6%96%99&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;这部分其实就是产品的文档说明书。
+可以在网上找到一些模版，根据模版套用自己的产品就可以了。&lt;/p&gt;
+&lt;div id=&#34;4确认提交&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;4.确认提交 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#4%e7%a1%ae%e8%ae%a4%e6%8f%90%e4%ba%a4&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;完成以上步骤后进行提交。&lt;/strong&gt;
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/ccopyright/c3.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;div id=&#34;5提交材料&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;5.提交材料 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#5%e6%8f%90%e4%ba%a4%e6%9d%90%e6%96%99&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;完成了初步的提交后，下载签章页，盖章后提交即可。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/ccopyright/c4.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;如果没有打印扫描设备，可以找打印店去打印材料后进行盖章，扫描成文件再上传。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/ccopyright/c5.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;div id=&#34;结语&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;结语 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%bb%93%e8%af%ad&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;其实自己申请反而比走代理的材料要少（少了代办的盖章材料大概五六张），而且成功率更高。
+很多事，我觉得可以自己多探索一下也许会有意想不到的收获。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
     <item>
       <title>不会写代码能不能开发APP</title>
       <link>https://vastzh.com/blog/wont_code_to_app/</link>
