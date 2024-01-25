@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>出海日记——单机版应用如何做数据同步 &middot; 超级浩码</title>
-  <meta name="title" content="出海日记——单机版应用如何做数据同步 &middot; 超级浩码" />
+  <title>开发日记 —— 记录对接苹果登录的坑 &middot; 超级浩码</title>
+  <meta name="title" content="开发日记 —— 记录对接苹果登录的坑 &middot; 超级浩码" />
   
-  <meta name="description" content="不想接服务器，开发单机应用APP如何做数据同步？" />
-  <meta name="keywords" content="Google Play, 开发日记, Flutter, " />
+  <meta name="description" content="由于是第一次对接苹果登录，踩了不少坑，记录一下" />
+  <meta name="keywords" content="个人开发者, 苹果, flutter, " />
   
   
-  <link rel="canonical" href="https://vastzh.com/blog/local_sync/" />
+  <link rel="canonical" href="https://vastzh.com/blog/apple_login/" />
   
   
   
@@ -63,17 +63,17 @@
   
   
   
-  <meta property="og:title" content="出海日记——单机版应用如何做数据同步" />
-<meta property="og:description" content="不想接服务器，开发单机应用APP如何做数据同步？" />
+  <meta property="og:title" content="开发日记 —— 记录对接苹果登录的坑" />
+<meta property="og:description" content="由于是第一次对接苹果登录，踩了不少坑，记录一下" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://vastzh.com/blog/local_sync/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2023-11-21T16:22:12+08:00" />
+<meta property="og:url" content="https://vastzh.com/blog/apple_login/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-01-25T15:38:15+08:00" />
 <meta property="article:modified_time" content="2023-11-24T00:00:00+00:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="出海日记——单机版应用如何做数据同步"/>
-<meta name="twitter:description" content="不想接服务器，开发单机应用APP如何做数据同步？"/>
+<meta name="twitter:title" content="开发日记 —— 记录对接苹果登录的坑"/>
+<meta name="twitter:description" content="由于是第一次对接苹果登录，踩了不少坑，记录一下"/>
 
   
   <script type="application/ld+json">
@@ -81,26 +81,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blog",
-    "name": "出海日记——单机版应用如何做数据同步",
-    "headline": "出海日记——单机版应用如何做数据同步",
+    "name": "开发日记 —— 记录对接苹果登录的坑",
+    "headline": "开发日记 —— 记录对接苹果登录的坑",
     
-    "abstract": "不想接服务器，开发单机应用APP如何做数据同步？",
+    "abstract": "由于是第一次对接苹果登录，踩了不少坑，记录一下",
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/vastzh.com\/blog\/local_sync\/",
+    "url" : "https:\/\/vastzh.com\/blog\/apple_login\/",
     "author" : {
       "@type": "Person",
       "name": "超级浩码"
     },
-    "copyrightYear": "2023",
-    "dateCreated": "2023-11-21T16:22:12\u002b08:00",
-    "datePublished": "2023-11-21T16:22:12\u002b08:00",
+    "copyrightYear": "2024",
+    "dateCreated": "2024-01-25T15:38:15\u002b08:00",
+    "datePublished": "2024-01-25T15:38:15\u002b08:00",
     
     "dateModified": "2023-11-24T00:00:00\u002b00:00",
     
-    "keywords": ["Google Play","开发日记","Flutter"],
+    "keywords": ["个人开发者","苹果","flutter"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "176"
+    "wordCount": "365"
   }]
   </script>
 
@@ -455,7 +455,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      出海日记——单机版应用如何做数据同步
+      开发日记 —— 记录对接苹果登录的坑
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -502,9 +502,9 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-11-21 16:22:12 &#43;0800 CST">2023-11-21</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2023-11-24 00:00:00 &#43;0000 UTC">更新于 2023-11-24</time><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2024-01-25 15:38:15 &#43;0800 CST">2024-01-25</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2023-11-24 00:00:00 &#43;0000 UTC">更新于 2023-11-24</time><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="views_blog/local_sync/index.md" title="views">0</span> 
+    <span id="views_blog/apple_login/index.md" title="views">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -516,7 +516,7 @@
 </span>
 </span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="likes_blog/local_sync/index.md" title="likes">0</span> 
+    <span id="likes_blog/apple_login/index.md" title="likes">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -586,23 +586,23 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/google-play/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E8%80%85/&#34;,'_self');">
     <span class="flex">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
   >
-    Google Play
+    个人开发者
   </span>
 </span>
 
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E8%AE%B0/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%8B%B9%E6%9E%9C/&#34;,'_self');">
     <span class="flex">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
   >
-    开发日记
+    苹果
   </span>
 </span>
 
@@ -746,8 +746,15 @@
     class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#步骤">步骤</a></li>
-    <li><a href="#引用">引用</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#正文">正文</a>
+      <ul>
+        <li><a href="#1-苹果开发者后台配置">1. 苹果开发者后台配置</a></li>
+        <li><a href="#2-客户端配置">2. 客户端配置</a></li>
+        <li><a href="#3-xcode配置">3. XCode配置</a></li>
+        <li><a href="#4-服务端验证">4. 服务端验证</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -761,8 +768,15 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#步骤">步骤</a></li>
-    <li><a href="#引用">引用</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#正文">正文</a>
+      <ul>
+        <li><a href="#1-苹果开发者后台配置">1. 苹果开发者后台配置</a></li>
+        <li><a href="#2-客户端配置">2. 客户端配置</a></li>
+        <li><a href="#3-xcode配置">3. XCode配置</a></li>
+        <li><a href="#4-服务端验证">4. 服务端验证</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -819,305 +833,342 @@
 
 
         <div class="max-w-prose mb-20">
-          <p>
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/local_sync/sync.png"
-        alt=""
-      />
-      
-      
-    </figure>
-  
-
-<br>
-如果你是刚入门  <strong>独立开发</strong>  ，你可能有过这样的思考，我做的APP会不会有人用？  刚开始会不会有盈利？  有没有必要把数据保存在服务端？<br>
-<br>
-其实在一切条件都允许的情况，我认为一个应用必然  <strong>要有一个服务器</strong>的，有了服务器，用户的数据更安全不会因为更新卸载应用而导致数据丢失，同时也方便开发者通过观察用户数据去更新和迭代应用。也能更好的对应用进行控制，如权限，公告，内购的折扣等等。<br>
-<br></p>
-<p>当然，服务器也会带来很多<strong>额外的成本</strong>，比如运维，安全，服务器费用，接口开发等等。你需要考虑服务器的配置，一般双11各大云厂商都有2~5折优惠，但是<strong>续费</strong>时吓死人，同时你可能也要考虑避免服务器被攻击等问题。<br>
-<br></p>
-<p>以我个人为例，开发了10来个工具类的应用。有时候为了更好的增加用户粘性，也会增加像打卡签到，用户日常数据的记录。有趣的是，我的这些应用都没有接服务器，原因就像上面所说。刚开始我更希望的是，APP开发完成了，就<strong>不再需要额外的维护成本</strong>，除非我想加新的功能。这样我才有更多时间去专注下一个APP，  虽然干了9年后端，前期还是不想有额外的负担。<br>
-<br></p>
-<p>进入正题，如果你和我想法一样，那么单机版应用要如何做数据同步？答案是，做云同步或者说类似于用用户自己的网盘去同步。接下来说一下我的<br>
-<strong>Flutter方案</strong>。<br>
-<br></p>
-<p>目前我的APP都发布在  <strong>Google Play</strong>，所以这里也是举例海外的一套方案，你完全可以照葫芦画瓢开发一套适应国内的方案。不过我建议如果你想针对你的某个APP发力做精品还是接个服务器会比较好。<br>
-<br></p>
-<p><strong>Google  OAuth + Drive</strong>这是一套谷歌方案，你可能常常看到国外的APP上看到同步的功能，一般先登录谷歌账号，之后定期自动同步。虽然不清楚老外怎么实现的，用没用上服务器。但是我自己摸索的这套方案，也能做到同样的效果，也不需要维护服务器。<br>
-<br></p>
-<p>可能有人会有疑问，Drive只是一个网盘怎么备份应用的数据。其实方法也不难，一般工具类APP，即使记录了一年的用户数据，数据量也是非常小的。可以写一个工具类把数据转成json存储到文件里，再写个方法把json解析成数据对象回写到你的存储引擎。或者更省事，你可以使用<strong>sqlite</strong>，直接把整个sql文件给上传了。<br>
-<br></p>
-<div id="步骤" class="anchor"></div>
-<h2 class="relative group">步骤 
+          <blockquote>
+<p>最近在开发新项目时用到了 苹果登录、微信登录和订阅支付，由于是第一次对接以上内容，踩了不少坑，记录一下。</p>
+</blockquote>
+<blockquote>
+<p>本文主要介绍苹果登录，我也会在之后的文章中介绍微信登录和订阅支付。</p>
+</blockquote>
+<div id="前言" class="anchor"></div>
+<h2 class="relative group">前言 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e6%ad%a5%e9%aa%a4" aria-label="锚点">#</a></span>        
+            style="text-decoration-line: none !important;" href="#%e5%89%8d%e8%a8%80" aria-label="锚点">#</a></span>        
     
 </h2>
-<p>打开  <strong>Google Cloud Platform API manager</strong> [https://console.cloud.google.com/apis/dashboard]，点击启用API和服务</p>
-<p>
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/local_sync/8b1bddb0d675fed1c4277d608808b9ec.png"
-        alt=""
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>搜索drive关键期，选择Google Drive API添加</p>
-<p>
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/local_sync/ba056a9dfc6439867397fdfc7a23e271.png"
-        alt=""
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>添加API凭据，这里我是通过<br>
-<strong>Firebase</strong>自动生成。</p>
-<p>所以也可以去<br>
-<strong>Firebase</strong>中创建项目（之后我会写篇Firebase如何创建项目的文章）</p>
-<p>
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/local_sync/b76c4a5d42c4fec09eccea3204669e3b.png"
-        alt=""
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>创建完项目和应用后，需要在Authentication模块中加入登入验证方式。</p>
-<p>
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/local_sync/004d79734dda2917deeb4c846b7073dc.png"
-        alt=""
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>要求填入Oauth客户端ID</p>
-<p>
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/local_sync/29cbaafaffadc6a41ac6b06fba941d27.png"
-        alt=""
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>这是可以返回刚才Google Cloud Platform API manager [https://console.cloud.google.com/apis/dashboard]，已经自动创建的Oauth客户端信息复制ID和密钥。</p>
-<p>
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/local_sync/dc18d14a6e273b625d7d900bc931a1fd.png"
-        alt=""
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>到这，配置就差不多了，来看下主要代码</p>
-<p>在pubspec.yaml中添加依赖：</p>
-<pre tabindex="0"><code>  google_sign_in: ^6.1.4
-  googleapis: ^11.2.0
-</code></pre><p>创建用来登录的变量</p>
-<pre tabindex="0"><code>  import &#39;package:googleapis/drive/v3.dart&#39; as drive;
-  import &#39;package:google_sign_in/google_sign_in.dart&#39;;
-  
-  GoogleSignInAccount? account;
-  ...
-  // 调用此方法可以让APP出现登入弹窗
-  account = await GoogleSignIn.standard(scopes: [drive.DriveApi.driveScope])
-          .signIn();
-          
-  // 注销登入  
-  await GoogleSignIn.standard(scopes: [
-                                drive.DriveApi.driveScope
-                                    ]).signOut();      
-</code></pre><p>根据自己的业务逻辑使用登入登出功能。</p>
-<p>
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/local_sync/beb972b89ca12cc63a94404659035286.png"
-        alt=""
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>到这里我们拿到了用于调用drive接口所需的验签。</p>
-<p>再来看一下drive上传和下载的方法。</p>
-<pre tabindex="0"><code>import &#39;package:googleapis/drive/v3.dart&#39; as drive;
-
-
- // 获取driveApiClient
- final driveApi =
-          drive.DriveApi(GoogleAuthClient(await account!.authHeaders));
- 
- 
- // 上传db文件
- final dbMedia =
-    drive.Media(File(dbPath).openRead(), File(dbPath).lengthSync());
- final file = drive.File()
-   ..name = dbPath.split(&#39;/&#39;).last
-   ..parents = [parentFolderId]
-   ..description = dbVersion.toString(); 
- await driveApi.files.create(file, uploadMedia: dbMedia);
-
- // 下载本地更新
- final dbMedia = await driveApi.files.get(dbFileId,
-              downloadOptions: drive.DownloadOptions.fullMedia) as drive.Media;
-  List&lt;int&gt; contentBytes = [];
-  await dbMedia.stream.listen((bytes) {
-    contentBytes.addAll(bytes);
-  }).asFuture();
-  await File(dbPath).writeAsBytes(contentBytes, flush: true);
-  Logger().i(&#39;本地更新&#39;);
- 
- 
-          
- // 封装一个带验签的http client
- class GoogleAuthClient extends BaseClient {
-  final Map&lt;String, String&gt; headers;
-  final Client client = Client();
-
-  GoogleAuthClient(this.headers);
-
-  @override
-  Future&lt;StreamedResponse&gt; send(BaseRequest request) {
-    return client.send(request..headers.addAll(headers));
-  }
-}         
-</code></pre><p>这里只演示如何上传和下载，同步逻辑请根据自身需要来实现。</p>
-<p>如果你是<br>
-<strong>安卓开发</strong>，那么需要使用Android对应的SDK即可，配置应该都是一样的。</p>
-<p>强调一下，我在使用sqlite的时候，其实使用了<strong>多个db文件</strong>。原因是我不希望所有的数据都需要同步。例如下次我们开发了一个新的功能，在数据库中增加了新字段B来控制或记录这个功能。这是如果用全套db同步的方案，B字段会因为同步而消失从而导致问题。</p>
-<p>不是所有的数据都需要同步备份，精简出业务所需的用户功能数据来进行备份，这样才能减少问题。<strong>所以具体怎么同步根据不同的需求去设计。</strong></p>
-<div id="引用" class="anchor"></div>
-<h2 class="relative group">引用 
+<p>之前我的APP中大多数是买断式的，用户可以使用一些基本的功能，如果需要高级功能，则需要付费买断。</p>
+<p>这次介于新的项目的特点，我决定在买断的基础之外加上订阅支付，对我来说算是一种新的尝试吧。有了订阅同时也就意味着需要构建一个用户体系来管理订阅。</p>
+<p>对于订阅支付来说<strong>用户体系</strong>更符合逻辑。但在调研过程中也发现有些APP没有做登录(用户体系)也依然有订阅支付，其主要还是依靠大部分IAP组件提供的<strong>恢复购买</strong>功能+<strong>本地验证</strong>接口实现的。但是这里面还是有一些坑，在下文会介绍。</p>
+<hr>
+<div id="正文" class="anchor"></div>
+<h2 class="relative group">正文 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%bc%95%e7%94%a8" aria-label="锚点">#</a></span>        
+            style="text-decoration-line: none !important;" href="#%e6%ad%a3%e6%96%87" aria-label="锚点">#</a></span>        
     
 </h2>
-<pre tabindex="0"><code>https://pub.dev/packages/google_sign_in
-https://pub.dev/packages/googleapis
-https://cloud.google.com/docs/authentication?hl=zh_CN&amp;_ga=2.156109883.-1604196893.1667810752
-https://firebase.google.com/docs/flutter/setup?hl=zh-cn&amp;platform=android
-</code></pre><hr>
-<!-- <img src="../../../img/wc-search.png" alt="公众号" style="width:80%; display:block; margin:auto;"> -->
+<p>先看下完整的苹果登录流程：
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/blog/apple_login/image-3.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<hr>
+<div id="1-苹果开发者后台配置" class="anchor"></div>
+<h3 class="relative group">1. 苹果开发者后台配置 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#1-%e8%8b%b9%e6%9e%9c%e5%bc%80%e5%8f%91%e8%80%85%e5%90%8e%e5%8f%b0%e9%85%8d%e7%bd%ae" aria-label="锚点">#</a></span>        
+    
+</h3>
+<p>服务端需要的参数,可在苹果开发者后台设置。 设置App ID, 在 <strong>Capabilities</strong> 中设置 <strong>Sign In with Apple</strong>。</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/blog/apple_login/a1.png"
+        alt=""
+      />
+      
+      
+    </figure>
+  
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/blog/apple_login/a2.png"
+        alt=""
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>创建一个用来在服务端与Apple服务器交互的Key，并下载密钥文件。
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/blog/apple_login/a3.png"
+        alt=""
+      />
+      
+      
+    </figure>
+  
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/blog/apple_login/a4.png"
+        alt=""
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<hr>
+<div id="2-客户端配置" class="anchor"></div>
+<h3 class="relative group">2. 客户端配置 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#2-%e5%ae%a2%e6%88%b7%e7%ab%af%e9%85%8d%e7%bd%ae" aria-label="锚点">#</a></span>        
+    
+</h3>
+<p>选择主流的Apple登录插件<a href="https://pub.dev/packages/sign_in_with_apple"   target="_blank">
+    Sign_in_with_apple</a>。</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/blog/apple_login/image.png"
+        alt=""
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<pre tabindex="0"><code>dependencies:
+  flutter:
+    sdk: flutter
+  sign_in_with_apple: ^latest_version
+</code></pre><p>在登录按钮里调用方法：</p>
+<pre tabindex="0"><code>final credential = await SignInWithApple.getAppleIDCredential(
+                    scopes: [
+                      AppleIDAuthorizationScopes.email,
+                      AppleIDAuthorizationScopes.fullName,
+                    ],
+                  );
+</code></pre><p>返回结果credential的结构如下源码：</p>
+<pre tabindex="0"><code>/// Authorization details from a successful Sign in with Apple flow.
+///
+/// Most fields are optional in this class.
+///
+/// Especially [givenName], [familyName], and [email] member will only be provided on the first authorization between
+/// the app and Apple ID.
+///
+/// The [authorizationCode] member is always present and should be used to check the authorizations with Apple servers
+/// from your backend. Upon successful validation, you should create a session in your system for the current user,
+/// or consider her now logged in.
+@immutable
+class AuthorizationCredentialAppleID {
+  /// Creates an instance which contains the result of a successful Sign in with Apple flow.
+  const AuthorizationCredentialAppleID({
+    // 略...
+  });
+
+  // 略...
+
+  /// An identifier associated with the authenticated user.
+  ///
+  /// This will always be provided on iOS and macOS systems. On Android, however, this will not be present.
+  /// This will stay the same between sign ins, until the user deauthorizes your App.
+  final String? userIdentifier;
+ 
+  /// The verification code for the current authorization.
+  ///
+  /// This code should be used by your server component to validate the authorization with Apple within 5 minutes upon receiving it.
+  final String authorizationCode;
+
+  /// A JSON Web Token (JWT) that securely communicates information about the user to your app.
+  final String? identityToken;
+
+  // 略...
+}
+</code></pre><p>我们主要用到的是这样几个字段：</p>
+<ul>
+<li><code>userIdentifier</code>            —— 苹果用户的唯一标识</li>
+<li><code>identityToken</code>             —— jwt加密的idToken,可以在通过接口获取出上面的userIdentifier</li>
+<li><code>authorizationCode</code>         —— 配合secret，keyId，teamId，clientId可以获取到jwt加密的idToken</li>
+</ul>
+<p>PS: <strong>userIdentifier</strong> 是用户唯一标识, 如果没有服务端则可以通过 <strong>userIdentifier</strong> 直接使用但不推荐。正确安全的方式通过服务端获取，就可以用第二或第三个字段。
+服务端代码可参考这里：<a href="https://github.com/Timothylock/go-signin-with-apple/tree/master"   target="_blank">
+    go-signin-with-apple</a>。</p>
+<hr>
+<div id="3-xcode配置" class="anchor"></div>
+<h3 class="relative group">3. XCode配置 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#3-xcode%e9%85%8d%e7%bd%ae" aria-label="锚点">#</a></span>        
+    
+</h3>
+<p>打开ios目录，在Runner（文件浏览器侧栏）-&gt; Targets-&gt; Runner-&gt;Signing &amp; Capabilities设置 Apple Developer Portal 中创建的“Bundle Identifier”
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/blog/apple_login/image-1.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>确保应用具有“使用 Apple 登录”功能（Runner（文件浏览器侧边栏）-&gt; Targets-&gt; Runner-&gt; Signing &amp; Capabilities），否则使用 Apple 登录将失败且没有视觉指示（代码仍会收到异常） ）
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/blog/apple_login/image-2.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<hr>
+<div id="4-服务端验证" class="anchor"></div>
+<h3 class="relative group">4. 服务端验证 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#4-%e6%9c%8d%e5%8a%a1%e7%ab%af%e9%aa%8c%e8%af%81" aria-label="锚点">#</a></span>        
+    
+</h3>
+<p>通过 <strong>authorizationCode</strong> 获取 <strong>userIdentifier</strong></p>
+<pre tabindex="0"><code>import &#34;github.com/Timothylock/go-signin-with-apple/apple&#34;
+
+client := apple.New()
+
+vReq := apple.AppValidationTokenRequest{
+	ClientID:     clientID,
+	ClientSecret: secret,
+	Code:         &#34;authorizationCode&#34;, // 客户端获取的 authorizationCode
+}
+
+var resp apple.ValidationResponse
+
+// Do the verification
+client.VerifyAppToken(context.Background(), vReq, &amp;resp)
+
+unique, _ := apple.GetUniqueID(resp.IDToken)
+
+// Voila!
+fmt.Println(unique)
+</code></pre><p>通过 <strong>identityToken</strong> 获取 <strong>userIdentifier</strong></p>
+<pre tabindex="0"><code>unique, _ := apple.GetUniqueID(params.IDToken)
+
+claim, _ := apple.GetClaims(params.IDToken)
+</code></pre><p>解析后，<code>claim[&quot;sub&quot;]</code>是userIdentifier, <code>claim[aud]</code>是BundleID。</p>
+<p>最后，将userIdentifier和token保存到数据库中，以上是苹果登录的配置和流程。</p>
+<hr>
 <p>
 
 
@@ -1152,8 +1203,8 @@ https://firebase.google.com/docs/flutter/setup?hl=zh-cn&amp;platform=android
       </div>
      
      <script>
-        var oid = "views_blog\/local_sync\/index.md"
-        var oid_likes = "likes_blog\/local_sync\/index.md"
+        var oid = "views_blog\/apple_login\/index.md"
+        var oid_likes = "likes_blog\/apple_login\/index.md"
       </script>
       
       
@@ -1175,40 +1226,18 @@ https://firebase.google.com/docs/flutter/setup?hl=zh-cn&amp;platform=android
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/blog/self_media/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >聊聊我如何一个月把抖音小红书粉丝累积到3万的“反面教材”</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2023-11-27 15:22:12 &#43;0800 CST">2023-11-27</time>
-                  
-                </span>
-              </span>
-            </a>
-          
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/blog/gdpr_message/">
+            <a class="flex text-right group ml-3" href="/blog/ccopyright/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >出海日记——Admob完成这个操作否则明年可能没有广告收入</span
+                  >别再找代理，申请计算机软件著作登记(软著)了</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2023-11-15 16:22:12 &#43;0800 CST">2023-11-15</time>
+                    <time datetime="2024-01-02 15:38:15 &#43;0800 CST">2024-01-02</time>
                   
                 </span>
               </span>
@@ -1241,9 +1270,9 @@ https://firebase.google.com/docs/flutter/setup?hl=zh-cn&amp;platform=android
 <div id="cusdis_thread"
   data-host="https://cusdis.com"
   data-app-id="7f2c28c9-6150-4e27-9bfa-10ee0854ff2b"
-  data-page-id="c7c9a49a3b20b890a5e7449d447c4e3c"
-  data-page-url="/blog/local_sync/"
-  data-page-title="出海日记——单机版应用如何做数据同步"
+  data-page-id="084b0677794402e7d5cd74b39b9ea9a2"
+  data-page-url="/blog/apple_login/"
+  data-page-title="开发日记 —— 记录对接苹果登录的坑"
 ></div><script type='text/javascript'>
   (()=>{window.CUSDIS_LOCALE={powered_by:"\u8BC4\u8BBA\u7531 Cusdis \u63D0\u4F9B",post_comment:"\u53D1\u9001",loading:"\u52A0\u8F7D\u4E2D",email:"\u90AE\u7BB1\u5730\u5740 (\u53EF\u9009)",nickname:"\u6635\u79F0",reply_placeholder:"\u56DE\u590D\u5185\u5BB9\u2026",reply_btn:"\u56DE\u590D",sending:"\u53D1\u9001\u4E2D\u2026",mod_badge:"\u7BA1\u7406\u5458",content_is_required:"\u5185\u5BB9\u4E0D\u80FD\u4E3A\u7A7A",nickname_is_required:"\u6635\u79F0\u4E0D\u80FD\u4E3A\u7A7A",comment_has_been_sent:"\u8BC4\u8BBA\u5DF2\u53D1\u9001\uFF0C\u7BA1\u7406\u5458\u5BA1\u6838\u901A\u8FC7\u540E\u4F1A\u5C55\u793A"};})();
 
