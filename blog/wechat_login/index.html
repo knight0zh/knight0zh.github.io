@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>开发日记 —— 苹果支付指南 &middot; 超级浩码</title>
-  <meta name="title" content="开发日记 —— 苹果支付指南 &middot; 超级浩码" />
+  <title>开发日记 —— 记录对接苹果微信登录的坑 &middot; 超级浩码</title>
+  <meta name="title" content="开发日记 —— 记录对接苹果微信登录的坑 &middot; 超级浩码" />
   
-  <meta name="description" content="个人开发者的博客" />
-  <meta name="keywords" content="个人开发者, 苹果, flutter, 支付, " />
+  <meta name="description" content="记录对接微信登录的坑过程" />
+  <meta name="keywords" content="个人开发者, 苹果, flutter, " />
   
   
-  <link rel="canonical" href="https://vastzh.com/blog/apple_pay/" />
+  <link rel="canonical" href="https://vastzh.com/blog/wechat_login/" />
   
   
   
@@ -63,17 +63,17 @@
   
   
   
-  <meta property="og:title" content="开发日记 —— 苹果支付指南" />
-<meta property="og:description" content="上一篇文章分享了实践 Apple 登录的开发过程。 今天主要分享一下 Apple 支付的实践。" />
+  <meta property="og:title" content="开发日记 —— 记录对接苹果微信登录的坑" />
+<meta property="og:description" content="记录对接微信登录的坑过程" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://vastzh.com/blog/apple_pay/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2024-01-26T10:38:15+08:00" />
-<meta property="article:modified_time" content="2024-01-26T10:38:15+08:00" />
+<meta property="og:url" content="https://vastzh.com/blog/wechat_login/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-01-29T09:38:15+08:00" />
+<meta property="article:modified_time" content="2023-11-25T00:00:00+00:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="开发日记 —— 苹果支付指南"/>
-<meta name="twitter:description" content="上一篇文章分享了实践 Apple 登录的开发过程。 今天主要分享一下 Apple 支付的实践。"/>
+<meta name="twitter:title" content="开发日记 —— 记录对接苹果微信登录的坑"/>
+<meta name="twitter:description" content="记录对接微信登录的坑过程"/>
 
   
   <script type="application/ld+json">
@@ -81,26 +81,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blog",
-    "name": "开发日记 —— 苹果支付指南",
-    "headline": "开发日记 —— 苹果支付指南",
+    "name": "开发日记 —— 记录对接苹果微信登录的坑",
+    "headline": "开发日记 —— 记录对接苹果微信登录的坑",
     
-    "abstract": "上一篇文章分享了实践 Apple 登录的开发过程。 今天主要分享一下 Apple 支付的实践。",
+    "abstract": "记录对接微信登录的坑过程",
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/vastzh.com\/blog\/apple_pay\/",
+    "url" : "https:\/\/vastzh.com\/blog\/wechat_login\/",
     "author" : {
       "@type": "Person",
       "name": "超级浩码"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-01-26T10:38:15\u002b08:00",
-    "datePublished": "2024-01-26T10:38:15\u002b08:00",
+    "dateCreated": "2024-01-29T09:38:15\u002b08:00",
+    "datePublished": "2024-01-29T09:38:15\u002b08:00",
     
-    "dateModified": "2024-01-26T10:38:15\u002b08:00",
+    "dateModified": "2023-11-25T00:00:00\u002b00:00",
     
-    "keywords": ["个人开发者","苹果","flutter","支付"],
+    "keywords": ["个人开发者","苹果","flutter"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "265"
+    "wordCount": "126"
   }]
   </script>
 
@@ -455,7 +455,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      开发日记 —— 苹果支付指南
+      开发日记 —— 记录对接苹果微信登录的坑
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -497,12 +497,14 @@
 
 
 
+
+
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-01-26 10:38:15 &#43;0800 CST">2024-01-26</time><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2024-01-29 09:38:15 &#43;0800 CST">2024-01-29</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2023-11-25 00:00:00 &#43;0000 UTC">更新于 2023-11-25</time><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="views_blog/apple_pay/index.md" title="views">0</span> 
+    <span id="views_blog/wechat_login/index.md" title="views">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -514,7 +516,7 @@
 </span>
 </span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="likes_blog/apple_pay/index.md" title="likes">0</span> 
+    <span id="likes_blog/wechat_login/index.md" title="likes">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -612,17 +614,6 @@
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
   >
     flutter
-  </span>
-</span>
-
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%94%AF%E4%BB%98/&#34;,'_self');">
-    <span class="flex">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
-  >
-    支付
   </span>
 </span>
 
@@ -755,16 +746,9 @@
     class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#购买项配置">购买项配置</a></li>
-    <li><a href="#客户端">客户端</a>
-      <ul>
-        <li><a href="#获取交易信息">获取交易信息</a></li>
-        <li><a href="#获取历史交易信息">获取历史交易信息</a></li>
-      </ul>
-    </li>
-    <li><a href="#验签及api配置">验签及API配置</a></li>
-    <li><a href="#内购被拒">内购被拒</a></li>
+    <li><a href="#配置开放平台">配置开放平台</a></li>
+    <li><a href="#配置xcode">配置Xcode</a></li>
+    <li><a href="#客户端">客户端</a></li>
     <li><a href="#总结">总结</a></li>
   </ul>
 </nav>
@@ -779,16 +763,9 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#购买项配置">购买项配置</a></li>
-    <li><a href="#客户端">客户端</a>
-      <ul>
-        <li><a href="#获取交易信息">获取交易信息</a></li>
-        <li><a href="#获取历史交易信息">获取历史交易信息</a></li>
-      </ul>
-    </li>
-    <li><a href="#验签及api配置">验签及API配置</a></li>
-    <li><a href="#内购被拒">内购被拒</a></li>
+    <li><a href="#配置开放平台">配置开放平台</a></li>
+    <li><a href="#配置xcode">配置Xcode</a></li>
+    <li><a href="#客户端">客户端</a></li>
     <li><a href="#总结">总结</a></li>
   </ul>
 </nav>
@@ -847,17 +824,17 @@
 
         <div class="max-w-prose mb-20">
           <blockquote>
-<p>上一篇文章分享了实践 Apple 登录的开发过程。 今天主要分享一下 Apple 支付的实践。</p>
+<p>在对接iOS微信登录时，踩了不少坑，查了很多网上的资料但是对<strong>Universal Links</strong>和<strong>Associated Domains</strong>的配置都比较模糊，本文详细介绍怎么配置这些参数。</p>
 </blockquote>
-<div id="前言" class="anchor"></div>
-<h2 class="relative group">前言 
+<div id="配置开放平台" class="anchor"></div>
+<h2 class="relative group">配置开放平台 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%89%8d%e8%a8%80" aria-label="锚点">#</a></span>        
+            style="text-decoration-line: none !important;" href="#%e9%85%8d%e7%bd%ae%e5%bc%80%e6%94%be%e5%b9%b3%e5%8f%b0" aria-label="锚点">#</a></span>        
     
 </h2>
-<p>本次实践中，笔者采用了 <strong>订阅 + 一次性付费</strong> 的模式。用户可根据自己的需求，选择会员订阅周期。从大部分开发者角度来说，订阅模式是比较常见的，因为订阅更有力于APP的长期发展。</p>
+<p>如果你的应用需要使接入微信生态相关功能，如<strong>微信登录、微信支付、微信分享</strong>等，那就需要先在微信开放平台注册账号。</p>
 <p>
 
 
@@ -872,7 +849,7 @@
       
       <img
         class="my-0 rounded-md"
-        src="/blog/apple_pay/p1.png"
+        src="/blog/wechat_login/image.png"
         alt="Alt text"
       />
       
@@ -881,25 +858,9 @@
   
 
 </p>
-<hr>
-<div id="购买项配置" class="anchor"></div>
-<h2 class="relative group">购买项配置 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e8%b4%ad%e4%b9%b0%e9%a1%b9%e9%85%8d%e7%bd%ae" aria-label="锚点">#</a></span>        
-    
-</h2>
-<p>进入 开发者后台配置</p>
-<ol>
-<li>
-<p>在 <strong>App 内购买项目</strong> 中创建 <strong>永久会员</strong></p>
-</li>
-<li>
-<p>在 <strong>订阅</strong> 创建订阅组，后分别 <strong>月度会员</strong> <strong>年度会员</strong></p>
-</li>
-</ol>
-<p>
+<p>完成做<strong>开发者资质认证</strong>，认证通过后，就可以进行<strong>应用接入</strong>。需要注意认证的费用为300元，提交后会有微信交托的三方认证公司给你来电确认信息，所以看到陌生电话不要直接拒接。</p>
+<p>完成上述认证后进入正题开始接入<strong>微信登录</strong>。在开放平台管理中心<code>创建移动应用</code>(开发者资质可以创建50个)，填写应用名称、包名等基本信息。点击<code>下一步</code>
+
 
 
 
@@ -913,7 +874,7 @@
       
       <img
         class="my-0 rounded-md"
-        src="/blog/apple_pay/p2.png"
+        src="/blog/wechat_login/image-1.png"
         alt="Alt text"
       />
       
@@ -922,12 +883,96 @@
   
 
 </p>
-<p>需要注意两点：</p>
-<ul>
-<li>创建的购买项需要设置多语言，否则会出现报错 <strong>缺少元数据</strong>。</li>
-<li>审核信息的截图有设备<strong>尺寸限制</strong>，可参考官方文档：<code>https://developer.apple.com/help/app-store-connect/reference/screenshot-specifications</code></li>
-</ul>
+<p>这里需要注意<strong>Universal Links</strong>的填写。</p>
+<blockquote>
+<p><strong>Universal Links</strong> 是苹果在 WWDC 上提出的 iOS9 的新特性之一。此特性类似于深层链接，并能够方便地通过打开一个 Https 链接来直接启动您的客户端应用(手机有安装 App)。对比起以往所使用的 URL Scheme,这种新特性在实现 web-app 的无缝链接时能够提供极佳的用户体验。</p>
+</blockquote>
+<p>简单说这个链接就是用来打开你应用的入口，在微信中点击这个链接，就会直接跳转到你的应用。</p>
+<p>配置成功后可以尝试在手机Safari浏览器直接访问该地址会显示<strong>打开</strong>按钮。
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/blog/wechat_login/image-2.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+</p>
 <hr>
+<div id="配置xcode" class="anchor"></div>
+<h2 class="relative group">配置Xcode 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e9%85%8d%e7%bd%aexcode" aria-label="锚点">#</a></span>        
+    
+</h2>
+<p>此外我们还需要在Xcode中配置<strong>Associated Domains</strong>。</p>
+<p>点击<code>Sigining &amp; Capabilities</code> -&gt; <code>Associated Domains</code> -&gt; <code>+</code></p>
+<p>接着在下方<strong>Domais</strong>中填写<code>applinks:xxx.com</code>，其中xxx.com是你的域名。
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/blog/wechat_login/image-4.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+
+这里的域名需要和Universal Links中的域名一致，例如：</p>
+<p>开放平台设置</p>
+<p><strong>Universal Links</strong>: <code>https://xxx.com/st/universal_link/wechat/</code></p>
+<p>Xcode</p>
+<p><strong>Domais</strong>: <code>applinks:xxx.com</code></p>
+<p>配置文件下载地址
+<code>https://xxx.com/.well-known/apple-app-site-association</code></p>
+<blockquote>
+<p>.well-known 目录是一个由互联网工程任务组（IETF）在RFC 5785中定义的特殊目录，用于存放网站的一些特定的元数据或者配置文件。这个目录通常放在网站的根目录下，使得这些配置文件可以通过一个标准和一致的方式被访问。</p>
+</blockquote>
+<p>APP会在第一次启动的时候通过填写的域名来下载apple-app-site-association文件。
+所以我们还需要在服务器对应地址下放一个apple-app-site-association的json文件，内容如下：</p>
+<pre tabindex="0"><code>{
+  &#34;applinks&#34;: {
+    &#34;apps&#34;: [],
+    &#34;details&#34;: [
+      {
+        &#34;appID&#34;: &#34;${your team id}.${your app bundle id}&#34;,
+        &#34;paths&#34;: [
+          &#34;/universal_link/wechat/*&#34;   //开放平台中的Universal Links Uri对应
+        ]
+      }
+    ]
+  }
+}
+</code></pre><hr>
 <div id="客户端" class="anchor"></div>
 <h2 class="relative group">客户端 
     <span
@@ -936,227 +981,29 @@
             style="text-decoration-line: none !important;" href="#%e5%ae%a2%e6%88%b7%e7%ab%af" aria-label="锚点">#</a></span>        
     
 </h2>
-<p>我使用 <strong>in_app_purchase</strong> 插件，在客户端进行支付。可以运行插件的example进行测试。成功运行效果如下：
+<p>这里只简单介绍下客户端集成不是本文重点。插件可以使用fluwx 或 wechat_kit。以fluwx为例：</p>
+<pre tabindex="0"><code>    await fluwx
+        .authBy(
+            which: NormalAuth(
+          scope: &#39;snsapi_userinfo&#39;,
+          state: &#39;wechat_sdk_demo_test&#39;,
+        ))
+        .then((value) async {});
 
 
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/apple_pay/p3.gif"
-        alt="Alt text"
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>具体细节可以参考插件文档，需要注意的是，我们需要如何进行iOS订单的验证。
-通过插件的demo我们看到默认返回true，所以这部分逻辑需要开发者自己实现。</p>
-<pre tabindex="0"><code>  Future&lt;bool&gt; _verifyPurchase(PurchaseDetails purchaseDetails) async {
-    // IMPORTANT!! Always verify a purchase before delivering the product.
-    // For the purpose of an example, we directly return true.
-    
-    return Future&lt;bool&gt;.value(true);
-  }
-</code></pre><p>通过方法返回的类型可以得到：</p>
-<pre tabindex="0"><code>class PurchaseVerificationData {
-  /// ...
-
-  /// The data used for local verification.
-  ///
-  /// The data is formatted according to the specifications of the respective
-  /// store. You can use the [source] field to determine the store from which
-  /// the data originated and proces the data accordingly.
-  final String localVerificationData;
-
-  /// The data used for server verification.
-  final String serverVerificationData;
-}
-</code></pre><p>我们看到 <strong>localVerificationData</strong> 用于本地验证，<strong>serverVerificationData</strong> 用于服务器验证。</p>
-<pre tabindex="0"><code>
-    final verificationData =
-        purchaseDetails.verificationData.serverVerificationData;
-
-    final Dio dio = Dio();
-    dio.options.headers[&#39;Accept&#39;] = &#39;application/json&#39;;
-    dio.options.headers[&#39;Content-Type&#39;] = &#39;application/json&#39;;
-    var response = await dio.post(&#39;https://buy.itunes.apple.com/verifyReceipt&#39;,
-        data: {
-          &#39;password&#39;: password,
-          &#39;receipt-data&#39;: verificationData
-        });
-    var _response = json.decode(response.toString());
-    if (_response[&#34;status&#34;] == 21007) {
-      var response = await dio
-          .post(&#39;https://sandbox.itunes.apple.com/verifyReceipt&#39;, data: {
-        &#39;password&#39;: password,
-        &#39;receipt-data&#39;: verificationData
-      });
-    }
-    if (_response[&#34;status&#34;] == 0) {
-      return Future&lt;bool&gt;.value(true);
-    } else {
-      return Future&lt;bool&gt;.value(false);
-    }
-</code></pre><p><strong>以前苹果提供了一个验证接口，可以跳过服务端进行验证，可惜在去年5月份被标记 <code>Deprecated(已弃用)</code>，虽然目前看来还是可以使用，但是保不齐哪天就被苹果给删掉了。</strong>
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/apple_pay/p4.png"
-        alt="Alt text"
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>通过文档我们得知：</p>
-<blockquote>
-<p>该接口已弃用。要验证服务器上的收据，请按照在服务器上的设备上验证收据中的步骤操作。要在不使用收据的情况下验证服务器上的应用内购买，请调用App Store Server API为您的客户获取 Apple 签名的交易和订阅信息，或验证您的应用获取的签名数据。您还可以从App Store Server Notifications V2端点获取相同的签名交易和订阅信息 。</p>
-</blockquote>
-<p>所以需要改用 <strong>App Store Server API</strong> 进行验证。</p>
-<div id="获取交易信息" class="anchor"></div>
-<h3 class="relative group">获取交易信息 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e8%8e%b7%e5%8f%96%e4%ba%a4%e6%98%93%e4%bf%a1%e6%81%af" aria-label="锚点">#</a></span>        
-    
-</h3>
-<p><code>https://developer.apple.com/documentation/appstoreserverapi/get_transaction_info</code>
-根据文档的描述，我们得知此接口我们可以获取 <strong>包含签名的单个交易信息的结果</strong>。</p>
-<p>接着，通过苹果开发后台进行配置下载 <strong>私钥匙文件 + KeyID + BundleID + Issuer</strong> 进行验签比对订单号等数据判断交易是否成功。</p>
-<div id="获取历史交易信息" class="anchor"></div>
-<h3 class="relative group">获取历史交易信息 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e8%8e%b7%e5%8f%96%e5%8e%86%e5%8f%b2%e4%ba%a4%e6%98%93%e4%bf%a1%e6%81%af" aria-label="锚点">#</a></span>        
-    
-</h3>
-<p><code>https://developer.apple.com/documentation/appstoreserverapi/get_transaction_history</code>
-根据此接口我们可以获取<strong>包含签名的多个交易信息的结果</strong>，同样验签后获取详细数据。</p>
-<p>我们可以通过此接口进行订阅到期续费情况等数据进行判断。</p>
-<hr>
-<div id="验签及api配置" class="anchor"></div>
-<h2 class="relative group">验签及API配置 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e9%aa%8c%e7%ad%be%e5%8f%8aapi%e9%85%8d%e7%bd%ae" aria-label="锚点">#</a></span>        
-    
-</h2>
-<p>在此页面我们可以获取验签需要的数据 <strong>私钥匙文件、 KeyID + BundleID + Issuer</strong>
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/apple_pay/p5.png"
-        alt="Alt text"
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>创建沙盒账号后可进行购买订阅的测试，不会收取费用。
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/apple_pay/p6.png"
-        alt="Alt text"
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<hr>
-<div id="内购被拒" class="anchor"></div>
-<h2 class="relative group">内购被拒 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%86%85%e8%b4%ad%e8%a2%ab%e6%8b%92" aria-label="锚点">#</a></span>        
-    
-</h2>
-<p>另外，在完成所有工作发布可能会被拒，因为我之前没有订阅经验，所以遇到了一些问题。
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        src="/blog/apple_pay/p7.png"
-        alt="Alt text"
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>如果做了订阅我建议你完成以下步骤，如果这些步骤都做到了，那么大概率是不会被拒的。</p>
-<ol>
-<li>在付费页面提供隐私政策及使用条款的入口。</li>
-<li>在使用条款中明确说明和介绍你的订阅服务，包含的服务内容、订阅周期、退订、取消订阅等信息。</li>
-<li>在APP详情页中，提供订阅服务的详细说明。</li>
-<li>提供恢复购买的功能。</li>
-</ol>
-<p>如果还是不知道如何做，可以参考一些其他的APP，一般在他们的App详情页和使用条款中都有订阅相关的说明。</p>
+    fluwx.addSubscriber((response) async {
+      if (response is WeChatAuthResponse) {
+        await getWeChatAccessToken(response.code);
+        await getUserData();
+        Get.back();
+      }
+    });    
+</code></pre><p>插件主要是完成<strong>APP-&gt;微信-&gt;APP</strong>的跳转工作，通过回调拿到code。但不是最终我们需要的openid。接着再通过接口获取openid和access_token。
+详细可参考文档：
+<code>https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html</code></p>
+<p>access_token：通过code换取access_token和openid
+userinfo：获取微信用户基本信息</p>
+<p>这里需要注意，如果你在开放平台配置的<strong>Universal Links</strong>的不能返回200。或者<strong>Univeral Links</strong>的域名和<strong>apple-app-site-association</strong>文件中的域名不一致，都可能导致无法跳转。我们需要让APP重新下载配置文件，可以尝试删除APP并重启手机。</p>
 <hr>
 <div id="总结" class="anchor"></div>
 <h2 class="relative group">总结 
@@ -1166,10 +1013,7 @@
             style="text-decoration-line: none !important;" href="#%e6%80%bb%e7%bb%93" aria-label="锚点">#</a></span>        
     
 </h2>
-<p>理论上来说，<strong>获取交易信息</strong> <strong>获取历史交易信息</strong> 这两个接口的数据都可以放在客户端本地调用，只是验证这一步放在服务端去做比较符合逻辑。</p>
-<p>无论是全部交易接口在服务端还是验签在服务端，都可能被<strong>劫持</strong>，即在返回客户端前，对数据进行加工处理，比如修改交易状态来欺瞒客户端。</p>
-<p>所以，最好是对接口数据进行加密。我采用对请求参数返回结构进行 <strong>AES</strong> 加密，及时数据被劫持也无法进行修改。</p>
-<p>如果没有服务端，极端的方式是把验签放在客户端进行能跑通，因安全性问题不推荐这么做。</p>
+<p>总的来说，对接微信登录并不复杂，主要麻烦在于开放平台的资质认证和应用认证都分别需要审核时间。另外网上有关<strong>Univeral Links</strong>的配置资料不少，但都不详细，导致笔记最后还是一步步踩坑才调通。</p>
 <hr>
 <p>
 
@@ -1205,8 +1049,8 @@
       </div>
      
      <script>
-        var oid = "views_blog\/apple_pay\/index.md"
-        var oid_likes = "likes_blog\/apple_pay\/index.md"
+        var oid = "views_blog\/wechat_login\/index.md"
+        var oid_likes = "likes_blog\/wechat_login\/index.md"
       </script>
       
       
@@ -1228,40 +1072,18 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/blog/wechat_login/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >开发日记 —— 记录对接苹果微信登录的坑</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2024-01-29 09:38:15 &#43;0800 CST">2024-01-29</time>
-                  
-                </span>
-              </span>
-            </a>
-          
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/blog/apple_login/">
+            <a class="flex text-right group ml-3" href="/blog/apple_pay/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >开发日记 —— 记录对接苹果登录的坑</span
+                  >开发日记 —— 苹果支付指南</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-01-25 15:38:15 &#43;0800 CST">2024-01-25</time>
+                    <time datetime="2024-01-26 10:38:15 &#43;0800 CST">2024-01-26</time>
                   
                 </span>
               </span>
@@ -1294,9 +1116,9 @@
 <div id="cusdis_thread"
   data-host="https://cusdis.com"
   data-app-id="7f2c28c9-6150-4e27-9bfa-10ee0854ff2b"
-  data-page-id="067a335ecbc1425277895448ea27a88f"
-  data-page-url="/blog/apple_pay/"
-  data-page-title="开发日记 —— 苹果支付指南"
+  data-page-id="54b212f780b15c5f16ce3a4fc9869ecc"
+  data-page-url="/blog/wechat_login/"
+  data-page-title="开发日记 —— 记录对接苹果微信登录的坑"
 ></div><script type='text/javascript'>
   (()=>{window.CUSDIS_LOCALE={powered_by:"\u8BC4\u8BBA\u7531 Cusdis \u63D0\u4F9B",post_comment:"\u53D1\u9001",loading:"\u52A0\u8F7D\u4E2D",email:"\u90AE\u7BB1\u5730\u5740 (\u53EF\u9009)",nickname:"\u6635\u79F0",reply_placeholder:"\u56DE\u590D\u5185\u5BB9\u2026",reply_btn:"\u56DE\u590D",sending:"\u53D1\u9001\u4E2D\u2026",mod_badge:"\u7BA1\u7406\u5458",content_is_required:"\u5185\u5BB9\u4E0D\u80FD\u4E3A\u7A7A",nickname_is_required:"\u6635\u79F0\u4E0D\u80FD\u4E3A\u7A7A",comment_has_been_sent:"\u8BC4\u8BBA\u5DF2\u53D1\u9001\uFF0C\u7BA1\u7406\u5458\u5BA1\u6838\u901A\u8FC7\u540E\u4F1A\u5C55\u793A"};})();
 

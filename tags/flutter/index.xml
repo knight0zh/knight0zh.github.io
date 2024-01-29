@@ -7,7 +7,232 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 超级浩码</copyright>
-    <lastBuildDate>Fri, 26 Jan 2024 10:38:15 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Jan 2024 09:38:15 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开发日记 —— 记录对接苹果微信登录的坑</title>
+      <link>https://vastzh.com/blog/wechat_login/</link>
+      <pubDate>Mon, 29 Jan 2024 09:38:15 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/wechat_login/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;在对接iOS微信登录时，踩了不少坑，查了很多网上的资料但是对&lt;strong&gt;Universal Links&lt;/strong&gt;和&lt;strong&gt;Associated Domains&lt;/strong&gt;的配置都比较模糊，本文详细介绍怎么配置这些参数。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div id=&#34;配置开放平台&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;配置开放平台 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e9%85%8d%e7%bd%ae%e5%bc%80%e6%94%be%e5%b9%b3%e5%8f%b0&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;如果你的应用需要使接入微信生态相关功能，如&lt;strong&gt;微信登录、微信支付、微信分享&lt;/strong&gt;等，那就需要先在微信开放平台注册账号。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/wechat_login/image.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;完成做&lt;strong&gt;开发者资质认证&lt;/strong&gt;，认证通过后，就可以进行&lt;strong&gt;应用接入&lt;/strong&gt;。需要注意认证的费用为300元，提交后会有微信交托的三方认证公司给你来电确认信息，所以看到陌生电话不要直接拒接。&lt;/p&gt;
+&lt;p&gt;完成上述认证后进入正题开始接入&lt;strong&gt;微信登录&lt;/strong&gt;。在开放平台管理中心&lt;code&gt;创建移动应用&lt;/code&gt;(开发者资质可以创建50个)，填写应用名称、包名等基本信息。点击&lt;code&gt;下一步&lt;/code&gt;
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/wechat_login/image-1.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;这里需要注意&lt;strong&gt;Universal Links&lt;/strong&gt;的填写。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Universal Links&lt;/strong&gt; 是苹果在 WWDC 上提出的 iOS9 的新特性之一。此特性类似于深层链接，并能够方便地通过打开一个 Https 链接来直接启动您的客户端应用(手机有安装 App)。对比起以往所使用的 URL Scheme,这种新特性在实现 web-app 的无缝链接时能够提供极佳的用户体验。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简单说这个链接就是用来打开你应用的入口，在微信中点击这个链接，就会直接跳转到你的应用。&lt;/p&gt;
+&lt;p&gt;配置成功后可以尝试在手机Safari浏览器直接访问该地址会显示&lt;strong&gt;打开&lt;/strong&gt;按钮。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/wechat_login/image-2.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;配置xcode&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;配置Xcode 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e9%85%8d%e7%bd%aexcode&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;此外我们还需要在Xcode中配置&lt;strong&gt;Associated Domains&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;点击&lt;code&gt;Sigining &amp;amp; Capabilities&lt;/code&gt; -&amp;gt; &lt;code&gt;Associated Domains&lt;/code&gt; -&amp;gt; &lt;code&gt;+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;接着在下方&lt;strong&gt;Domais&lt;/strong&gt;中填写&lt;code&gt;applinks:xxx.com&lt;/code&gt;，其中xxx.com是你的域名。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/wechat_login/image-4.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+
+这里的域名需要和Universal Links中的域名一致，例如：&lt;/p&gt;
+&lt;p&gt;开放平台设置&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Universal Links&lt;/strong&gt;: &lt;code&gt;https://xxx.com/st/universal_link/wechat/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Xcode&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Domais&lt;/strong&gt;: &lt;code&gt;applinks:xxx.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;配置文件下载地址
+&lt;code&gt;https://xxx.com/.well-known/apple-app-site-association&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;.well-known 目录是一个由互联网工程任务组（IETF）在RFC 5785中定义的特殊目录，用于存放网站的一些特定的元数据或者配置文件。这个目录通常放在网站的根目录下，使得这些配置文件可以通过一个标准和一致的方式被访问。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;APP会在第一次启动的时候通过填写的域名来下载apple-app-site-association文件。
+所以我们还需要在服务器对应地址下放一个apple-app-site-association的json文件，内容如下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;applinks&amp;#34;: {
+    &amp;#34;apps&amp;#34;: [],
+    &amp;#34;details&amp;#34;: [
+      {
+        &amp;#34;appID&amp;#34;: &amp;#34;${your team id}.${your app bundle id}&amp;#34;,
+        &amp;#34;paths&amp;#34;: [
+          &amp;#34;/universal_link/wechat/*&amp;#34;   //开放平台中的Universal Links Uri对应
+        ]
+      }
+    ]
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;div id=&#34;客户端&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;客户端 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%ae%a2%e6%88%b7%e7%ab%af&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;这里只简单介绍下客户端集成不是本文重点。插件可以使用fluwx 或 wechat_kit。以fluwx为例：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    await fluwx
+        .authBy(
+            which: NormalAuth(
+          scope: &amp;#39;snsapi_userinfo&amp;#39;,
+          state: &amp;#39;wechat_sdk_demo_test&amp;#39;,
+        ))
+        .then((value) async {});
+
+
+    fluwx.addSubscriber((response) async {
+      if (response is WeChatAuthResponse) {
+        await getWeChatAccessToken(response.code);
+        await getUserData();
+        Get.back();
+      }
+    });    
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;插件主要是完成&lt;strong&gt;APP-&amp;gt;微信-&amp;gt;APP&lt;/strong&gt;的跳转工作，通过回调拿到code。但不是最终我们需要的openid。接着再通过接口获取openid和access_token。
+详细可参考文档：
+&lt;code&gt;https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;access_token：通过code换取access_token和openid
+userinfo：获取微信用户基本信息&lt;/p&gt;
+&lt;p&gt;这里需要注意，如果你在开放平台配置的&lt;strong&gt;Universal Links&lt;/strong&gt;的不能返回200。或者&lt;strong&gt;Univeral Links&lt;/strong&gt;的域名和&lt;strong&gt;apple-app-site-association&lt;/strong&gt;文件中的域名不一致，都可能导致无法跳转。我们需要让APP重新下载配置文件，可以尝试删除APP并重启手机。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;总结 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;总的来说，对接微信登录并不复杂，主要麻烦在于开放平台的资质认证和应用认证都分别需要审核时间。另外网上有关&lt;strong&gt;Univeral Links&lt;/strong&gt;的配置资料不少，但都不详细，导致笔记最后还是一步步踩坑才调通。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
     <item>
       <title>开发日记 —— 苹果支付指南</title>
       <link>https://vastzh.com/blog/apple_pay/</link>

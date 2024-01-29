@@ -15,6 +15,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://vastzh.com/blog/wechat_login/</loc>
+    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://vastzh.com/blog/apple_pay/</loc>
     <lastmod>2024-01-26T10:38:15+08:00</lastmod>
     <changefreq>daily</changefreq>
