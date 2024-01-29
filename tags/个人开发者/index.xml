@@ -192,8 +192,10 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;插件主要是完成&lt;strong&gt;APP-&amp;gt;微信-&amp;gt;APP&lt;/strong&gt;的跳转工作，通过回调拿到code。但不是最终我们需要的openid。接着再通过接口获取openid和access_token。
 详细可参考文档：
 &lt;code&gt;https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;access_token：通过code换取access_token和openid
-userinfo：获取微信用户基本信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;access_token：通过code换取access_token和openid&lt;/li&gt;
+&lt;li&gt;userinfo：获取微信用户基本信息&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;这里需要注意，如果你在开放平台配置的&lt;strong&gt;Universal Links&lt;/strong&gt;的不能返回200。或者&lt;strong&gt;Univeral Links&lt;/strong&gt;的域名和&lt;strong&gt;apple-app-site-association&lt;/strong&gt;文件中的域名不一致，都可能导致无法跳转。我们需要让APP重新下载配置文件，可以尝试删除APP并重启手机。&lt;/p&gt;
 &lt;hr&gt;
 &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
