@@ -7,7 +7,136 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 超级浩码</copyright>
-    <lastBuildDate>Fri, 26 Jan 2024 10:38:15 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/%E6%94%AF%E4%BB%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Jan 2024 09:38:15 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/%E6%94%AF%E4%BB%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开发日记 —— 快速对接微信支付</title>
+      <link>https://vastzh.com/blog/wechat_pay/</link>
+      <pubDate>Mon, 29 Jan 2024 09:38:15 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/wechat_pay/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;最近准备开拓国内的安卓市场，由于安卓厂商不同于苹果，每个厂商都有自己的一套钱包体系同时也为被广大用户所熟知，所以对接微信支付就成为了最通用的选择。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对接微信支付的条件比较苛刻，其中最大的坎是需要企业资质，包括现在很多广告商也是。&lt;/p&gt;
+&lt;p&gt;我见过有些开发者由于没有企业资质，使用支付宝或微信转账。在客户端做一个兑换码的窗口。用户转账后会获得兑换码，使用兑换码在APP中兑换商品。虽然体验不好但确实也解决了这个问题。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;说下具体需要的条件。进入&lt;strong&gt;微信开放平台&lt;/strong&gt;（https://open.weixin.qq.com/），在账号中心填写企业相关信息并进行认证。另外还需要开通 &lt;strong&gt;微信开发者资质&lt;/strong&gt; 认证，这两个认证都需要时间进行审核，建议提前完成。&lt;/p&gt;
+&lt;p&gt;之后我们在管理中心创建一个与你的APP对应的移动应用，这里需要填写应用的官网地址，如果没有开发APP官网的需要开发一个，&lt;strong&gt;Docusaurus&lt;/strong&gt; 是不错的选择。完成创建后同样需要等待审核。&lt;/p&gt;
+&lt;p&gt;接下来在移动应用的能力专区中开启微信支付，需要注册一个微信支付的商户号通用需要审核时间，对接微信支付的代码会用到此商户号。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/wechat_pay/image.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;完成上述的准备工作后就可以开始对接微信支付了，先看下微信支付的流程图及接口文档：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;微信支付APP接入官方文档&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pay.weixin.qq.com/static/applyment_guide/applyment_detail_app.shtml&#34;   target=&#34;_blank&#34;&gt;
+    https://pay.weixin.qq.com/static/applyment_guide/applyment_detail_app.shtml&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pay.weixin.qq.com/wiki/doc/apiv3/open/pay/chapter2_5_0.shtml&#34;   target=&#34;_blank&#34;&gt;
+    https://pay.weixin.qq.com/wiki/doc/apiv3/open/pay/chapter2_5_0.shtml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里关键是设置&lt;strong&gt;APIv3密钥&lt;/strong&gt;及&lt;strong&gt;申请API证书&lt;/strong&gt;，有了这些资源就可以进行对接了，我使用的是&lt;strong&gt;Flutter&lt;/strong&gt;，所以这里只介绍Flutter的对接方式。&lt;/p&gt;
+&lt;p&gt;我在客户端使用 &lt;strong&gt;fluwx&lt;/strong&gt; 插件，使用此插件可以非常方便的接入微信支付。
+服务端我是用golang写的 &lt;strong&gt;go-pay&lt;/strong&gt; 库。&lt;/p&gt;
+&lt;p&gt;地址如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/OpenFlutter/fluwx&#34;   target=&#34;_blank&#34;&gt;
+    https://github.com/OpenFlutter/fluwx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/go-pay&#34;   target=&#34;_blank&#34;&gt;
+    https://github.com/go-pay&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其实流程比较简单，但是这两个库的文档没有进行描述，可能因为微信支付是挺常规的功能吧。但是对于新手来说，还是需要花点时间。
+流程可以参考下图：
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/wechat_pay/image-3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;简单说，就是先通过服务端进行预下单 通过 你的商户配置 以及 &lt;strong&gt;go-pay&lt;/strong&gt; 按照加密规则 生成一些参数返回客户端，然后客户端使用这些参数 调用 &lt;strong&gt;fluwx&lt;/strong&gt; 的方法，可以让APP跳转到微信支付页进行付款。&lt;/p&gt;
+&lt;p&gt;之后通过服务端的支付通知接口回调，进行订单支付验证。最后客户端付款成功后，通过接口向服务端获取商品数据。&lt;/p&gt;
+&lt;p&gt;APP下单API:
+&lt;a href=&#34;https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_2_1.shtml&#34;   target=&#34;_blank&#34;&gt;
+    https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_2_1.shtml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;支付通知API:
+&lt;a href=&#34;https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_2_5.shtml&#34;   target=&#34;_blank&#34;&gt;
+    https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_2_5.shtml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;微信付款和支付接口调用是异步的，所以我们需要做到接口加密，否则受到中间人攻击劫持就损害利益了。&lt;/strong&gt;
+我采用对请求参数返回结果进行 AES 加密，这样数据即使被劫持也无法进行修改。&lt;/p&gt;
+&lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;总结 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;本文主要讨论了微信支付的整体流程，有些细节并没有进行描述。比如：下单的时需要传用户标识商品标识，周期性商品如何校验等等。这些同样也比较重要，需要开发者根据具体情况进行开发与配置。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
     <item>
       <title>开发日记 —— 苹果支付指南</title>
       <link>https://vastzh.com/blog/apple_pay/</link>

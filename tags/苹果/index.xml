@@ -78,8 +78,8 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Universal Links&lt;/strong&gt; 是苹果在 WWDC 上提出的 iOS9 的新特性之一。此特性类似于深层链接，并能够方便地通过打开一个 Https 链接来直接启动您的客户端应用(手机有安装 App)。对比起以往所使用的 URL Scheme,这种新特性在实现 web-app 的无缝链接时能够提供极佳的用户体验。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;简单说这个链接就是用来打开你应用的入口，在微信中点击这个链接，就会直接跳转到你的应用。&lt;/p&gt;
-&lt;p&gt;配置成功后可以尝试在手机Safari浏览器直接访问该地址会显示&lt;strong&gt;打开&lt;/strong&gt;按钮。
+&lt;p&gt;简单说这个链接就是用来打开你应用的入口，在微信中点击这个链接，就会直接跳转到你的应用。
+配置成功后可以尝试在手机Safari浏览器直接访问该地址会显示&lt;strong&gt;打开&lt;/strong&gt;按钮。
 
 
 
