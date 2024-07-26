@@ -7,7 +7,118 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 超级浩码</copyright>
-    <lastBuildDate>Mon, 29 Jan 2024 09:38:15 +0800</lastBuildDate><atom:link href="https://vastzh.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Jul 2024 14:38:15 +0800</lastBuildDate><atom:link href="https://vastzh.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记一次App上架遇到的坑</title>
+      <link>https://vastzh.com/blog/appprivacy/</link>
+      <pubDate>Fri, 26 Jul 2024 14:38:15 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/appprivacy/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;好久没有更新了，实在太忙了，最近在准备新APP的上架，不想刻意的找素材写。花了一周多的时间才终于把国内的几大平台都上架了。为什么花这么久呢？因为在APP上架时，一直被拒，一直被拒，一直悲剧&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;这是在国内上架的第三款APP，之前的两个产品相对来说上架比较顺利。遇到问题相对比较少，无非是业务上的小BUG，隐私合规，权限用途说明等问题相信不少人也遇到过。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;这次上架遇到的问题就比较离奇了，在荣耀和OPPO上还是比较顺利的。我觉得审核就应该这么爽快，绝对不是平台审核太松导致的。而对于华为，小米，vivo等平台，审核非常不顺利。
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;审核通常分为两部分机审和人工审。机审主要是一些隐私合规方面的审核，如：权限的使用，在隐私政策里是否都体现到了，获取所有收集的个人信息，设备信息，SDK调用是否合规的问题。
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;而人工审就更全面一些，会涉及权限的使用与隐私合规性，功能的可用性，属于表相上的用户所看到的界面审核。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;回顾本次所遇问题是在机审上。最初机审详情提示我，&lt;strong&gt;在用户点击同意隐私政策之前，不应提前收集IMEI、设备MAC地址和软件安装列表等信息，以及不应提前向用户申请手机、通讯、短信等敏感权限。&lt;/strong&gt;&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;在APP里使用了穿山甲，高德地图等SDK。这些SDK会自助收集用户信息如IMEI、设备MAC地址等。当时就按照提示，增加了在通过隐私政策同意后再初始化这些SDK。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;觉得这个问题还是比较简单的嘛。加完判断应该不回再被拒了，因为之前的两款APP都是这么通过机审的。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;诧异的是依然还是被拒了，原因依旧，&lt;strong&gt;在用户点击同意隐私政策之前，不应提前收集IMEI、设备MAC地址和软件安装列表等信息，以及不应提前向用户申请手机、通讯、短信等敏感权限。&lt;/strong&gt;&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;仔细检查代码。确实找不到有在隐私政策同意前初始化SDK代码。只能去检查所有依赖的第三方SDK，这个项目所依赖的SDK比较多，&lt;strong&gt;有广告的，定位的，地图，查包信息，传感器等等&lt;/strong&gt;。心想把这些SDK一个个删除进行复检，来排查具体是哪个包导致的问题。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;这个机审估计大约是40分钟出一次结果，导致排查的进度非常慢。这时想到有没有本地部署的隐私检测的服务来检测隐私合规性，这样就可以节省很多时间。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;github上找到不少本地部署的隐私检测，电脑端的服务搭建后，发现还需要一台root手机通过adb运行&lt;strong&gt;frida-server&lt;/strong&gt;。可能当时觉得太麻烦，手机刷了google框架，要刷root还要重新装google就放弃了。如果有测试机建议&lt;strong&gt;root&lt;/strong&gt;一台以备不时之需。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;只能一点点的通过平台机审来排查问题。现在回头来看，&lt;strong&gt;root&lt;/strong&gt;本地部署的隐私检测服务来测是更好的选择。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;机审来回我大概花了6天左右。机审对我来说是个黑盒，本地查不到问题只能通过机审。同时中间被其他的审核问题所耽误，混淆了关键问题。如之前机审没出现，这次测出的新问题，在删SDK排查时已经定位到了具体时哪个包导致的，但是偏偏又报另一个问题，以为不是这个包导致的。也可能是持久战太久我眼花了。&lt;br/&gt;
+&lt;br/&gt;
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/appprivacy/image.png&#34;
+        alt=&#34;alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;最后用空包再一个个加上这些SDK反复测试，方法比较笨也费时，但是可以准确定位是哪个SDK导致的。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;同时查看了其他平台的隐私合规被拒绝的日志，发现在vivo中更详细&lt;strong&gt;在用户点击同意隐私政策之前，调用的传感器列表&lt;/strong&gt;。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;定位到具体SDK，但问题并没有解决。因为确定在同意隐私政策后才初始化SDK。可偏偏报错&lt;strong&gt;在用户点击同意隐私政策之前，调用&amp;hellip;&lt;/strong&gt;。再次复检，引用包但不调任何方法，依然这个错误。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;同时在pub上找替换方案，或Google到类似的问题却没找到。可能是国内用传感器包的比较少，原生开发用底层包的人更多，另一个原因可能是国外对隐私政策的把控度和国内有区别吧。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;我使用Flutter进行开发，没有学过原生的安卓，对第三方包的&lt;strong&gt;java kotlin&lt;/strong&gt;代码比较陌生。借助GPT阅读代码找到了传感器部分，这部分代码是在&lt;strong&gt;onAttachedToEngine&lt;/strong&gt;方法中调用的。通过搜索发现在Flutter中，&lt;strong&gt;onAttachedToEngine&lt;/strong&gt;方法是在初始化时就被调用。所以即使在main函数中直接弹出隐私窗口，依旧在&lt;strong&gt;Flutter的生命周期&lt;/strong&gt;开始时调用&lt;strong&gt;onAttachedToEngine&lt;/strong&gt;方法。导致SensorManager的代码被调用。&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;找到具体原因后就好办了，虽然没学过kotlin但是有GPT，直接把第三方插件给改了。增加了一个标志&lt;strong&gt;userHasConsented&lt;/strong&gt;。在同意后才初始化传感器，这是GPT表现的又又点蠢，给的代码基本跑不起来一直报错，只能按照思路一点点引导GPT，一点点给GPT纠正逻辑，总算完成了。同时重新测试了SDK的功能是否完好。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;总结 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;总计耗时7天才把所以平台上架完成，中间还遇到不少问题，但是都解决了。最主要耗时还是一次次的问题排查机审，当定位到具体问题，进过细分还是相对好处理的。&lt;/p&gt;
+&lt;p&gt;同时对我来说，遇到了两个黑盒，1. 是隐私检测服务如果本地部署效率可能会大大提升。 2. 原生的安卓一直是我不太想碰的，现在我更多是关注产品上也不是技术本身，但当遇到此类问题。如果预先了解&lt;strong&gt;onAttachedToEngine&lt;/strong&gt;的执行特性，就能更快定位问题。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
     <item>
       <title>开发日记 —— 记录对接苹果微信登录的坑</title>
       <link>https://vastzh.com/blog/wechat_login/</link>

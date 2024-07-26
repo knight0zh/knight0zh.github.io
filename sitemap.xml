@@ -4,13 +4,19 @@
 
   <url>
     <loc>https://vastzh.com/blog/</loc>
-    <lastmod>2024-01-26T10:38:15+08:00</lastmod>
+    <lastmod>2024-07-26T14:38:15+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://vastzh.com/</loc>
-    <lastmod>2024-01-26T10:38:15+08:00</lastmod>
+    <lastmod>2024-07-26T14:38:15+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vastzh.com/blog/appprivacy/</loc>
+    <lastmod>2024-07-26T14:38:15+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
