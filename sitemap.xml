@@ -4,13 +4,19 @@
 
   <url>
     <loc>https://vastzh.com/blog/</loc>
-    <lastmod>2024-07-26T14:38:15+08:00</lastmod>
+    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vastzh.com/blog/android14/</loc>
+    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://vastzh.com/</loc>
-    <lastmod>2024-07-26T14:38:15+08:00</lastmod>
+    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android 14 on 超级浩码</title>
+    <link>https://vastzh.com/tags/android-14/</link>
+    <description>Recent content in Android 14 on 超级浩码</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 超级浩码</copyright>
+    <lastBuildDate>Wed, 14 Aug 2024 11:25:00 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/android-14/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Play Android 14 还没有升级将导致下架2024</title>
+      <link>https://vastzh.com/blog/android14/</link>
+      <pubDate>Wed, 14 Aug 2024 11:25:00 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/android14/</guid>
+      <description>&lt;div id=&#34;前言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;前言 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;在今年的6月，Google Play 已经宣布了 Android 14 的强制升级，最晚期限是 2024 年 8 月 31 日。原文地址：&lt;a href=&#34;https://support.google.com/googleplay/android-developer/answer/11926878?hl=zh-Hans&#34;   target=&#34;_blank&#34;&gt;
+    https://support.google.com/googleplay/android-developer/answer/11926878?hl=zh-Hans&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自 2024 年 8 月 31 日起：
+新应用和应用更新必须以 Android 14（API 级别 34）为目标平台，才能提交到 Google Play（Wear OS 应用和 Android TV 应用除外，此类应用必须以 Android 13 或更高版本为目标平台）。
+现有应用必须以 Android 13（API 级别 33）或更高版本为目标平台，Google Play 才会在新用户的设备搭载的 Android OS 版本高于应用的目标 API 级别时，继续向这些用户提供此类应用。如果应用以 Android 12（API 级别 31）或更低版本（如果是 Wear OS 应用，则为 Android 10 或更低版本；如果是 TV OS 应用，则为 Android 11 或更低版本）为目标平台，则只能在搭载的 Android OS 版本不高于应用的目标 API 级别的设备上使用。
+如果您需要更多时间来更新应用，可申请延期至 2024 年 11 月 1 日。今年晚些时候，您将能够在 Play 管理中心内找到应用的延期表单。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果逾期未升级，将导致应用被下架。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/android14/image.png&#34;
+        alt=&#34;alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;div id=&#34;解决方案&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;解决方案 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;div id=&#34;延期&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;延期 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%bb%b6%e6%9c%9f&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;如果时间比较仓促也可以选择延期，最晚可延期至2024年11月1日之前。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/android14/image-4.png&#34;
+        alt=&#34;alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;div id=&#34;升级&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;升级 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%8d%87%e7%ba%a7&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;升级的方法其实比较简单。&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;检查Android SDK的版本，可以通过Android Studio的SDK Manager查看。并进行升级。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/android14/image-1.png&#34;
+        alt=&#34;alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;在项目的android/app目录下，找到build.gradle文件，在android节点下更新如下代码：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;android {
+    compileSdkVersion 34
+    ...
+    defaultConfig {
+        minSdkVersion 34
+        targetSdkVersion 34
+        ...
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后重新编译，上传到Google Play，等待审核即可。&lt;/br&gt;
+如果你的Flutter项目，没有依赖其他的插件，那么这个问题应该已经得到了解决。&lt;/p&gt;
+&lt;p&gt;当你觉得一切都很顺利的时候，往往就会出现这样那样的问题。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/android14/image-2.png&#34;
+        alt=&#34;alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;明明已经将&lt;code&gt;compileSdkVersion&lt;/code&gt;,&lt;code&gt;targetSdkVersion&lt;/code&gt;,&lt;code&gt;minSdkVersion&lt;/code&gt;都更新到34了，为什么还会出现这个问题呢？&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;事实上，在多数的项目中我们都会依赖一些插件，其中有些插件使用了com.google.android.play:core的降低版本，这个版本有可能与Android 14 产生冲突。必须把他们升级到兼容Android 14的版本。&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;那么问题来了，依赖的插件少则十几种多则几十种，应该如何快速定位到这些插件库，依赖了com.google.android.play:core呢？&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;我们可以根据应用需求将整体 SDK 拆分为所需的依赖项。可&lt;a href=&#34;https://developer.android.com/reference/com/google/android/play/core/release-notes#partitioned-apis&#34;   target=&#34;_blank&#34;&gt;
+    在此处&lt;/a&gt;  &lt;code&gt;play-core&lt;/code&gt;找到替代 SDK。而对于我使用的Flutter混合应用程序，我们可以进入android文件夹。
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;运行以下命令检查应用程序中列出的所有依赖项，并com.google.android.play:core通过将所有依赖项导出到文本文件来检查哪一个具有依赖项dependencies.txt&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;./gradlew app:dependencies &amp;gt; dependencies.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一旦弄清楚了哪些依赖项使用了Play核心库，就可以将其更新了。
+我们往往会关注&lt;strong&gt;支付，广告，权限等&lt;/strong&gt;核心库。而忽略一些看起来不那么重要的存在。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/android14/image-3.png&#34;
+        alt=&#34;alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;之后我们更新对应依赖到支持Android 14的版本，重新编译，上传到Google Play，等待审核即可。&lt;/p&gt;
+&lt;div id=&#34;小结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;小结 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%b0%8f%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Google Play 于 2024 年 8 月 31 日起正式实施新的应用程序目标平台要求:所有新发布和更新的应用必须以 Android 14（API 级别 34）或更高版本为目标平台。现有应用也需尽快升级至 Android 13 或更高版本。这一举措旨在提升用户体验,增强应用程序的安全性和兼容性。开发者可申请延期至 2024 年 11 月 1 日完成升级,届时 Google Play 将提供相关表单。开发者务必及时关注并响应这一新政策,以确保应用程序在 Google Play 上的持续可用性。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;感谢阅读本文
+如果有什么建议，请在评论中让我知道。我很乐意改进。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
