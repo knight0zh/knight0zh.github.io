@@ -22,8 +22,8 @@
             style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
     
 &lt;/h2&gt;
-&lt;p&gt;在今年的6月，Google Play 已经宣布了 Android 14 的强制升级，最晚期限是 2024 年 8 月 31 日。原文地址：&lt;a href=&#34;https://support.google.com/googleplay/android-developer/answer/11926878?hl=zh-Hans&#34;   target=&#34;_blank&#34;&gt;
-    https://support.google.com/googleplay/android-developer/answer/11926878?hl=zh-Hans&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在今年的6月，&lt;a href=&#34;https://support.google.com/googleplay/android-developer/answer/11926878?hl=zh-Hans&#34;   target=&#34;_blank&#34;&gt;
+    Google Play 已经宣布了 Android 14 的强制升级&lt;/a&gt;，最晚期限是 2024 年 8 月 31 。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;自 2024 年 8 月 31 日起：
 新应用和应用更新必须以 Android 14（API 级别 34）为目标平台，才能提交到 Google Play（Wear OS 应用和 Android TV 应用除外，此类应用必须以 Android 13 或更高版本为目标平台）。
@@ -167,9 +167,9 @@
 &lt;p&gt;事实上，在多数的项目中我们都会依赖一些插件，其中有些插件使用了com.google.android.play:core的降低版本，这个版本有可能与Android 14 产生冲突。必须把他们升级到兼容Android 14的版本。&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;p&gt;那么问题来了，依赖的插件少则十几种多则几十种，应该如何快速定位到这些插件库，依赖了com.google.android.play:core呢？&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;p&gt;我们可以根据应用需求将整体 SDK 拆分为所需的依赖项。可&lt;a href=&#34;https://developer.android.com/reference/com/google/android/play/core/release-notes#partitioned-apis&#34;   target=&#34;_blank&#34;&gt;
-    在此处&lt;/a&gt;  &lt;code&gt;play-core&lt;/code&gt;找到替代 SDK。而对于我使用的Flutter混合应用程序，我们可以进入android文件夹。
-&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
-&lt;p&gt;运行以下命令检查应用程序中列出的所有依赖项，并com.google.android.play:core通过将所有依赖项导出到文本文件来检查哪一个具有依赖项dependencies.txt&lt;/p&gt;
+    在此处&lt;/a&gt;  &lt;code&gt;play-core&lt;/code&gt;找到替代 SDK。&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;而对于我使用的Flutter混合应用程序，我们可以进入android文件夹。
+运行以下命令检查应用程序中列出的所有依赖项，并com.google.android.play:core通过将所有依赖项导出到文本文件来检查哪一个具有依赖项dependencies.txt&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;./gradlew app:dependencies &amp;gt; dependencies.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一旦弄清楚了哪些依赖项使用了Play核心库，就可以将其更新了。
 我们往往会关注&lt;strong&gt;支付，广告，权限等&lt;/strong&gt;核心库。而忽略一些看起来不那么重要的存在。
