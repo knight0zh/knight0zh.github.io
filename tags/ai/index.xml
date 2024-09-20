@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on 超级浩码</title>
+    <link>https://vastzh.com/tags/ai/</link>
+    <description>Recent content in AI on 超级浩码</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 超级浩码</copyright>
+    <lastBuildDate>Fri, 20 Sep 2024 13:29:42 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>独立开发者聊聊自己设计icon/UI的思路</title>
+      <link>https://vastzh.com/blog/ai/</link>
+      <pubDate>Fri, 20 Sep 2024 13:29:42 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/ai/</guid>
+      <description>&lt;p&gt;作为一个独立开发者，那么你一定需要为产品设计UI界面，icon图标等美工相关的内容。当然如果你有一个团队，或者有合作的设计师，那么可以忽略这篇内容。
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;至于为什么会分享这篇文章，是因为最近在研究竞品时发现了他们的APP中使用了一些动画特效，这些特效让APP的交互和感观都得到很大的提升，所以就想研究一下他们的设计思路。以及他们所用到的Lottie动画，有关Lottie的内容我会再下一期文章来介绍。这篇文章我主要想聊一下如何自己设计APP的图标。
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;先来说一下我设计icon的思路。因为我原先不会使用&lt;code&gt;illustrator&lt;/code&gt;这类的设计工具。所以我一般时借助AI类的工具，通过提示词来生成icon图标。这里推荐一个免费的生成网站&lt;a href=&#34;https://perchance.org/ai-icon-generator&#34;   target=&#34;_blank&#34;&gt;
+    https://perchance.org/ai-icon-generator&lt;/a&gt;，如果你比较急又比较懒可以试试这个工具，完全免费。
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;当然AI也有缺点，相信用过类似产品的人都知道，AI生成的图标有时候会显得很粗糙，粗糙是指始终达不到你心里的预期。花费大量的时间去修改提示词也不尽人意。
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;另一种思路就是去一些素材网站直接通过关键词搜索素材进行下载。这也是大多数独立开发者的选择，在没有生成式AI的情况下，基本都是这个思路。同样推荐一个免费网站&lt;a href=&#34;https://www.flaticon.com/&#34;   target=&#34;_blank&#34;&gt;
+    https://www.flaticon.com/&lt;/a&gt;，但是要小心和别人的icon一样的风险，毕竟是现成的免费素材，用的人可能比较多。
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;最后一种思路是我过去常常用的，在现有的素材上进行修改，用PS或者AI进行修改。这种方法比较适合有设计基础的人，因为可以很灵活的修改素材。也不怕出现和别人的icon一样的风险。&lt;/p&gt;
+&lt;p&gt;接下来进入主题。
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;可能很多人听过AI，但是在人工智能没火之前，其实早有个制图工具简称也叫&lt;code&gt;AI&lt;/code&gt;，全称&lt;code&gt;Adobe Illustrator&lt;/code&gt;,专门用来做平面矢量图设计的。我想设计师应该没人不知道这个工具吧。
+&lt;br/&gt;&lt;br/&gt;
+&lt;img src=&#34;image-2.png&#34; alt=&#34;alt text&#34; width=&#34;200&#34; height=&#34;200&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Adobe Illustrator&lt;/code&gt;是天生用来做矢量图的。如果不知道矢量图和位图的区别可以自行搜索。为什么我会推荐这个工具，是因为一次偶然的机会，我大概花了两小时学习&lt;code&gt;Illustrator&lt;/code&gt;的基本操作后，基本就可以做简单的图标设计了，而且绝对比自己找素材或者用生成式AI要好用。因为他们很难让你找到称心的素材，但是自己花就没这个问题了。&lt;/p&gt;
+&lt;img src=&#34;image.png&#34; alt=&#34;alt text&#34; width=&#34;200&#34; height=&#34;200&#34;/&gt;
+&lt;img src=&#34;image-1.png&#34; alt=&#34;alt text&#34; width=&#34;200&#34; height=&#34;200&#34;/&gt;
+&lt;p&gt;以上两个图标都是我用&lt;code&gt;Illustrator&lt;/code&gt;做的，挺简单的也就花了10多分钟。
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;其实，花费两小时学习一个工具，能让我做出想要的80%的素材，我认为这个性价比真的很高。学会了这个技能，再不也需要花大量的时间去寻找素材而且还达不到满意的效果。
+再提供一个思路，如果你找到想要的素材，但是又觉得不满意，那么你可以用AI进行修改。通过转换成&lt;strong&gt;高保真招牌&lt;/strong&gt;，可以将位图转化成矢量图并进行修改。
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;感谢阅读本文
+如果有什么建议，请在评论中让我知道。我很乐意改进。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
