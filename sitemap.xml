@@ -4,13 +4,19 @@
 
   <url>
     <loc>https://vastzh.com/blog/</loc>
-    <lastmod>2024-09-20T13:29:42+08:00</lastmod>
+    <lastmod>2024-10-09T09:56:50+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://vastzh.com/</loc>
-    <lastmod>2024-09-20T13:29:42+08:00</lastmod>
+    <lastmod>2024-10-09T09:56:50+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vastzh.com/blog/lottie/</loc>
+    <lastmod>2024-10-09T09:56:50+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lottie on 超级浩码</title>
+    <link>https://vastzh.com/tags/lottie/</link>
+    <description>Recent content in Lottie on 超级浩码</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 超级浩码</copyright>
+    <lastBuildDate>Wed, 09 Oct 2024 09:56:50 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/lottie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>深入浅出聊聊Lottie动画</title>
+      <link>https://vastzh.com/blog/lottie/</link>
+      <pubDate>Wed, 09 Oct 2024 09:56:50 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/lottie/</guid>
+      <description>&lt;p&gt;在上一篇中介绍了作为个人开发者使用 &lt;code&gt;AI（Adobe Illustrator）&lt;/code&gt;的一些场景。其实对我而言学习&lt;code&gt;AI&lt;/code&gt;还有另一个目的，我在项目中需要使用&lt;code&gt;Lottie&lt;/code&gt;动画提升APP的视觉，也算是面向竟品看齐。&lt;code&gt;Lottie&lt;/code&gt;动画的json文件是由 &lt;code&gt;AE（Adobe After Effects）&lt;/code&gt;输出的。而制作&lt;code&gt;AE&lt;/code&gt;则需要先用&lt;code&gt;AI&lt;/code&gt;来绘制出动画的素材，这也是为什么学习&lt;code&gt;AI&lt;/code&gt;的原因。
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;div id=&#34;lottie的介绍&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;&lt;code&gt;Lottie&lt;/code&gt;的介绍 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#lottie%e7%9a%84%e4%bb%8b%e7%bb%8d&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Lottie&lt;/code&gt;是Airbnb开发的一种轻量级的JavaScript库，它能够在Web、iOS和Android平台上呈现高质量、动态的矢量动画。Lottie使得在应用中使用复杂的矢量动画变得更加容易，并且在不同平台上能够实现更高的视觉一致性。而lottie-web是Lottie的Web版本，使用它可以在Web页面中展示高品质、流畅的动态矢量动画。&lt;/p&gt;
+&lt;p&gt;估计很多人都不知道这个动画库，但是有个APP你一定知道，在它的活动中也使用了大量的&lt;code&gt;Lottie&lt;/code&gt;动画。
+&lt;img src=&#34;image-1.png&#34; alt=&#34;alt text&#34; width=&#34;200&#34; height=&#34;200&#34;/&gt;&lt;/p&gt;
+&lt;div id=&#34;与其他动画比较&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;与其他动画比较 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%b8%8e%e5%85%b6%e4%bb%96%e5%8a%a8%e7%94%bb%e6%af%94%e8%be%83&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;动画技术&lt;/th&gt;
+&lt;th&gt;时间成本&lt;/th&gt;
+&lt;th&gt;动画还原度&lt;/th&gt;
+&lt;th&gt;开发成本&lt;/th&gt;
+&lt;th&gt;产物大小&lt;/th&gt;
+&lt;th&gt;性能&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Lottie&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;高&lt;/td&gt;
+&lt;td&gt;高&lt;/td&gt;
+&lt;td&gt;低&lt;/td&gt;
+&lt;td&gt;低&lt;/td&gt;
+&lt;td&gt;优&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;CSS动画&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;低&lt;/td&gt;
+&lt;td&gt;低&lt;/td&gt;
+&lt;td&gt;低&lt;/td&gt;
+&lt;td&gt;低&lt;/td&gt;
+&lt;td&gt;优&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GIF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;高&lt;/td&gt;
+&lt;td&gt;中&lt;/td&gt;
+&lt;td&gt;中&lt;/td&gt;
+&lt;td&gt;中&lt;/td&gt;
+&lt;td&gt;差&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;帧动画&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;高&lt;/td&gt;
+&lt;td&gt;高&lt;/td&gt;
+&lt;td&gt;高&lt;/td&gt;
+&lt;td&gt;高&lt;/td&gt;
+&lt;td&gt;中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;可以看出，&lt;code&gt;Lottie&lt;/code&gt;在动画还原度和大小上具有优势。Lottie是以矢量形式储存的，所以它们可以以较小的文件大小呈现高品质的图像。但是，Lottie动画的开发成本还是挺高的可能只适合一些特殊场景，这对于开发人员来说可能是一个缺点。
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Lottie&lt;/code&gt; 比 GIF 小 600% ，且​​​​传送速度快 10 倍。由于它们是微小的文件，并且不会占用过多的磁盘空间，而且会提高下载速度，这对转换率来说会更好。但最重要的是，可以在不影响质量的情况下放大或缩小 Lottie 文件。您可以放大 Lottie 动画，无论缩放的大小或速度如何，图形都会缩放平滑。这是因为，与 GIF 不同，Lottie 动画是使用向量（与一些光栅元素混合）创建的，它更适合无限的可扩展性和帧速率。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/blog/lottie/image-2.png&#34;
+        alt=&#34;alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Lottie&lt;/code&gt;的另一个优势是它具有更强的灵活性。如&lt;strong&gt;动态更新&lt;/strong&gt;，&lt;strong&gt;动画控制力&lt;/strong&gt;等。
+&lt;img src=&#34;1109_1728444549-_online-video-cutter.com_.gif&#34; alt=&#34;alt text&#34; width=&#34;200&#34; height=&#34;200&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;另一个例子可以看到根据设置动态修改动画的更新速度的变化。
+&lt;img src=&#34;6899_1726028199-_online-video-cutter.com_.gif&#34; alt=&#34;alt text&#34; width=&#34;200&#34; height=&#34;200&#34;/&gt;&lt;/p&gt;
+&lt;div id=&#34;在-iosandroid-手机上的兼容性介绍&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;在 iOS、Android 手机上的兼容性介绍 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%9c%a8-iosandroid-%e6%89%8b%e6%9c%ba%e4%b8%8a%e7%9a%84%e5%85%bc%e5%ae%b9%e6%80%a7%e4%bb%8b%e7%bb%8d&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Lottie&lt;/code&gt; 在移动端的兼容性相对较好，支持 iOS 9.0+、Android 4.4+，以及 React Native 和 Flutter 等跨平台框架。
+在 iOS 上，需要注意的是，iOS 9.0 ~ 9.2 版本的 WebView 对 SVG 的支持有所不同，可能会导致一些 SVG 转换为 Lottie 动画后无法正常播放，这个问题在后续的 iOS 版本中已经得到了修复。
+&lt;br/&gt;&lt;br/&gt;
+在 Android 上，需要注意的是，Android 4.4 版本的 WebView 对某些 SVG 属性的支持可能不完善，可能会导致一些 SVG 转换为 Lottie 动画后无法正常播放。此外，Lottie 动画对硬件加速的依赖较高，如果设备不支持硬件加速，可能会导致动画性能下降。
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;div id=&#34;api&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;API 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#api&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Lottie&lt;/code&gt; 提供了丰富的 API，以便我们控制动画的播放、暂停、重置、改变速度等操作。下面列出一些常用的 API：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lottie.loadAnimation：加载动画文件并返回一个动画实例。&lt;/li&gt;
+&lt;li&gt;animation.play: 播放动画。&lt;/li&gt;
+&lt;li&gt;animation.stop: 停止动画。&lt;/li&gt;
+&lt;li&gt;animation.setSpeed：设置动画的播放速度。&lt;/li&gt;
+&lt;li&gt;animation.setDirection：设置动画的播放方向。&lt;/li&gt;
+&lt;li&gt;animation.goToAndStop：跳转到指定时间点或帧，并暂停。&lt;/li&gt;
+&lt;li&gt;animation.destroy：销毁动画实例。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更多API的使用可以参考Lottie的官方文档 &lt;a href=&#34;airbnb.io/lottie/&#34;  &gt;
+    airbnb.io/lottie/&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;实战分享&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;实战分享 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%ae%9e%e6%88%98%e5%88%86%e4%ba%ab&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;说了这么多，不如实战一下。分享我使用&lt;code&gt;Lottie&lt;/code&gt;动画的实战经验。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选择合适的动画素材，使用&lt;code&gt;AI&lt;/code&gt;对素材进行加工。（素材分解分层）
+&lt;img src=&#34;image-3.png&#34; alt=&#34;alt text&#34; width=&#34;300&#34; height=&#34;200&#34;/&gt;&lt;img src=&#34;image-4.png&#34; alt=&#34;alt text&#34; width=&#34;300&#34; height=&#34;200&#34;/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过插件导入&lt;code&gt;AE&lt;/code&gt;, 对身体部位引进父子链接
+&lt;img src=&#34;image-4.png&#34; alt=&#34;alt text&#34; width=&#34;300&#34; height=&#34;200&#34;/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置帧速率我以24帧为例，即一秒24帧，设置关键帧打上标签。
+&lt;img src=&#34;image-5.png&#34; alt=&#34;alt text&#34; width=&#34;300&#34; height=&#34;200&#34;/&gt;
+&lt;img src=&#34;image-6.png&#34; alt=&#34;alt text&#34; width=&#34;300&#34; height=&#34;200&#34;/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过插件生成&lt;code&gt;Lottie&lt;/code&gt;的json文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以&lt;code&gt;Flutter&lt;/code&gt;为例，引入&lt;code&gt;Lottie&lt;/code&gt;库&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;dependencies:
+lottie: ^3.1.2
+
+assets:
+- assets/lotties/  
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;动画组件代码&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int durationMilliseconds = ((60000 * 2) / rLogic.settings!.bpm).round();
+    _controller = AnimationController(
+        vsync: this, duration: Duration(milliseconds: durationMilliseconds));
+
+...
+
+child: Lottie.asset(
+    &amp;#39;assets/lotties/w_beat.json&amp;#39;
+    controller: _controller,
+    onLoaded: (composition) {
+        _controller.duration = composition.duration;
+    },
+    ),
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;为了动态地根据变化的来调整动画的时长，我使用以下公式来计算每步动画的时长：
+&lt;img src=&#34;image-7.png&#34; alt=&#34;alt text&#34; width=&#34;300&#34; height=&#34;200&#34;/&gt;
+因为我的Lottie动画的时长为一秒钟24帧（其中包含了左脚抬起放下和右脚抬起放下），简单说我的意图是根据选择的每分钟的步频，来计算一秒钟2步的动画方法速率。&lt;/p&gt;
+&lt;p&gt;最后的效果如下：
+&lt;img src=&#34;6899_1726028199-_online-video-cutter.com_.gif&#34; alt=&#34;alt text&#34; width=&#34;200&#34; height=&#34;200&#34;/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;总结 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Lottie&lt;/code&gt;是一个非常优秀的动画解决方案，项目GIF既能极大的减少文件的大小，又可以高保真的还原动画效果，同时具有极大的灵活性。它的开发时间会比较高，需要较高的综合能力，所以对于大多数个人开发者步太适合，除非这个动画是项目中的核心部分，可以进行大胆尝试！&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
