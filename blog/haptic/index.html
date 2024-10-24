@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>深入浅出聊聊Lottie动画 &middot; 超级浩码</title>
-  <meta name="title" content="深入浅出聊聊Lottie动画 &middot; 超级浩码" />
+  <title>从竞品APP中学到的100个技巧（一）震动反馈 &middot; 超级浩码</title>
+  <meta name="title" content="从竞品APP中学到的100个技巧（一）震动反馈 &middot; 超级浩码" />
   
   <meta name="description" content="个人开发者的博客" />
-  <meta name="keywords" content="Lottie, 动画, 独立开发, " />
+  <meta name="keywords" content="独立开发, haptic, 用户体验, " />
   
   
-  <link rel="canonical" href="https://vastzh.com/blog/lottie/" />
+  <link rel="canonical" href="https://vastzh.com/blog/haptic/" />
   
   
   
@@ -63,17 +63,17 @@
   
   
   
-  <meta property="og:title" content="深入浅出聊聊Lottie动画" />
-<meta property="og:description" content="在上一篇中介绍了作为个人开发者使用 AI（Adobe Illustrator）的一些场景。其实对我而言学习AI还有另一个目的，我在项目中需要使用Lottie动画提升APP的视觉，也算是面向竟品看齐。Lottie动画的json文件是由 AE（Adobe After Effects）输出的。而制作AE则需要先用AI来绘制出动画的素材，这也是为什么学习AI的原因。 Lottie的介绍 # Lottie是Airbnb开发的一种轻量级的JavaScript库，它能够在Web、iOS和Android平台上呈现高质量、动态的矢量动画。Lottie使得在应用中使用复杂的矢量动画变得更加容易，并且在不同平台上能够实现更高的视觉一致性。而lottie-web是Lottie的Web版本，使用它可以在Web页面中展示高品质、流畅的动态矢量动画。" />
+  <meta property="og:title" content="从竞品APP中学到的100个技巧（一）震动反馈" />
+<meta property="og:description" content="曾经我只知道「闭门造车」，后来才发现，要想进步就要多看、多学、多想，吸取对手的优点。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://vastzh.com/blog/lottie/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2024-10-09T09:56:50+08:00" />
-<meta property="article:modified_time" content="2024-10-09T09:56:50+08:00" />
+<meta property="og:url" content="https://vastzh.com/blog/haptic/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-10-22T16:58:14+08:00" />
+<meta property="article:modified_time" content="2024-10-22T16:58:14+08:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="深入浅出聊聊Lottie动画"/>
-<meta name="twitter:description" content="在上一篇中介绍了作为个人开发者使用 AI（Adobe Illustrator）的一些场景。其实对我而言学习AI还有另一个目的，我在项目中需要使用Lottie动画提升APP的视觉，也算是面向竟品看齐。Lottie动画的json文件是由 AE（Adobe After Effects）输出的。而制作AE则需要先用AI来绘制出动画的素材，这也是为什么学习AI的原因。 Lottie的介绍 # Lottie是Airbnb开发的一种轻量级的JavaScript库，它能够在Web、iOS和Android平台上呈现高质量、动态的矢量动画。Lottie使得在应用中使用复杂的矢量动画变得更加容易，并且在不同平台上能够实现更高的视觉一致性。而lottie-web是Lottie的Web版本，使用它可以在Web页面中展示高品质、流畅的动态矢量动画。"/>
+<meta name="twitter:title" content="从竞品APP中学到的100个技巧（一）震动反馈"/>
+<meta name="twitter:description" content="曾经我只知道「闭门造车」，后来才发现，要想进步就要多看、多学、多想，吸取对手的优点。"/>
 
   
   <script type="application/ld+json">
@@ -81,26 +81,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blog",
-    "name": "深入浅出聊聊Lottie动画",
-    "headline": "深入浅出聊聊Lottie动画",
+    "name": "从竞品APP中学到的100个技巧（一）震动反馈",
+    "headline": "从竞品APP中学到的100个技巧（一）震动反馈",
     
-    "abstract": "在上一篇中介绍了作为个人开发者使用 AI（Adobe Illustrator）的一些场景。其实对我而言学习AI还有另一个目的，我在项目中需要使用Lottie动画提升APP的视觉，也算是面向竟品看齐。Lottie动画的json文件是由 AE（Adobe After Effects）输出的。而制作AE则需要先用AI来绘制出动画的素材，这也是为什么学习AI的原因。 Lottie的介绍 # Lottie是Airbnb开发的一种轻量级的JavaScript库，它能够在Web、iOS和Android平台上呈现高质量、动态的矢量动画。Lottie使得在应用中使用复杂的矢量动画变得更加容易，并且在不同平台上能够实现更高的视觉一致性。而lottie-web是Lottie的Web版本，使用它可以在Web页面中展示高品质、流畅的动态矢量动画。",
+    "abstract": "曾经我只知道「闭门造车」，后来才发现，要想进步就要多看、多学、多想，吸取对手的优点。",
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/vastzh.com\/blog\/lottie\/",
+    "url" : "https:\/\/vastzh.com\/blog\/haptic\/",
     "author" : {
       "@type": "Person",
       "name": "超级浩码"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-10-09T09:56:50\u002b08:00",
-    "datePublished": "2024-10-09T09:56:50\u002b08:00",
+    "dateCreated": "2024-10-22T16:58:14\u002b08:00",
+    "datePublished": "2024-10-22T16:58:14\u002b08:00",
     
-    "dateModified": "2024-10-09T09:56:50\u002b08:00",
+    "dateModified": "2024-10-22T16:58:14\u002b08:00",
     
-    "keywords": ["Lottie","动画","独立开发"],
+    "keywords": ["独立开发","haptic","用户体验"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "174"
+    "wordCount": "88"
   }]
   </script>
 
@@ -455,7 +455,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      深入浅出聊聊Lottie动画
+      从竞品APP中学到的100个技巧（一）震动反馈
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -500,9 +500,9 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-10-09 09:56:50 &#43;0800 CST">2024-10-09</time><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2024-10-22 16:58:14 &#43;0800 CST">2024-10-22</time><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="views_blog/lottie/index.md" title="views">0</span> 
+    <span id="views_blog/haptic/index.md" title="views">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -514,7 +514,7 @@
 </span>
 </span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="likes_blog/lottie/index.md" title="likes">0</span> 
+    <span id="likes_blog/haptic/index.md" title="likes">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -584,34 +584,34 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/lottie/&#34;,'_self');">
-    <span class="flex">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
-  >
-    Lottie
-  </span>
-</span>
-
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%8A%A8%E7%94%BB/&#34;,'_self');">
-    <span class="flex">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
-  >
-    动画
-  </span>
-</span>
-
-  </span>
-  
   <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/&#34;,'_self');">
     <span class="flex">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
   >
     独立开发
+  </span>
+</span>
+
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/haptic/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    haptic
+  </span>
+</span>
+
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    用户体验
   </span>
 </span>
 
@@ -744,11 +744,6 @@
     class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#lottie的介绍"><code>Lottie</code>的介绍</a></li>
-    <li><a href="#与其他动画比较">与其他动画比较</a></li>
-    <li><a href="#在-iosandroid-手机上的兼容性介绍">在 iOS、Android 手机上的兼容性介绍</a></li>
-    <li><a href="#api">API</a></li>
-    <li><a href="#实战分享">实战分享</a></li>
     <li><a href="#总结">总结</a></li>
   </ul>
 </nav>
@@ -763,11 +758,6 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#lottie的介绍"><code>Lottie</code>的介绍</a></li>
-    <li><a href="#与其他动画比较">与其他动画比较</a></li>
-    <li><a href="#在-iosandroid-手机上的兼容性介绍">在 iOS、Android 手机上的兼容性介绍</a></li>
-    <li><a href="#api">API</a></li>
-    <li><a href="#实战分享">实战分享</a></li>
     <li><a href="#总结">总结</a></li>
   </ul>
 </nav>
@@ -825,77 +815,107 @@
 
 
         <div class="max-w-prose mb-20">
-          <p>在上一篇中介绍了作为个人开发者使用 <code>AI（Adobe Illustrator）</code>的一些场景。其实对我而言学习<code>AI</code>还有另一个目的，我在项目中需要使用<code>Lottie</code>动画提升APP的视觉，也算是面向竟品看齐。<code>Lottie</code>动画的json文件是由 <code>AE（Adobe After Effects）</code>输出的。而制作<code>AE</code>则需要先用<code>AI</code>来绘制出动画的素材，这也是为什么学习<code>AI</code>的原因。
-<br/><br/></p>
-<div id="lottie的介绍" class="anchor"></div>
-<h2 class="relative group"><code>Lottie</code>的介绍 
+          <blockquote>
+<p>曾经我只知道「闭门造车」，后来才发现，要想进步就要多看、多学、多想，吸取对手的优点。</p>
+</blockquote>
+<blockquote>
+<p>由于我长时间的「闭门造车」导致有一些后来者居上，吸取了我的产品中的优点和用户需求。凭借他们专业的团队很快就弯道超车从这个细分领域分走了大量的蛋糕。</p>
+</blockquote>
+<blockquote>
+<p>所以咱们也应该多学习竞品的优点，说白了就是有好的，值得借鉴的地方就抄过来，因为对方也是这么做的，也算是良性竞争吧。</p>
+</blockquote>
+<blockquote>
+<p>所以我打算不定期更新一些从竞品中学到的技巧，进行总结和分享。</p>
+</blockquote>
+<p>回归正题，这一期先从简单，但可以极大提升产品精致感的功能说起 —— <strong>震动反馈</strong>。</p>
+<p>不就是简单的震动吗，有什么好说的呢，加不加都不能本质提升APP下载量吧？</p>
+<p>其实我们的宗旨是多看多学多思考，如果没用，为什么大多数体验感极好的APP会有呢，何况加震动又能耽误多久呢？</p>
+<hr>
+<p>让我们先看看GPT对震动反馈的作用的总结，作为进一步了解。</p>
+<ol>
+<li>
+<p>增强交互感
+震动反馈可以让用户在点击或触摸按钮时感受到物理响应，从而增强互动的真实感。这种反馈让用户感知到系统正在响应他们的操作，提升触感体验，尤其是在虚拟按钮上。</p>
+</li>
+<li>
+<p>确认操作
+在用户需要作出重要决策或执行关键操作时（如支付、删除内容、确认提交等），震动反馈可以向用户提供额外的确认提示，减少误操作的可能性。例如，按下“确认”或“提交”按钮时，震动可以让用户意识到他们的操作已成功执行。</p>
+</li>
+<li>
+<p>无视觉提示时提供反馈
+当用户在使用设备时无法完全依赖视觉（如环境光线太暗、外部光线反射导致屏幕不清晰，或者用户眼睛没有直接看着屏幕）时，震动反馈可以代替视觉反馈来通知用户某个动作已经发生。这在盲人或有视力障碍的用户使用时也非常有帮助。</p>
+</li>
+<li>
+<p>提升用户体验的精致感
+震动反馈通常与细致的设计结合在一起，可以让产品显得更加高端。例如，苹果设备中使用的 Taptic Engine 就是一种通过震动反馈增强用户体验的技术，让每一次操作感觉更自然和直观。</p>
+</li>
+<li>
+<p>纠正错误或警告
+震动反馈不仅可以用于操作确认，还可以用于告知用户某些错误。例如，用户输入错误密码时，可以通过短促的震动反馈让用户立即知道出错了，而不需要依赖屏幕上的文字提示。</p>
+</li>
+<li>
+<p>提高无声环境下的操作体验
+在一些不适合发出声音的场景（如会议室、电影院、安静的场合）中，震动反馈可以提供无声的操作确认。这让用户无需依赖声音反馈，也能清楚地知道操作是否成功。</p>
+</li>
+<li>
+<p>提高游戏和娱乐中的沉浸感
+在游戏或娱乐类应用中，震动反馈可以用于增强沉浸感。例如，当玩家在游戏中完成任务或遇到危险时，通过震动来传达紧张感或成就感。</p>
+</li>
+</ol>
+<hr>
+<p>不得不承认，GPT总结都是非常专业且实用的，我本来想划一下重点，但感觉没必要，因为句句都是。</p>
+<p>要在APP中使用震动反馈，我建议大家可以了解一下 <strong>Haptic</strong> 和 <strong>Vibration</strong>。
+虽然在功能上有些重叠，但它们有一些细微的区别：</p>
+<ol>
+<li>Vibration (震动):</li>
+</ol>
+<ul>
+<li>是最常见的手机反馈方式，通过手机的振动电机产生连续或间断的物理震动。</li>
+<li>震动通常比较粗糙，常用于提醒通知、来电、消息等。</li>
+<li>设计较为简单，无法精细控制不同的震动模式和强度。</li>
+</ul>
+<ol start="2">
+<li>Haptic (触觉反馈):</li>
+</ol>
+<ul>
+<li>Haptic 是触觉反馈技术的总称，它不仅包含简单的震动，还包括更加精细和复杂的反馈形式。</li>
+<li>Haptic feedback 通常通过更精确的马达或驱动器，产生更复杂和细腻的振动，能够模拟触感，如按键按下、滑动、碰撞等。</li>
+<li>常用于提升用户体验，如游戏中的模拟触感、虚拟按键点击反馈，给人更丰富的感知体验。</li>
+</ul>
+<p>最初在我的项目中，我使用的是 <strong>Vibration</strong>。从某些角度来说，它的震动设置更灵活，但缺乏精细的控制。无论怎么调节频率都无法满足我在那些大神APP中的触觉感受。它的另一个缺点是它的底层在IOS和Anroid上是不一样的，所以当我在Android上测试时，震动效果达到预期，但是在IOS上会差很多。</p>
+<p>相比之下，Haptic在IOS上是一个更好的选择，尤其当想要实现高质量的震动效果时，提供更精细的触觉响应。在 Android 上，虽然没有与 iOS 的 Haptic Feedback 完全一样的机制。但是也提供了类似的功能，称为 VibrationEffect，最后出现的效果也差不多。</p>
+<p>对于不同的场景，Haptic也提供了不同的方法和类型。大致包括：</p>
+<p>iOS 和 Android 通用的 Flutter 实现：</p>
+<pre tabindex="0"><code>// 轻度冲击反馈
+HapticFeedback.lightImpact();
+
+// 中等冲击反馈
+HapticFeedback.mediumImpact();
+
+// 重度冲击反馈
+HapticFeedback.heavyImpact();
+
+// 成功通知反馈
+HapticFeedback.vibrate(); // 用于成功/错误等场景
+
+// 选择切换反馈
+HapticFeedback.selectionClick();
+</code></pre><hr>
+<div id="总结" class="anchor"></div>
+<h2 class="relative group">总结 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#lottie%e7%9a%84%e4%bb%8b%e7%bb%8d" aria-label="锚点">#</a></span>        
+            style="text-decoration-line: none !important;" href="#%e6%80%bb%e7%bb%93" aria-label="锚点">#</a></span>        
     
 </h2>
-<p><code>Lottie</code>是Airbnb开发的一种轻量级的JavaScript库，它能够在Web、iOS和Android平台上呈现高质量、动态的矢量动画。Lottie使得在应用中使用复杂的矢量动画变得更加容易，并且在不同平台上能够实现更高的视觉一致性。而lottie-web是Lottie的Web版本，使用它可以在Web页面中展示高品质、流畅的动态矢量动画。</p>
-<p>估计很多人都不知道这个动画库，但是有个APP你一定知道，在它的活动中也使用了大量的<code>Lottie</code>动画。
-<img src="image-1.png" alt="alt text" width="200" height="200"/></p>
-<div id="与其他动画比较" class="anchor"></div>
-<h2 class="relative group">与其他动画比较 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e4%b8%8e%e5%85%b6%e4%bb%96%e5%8a%a8%e7%94%bb%e6%af%94%e8%be%83" aria-label="锚点">#</a></span>        
-    
-</h2>
-<table>
-<thead>
-<tr>
-<th>动画技术</th>
-<th>时间成本</th>
-<th>动画还原度</th>
-<th>开发成本</th>
-<th>产物大小</th>
-<th>性能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Lottie</strong></td>
-<td>高</td>
-<td>高</td>
-<td>低</td>
-<td>低</td>
-<td>优</td>
-</tr>
-<tr>
-<td><strong>CSS动画</strong></td>
-<td>低</td>
-<td>低</td>
-<td>低</td>
-<td>低</td>
-<td>优</td>
-</tr>
-<tr>
-<td><strong>GIF</strong></td>
-<td>高</td>
-<td>中</td>
-<td>中</td>
-<td>中</td>
-<td>差</td>
-</tr>
-<tr>
-<td><strong>帧动画</strong></td>
-<td>高</td>
-<td>高</td>
-<td>高</td>
-<td>高</td>
-<td>中</td>
-</tr>
-</tbody>
-</table>
-<p>可以看出，<code>Lottie</code>在动画还原度和大小上具有优势。Lottie是以矢量形式储存的，所以它们可以以较小的文件大小呈现高品质的图像。但是，Lottie动画的开发成本还是挺高的可能只适合一些特殊场景，这对于开发人员来说可能是一个缺点。
-<br/><br/></p>
-<p><code>Lottie</code> 比 GIF 小 600% ，且​​​​传送速度快 10 倍。由于它们是微小的文件，并且不会占用过多的磁盘空间，而且会提高下载速度，这对转换率来说会更好。但最重要的是，可以在不影响质量的情况下放大或缩小 Lottie 文件。您可以放大 Lottie 动画，无论缩放的大小或速度如何，图形都会缩放平滑。这是因为，与 GIF 不同，Lottie 动画是使用向量（与一些光栅元素混合）创建的，它更适合无限的可扩展性和帧速率。</p>
-<p>
+<p>我们可以在不同的场景给用户提供不同的震动反馈，让用户形成一种记忆，提高用户的沉浸感。</p>
+<p>人类是一种非常依赖反馈的生物。反馈不仅帮助我们理解和调整自己的行为，还能增强我们与环境之间的互动。</p>
+<p>这种反馈需求贯穿于人类的各个生活和工作场景中，无论是物理世界还是数字世界。</p>
+<hr>
+<p>感谢阅读本文
+如果有什么建议，请在评论中让我知道。我很乐意改进。
+
 
 
 
@@ -909,8 +929,8 @@
       
       <img
         class="my-0 rounded-md"
-        src="/blog/lottie/image-2.png"
-        alt="alt text"
+        src="/img/wc-search.png"
+        alt=""
       />
       
       
@@ -918,106 +938,6 @@
   
 
 </p>
-<p><code>Lottie</code>的另一个优势是它具有更强的灵活性。如<strong>动态更新</strong>，<strong>动画控制力</strong>等。
-<img src="1109_1728444549-_online-video-cutter.com_.gif" alt="alt text" width="200" height="200"/></p>
-<p>另一个例子可以看到根据设置动态修改动画的更新速度的变化。
-<img src="6899_1726028199-_online-video-cutter.com_.gif" alt="alt text" width="200" height="200"/></p>
-<div id="在-iosandroid-手机上的兼容性介绍" class="anchor"></div>
-<h2 class="relative group">在 iOS、Android 手机上的兼容性介绍 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%9c%a8-iosandroid-%e6%89%8b%e6%9c%ba%e4%b8%8a%e7%9a%84%e5%85%bc%e5%ae%b9%e6%80%a7%e4%bb%8b%e7%bb%8d" aria-label="锚点">#</a></span>        
-    
-</h2>
-<p><code>Lottie</code> 在移动端的兼容性相对较好，支持 iOS 9.0+、Android 4.4+，以及 React Native 和 Flutter 等跨平台框架。
-在 iOS 上，需要注意的是，iOS 9.0 ~ 9.2 版本的 WebView 对 SVG 的支持有所不同，可能会导致一些 SVG 转换为 Lottie 动画后无法正常播放，这个问题在后续的 iOS 版本中已经得到了修复。
-<br/><br/>
-在 Android 上，需要注意的是，Android 4.4 版本的 WebView 对某些 SVG 属性的支持可能不完善，可能会导致一些 SVG 转换为 Lottie 动画后无法正常播放。此外，Lottie 动画对硬件加速的依赖较高，如果设备不支持硬件加速，可能会导致动画性能下降。
-<br/><br/></p>
-<div id="api" class="anchor"></div>
-<h2 class="relative group">API 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#api" aria-label="锚点">#</a></span>        
-    
-</h2>
-<p><code>Lottie</code> 提供了丰富的 API，以便我们控制动画的播放、暂停、重置、改变速度等操作。下面列出一些常用的 API：</p>
-<ul>
-<li>lottie.loadAnimation：加载动画文件并返回一个动画实例。</li>
-<li>animation.play: 播放动画。</li>
-<li>animation.stop: 停止动画。</li>
-<li>animation.setSpeed：设置动画的播放速度。</li>
-<li>animation.setDirection：设置动画的播放方向。</li>
-<li>animation.goToAndStop：跳转到指定时间点或帧，并暂停。</li>
-<li>animation.destroy：销毁动画实例。</li>
-</ul>
-<p>更多API的使用可以参考Lottie的官方文档 <a href="airbnb.io/lottie/"  >
-    airbnb.io/lottie/</a></p>
-<div id="实战分享" class="anchor"></div>
-<h2 class="relative group">实战分享 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%ae%9e%e6%88%98%e5%88%86%e4%ba%ab" aria-label="锚点">#</a></span>        
-    
-</h2>
-<p>说了这么多，不如实战一下。分享我使用<code>Lottie</code>动画的实战经验。</p>
-<ol>
-<li>
-<p>选择合适的动画素材，使用<code>AI</code>对素材进行加工。（素材分解分层）
-<img src="image-3.png" alt="alt text" width="300" height="200"/><img src="image-4.png" alt="alt text" width="300" height="200"/></p>
-</li>
-<li>
-<p>通过插件导入<code>AE</code>, 对身体部位引进父子链接
-<img src="image-4.png" alt="alt text" width="300" height="200"/></p>
-</li>
-<li>
-<p>设置帧速率我以24帧为例，即一秒24帧，设置关键帧打上标签。
-<img src="image-5.png" alt="alt text" width="300" height="200"/>
-<img src="image-6.png" alt="alt text" width="300" height="200"/></p>
-</li>
-<li>
-<p>通过插件生成<code>Lottie</code>的json文件。</p>
-</li>
-<li>
-<p>以<code>Flutter</code>为例，引入<code>Lottie</code>库</p>
-<pre tabindex="0"><code>dependencies:
-lottie: ^3.1.2
-
-assets:
-- assets/lotties/  
-</code></pre><p>动画组件代码</p>
-<pre tabindex="0"><code>int durationMilliseconds = ((60000 * 2) / rLogic.settings!.bpm).round();
-    _controller = AnimationController(
-        vsync: this, duration: Duration(milliseconds: durationMilliseconds));
-
-...
-
-child: Lottie.asset(
-    &#39;assets/lotties/w_beat.json&#39;
-    controller: _controller,
-    onLoaded: (composition) {
-        _controller.duration = composition.duration;
-    },
-    ),
-</code></pre><p>为了动态地根据变化的来调整动画的时长，我使用以下公式来计算每步动画的时长：
-<img src="image-7.png" alt="alt text" width="300" height="200"/>
-因为我的Lottie动画的时长为一秒钟24帧（其中包含了左脚抬起放下和右脚抬起放下），简单说我的意图是根据选择的每分钟的步频，来计算一秒钟2步的动画方法速率。</p>
-<p>最后的效果如下：
-<img src="6899_1726028199-_online-video-cutter.com_.gif" alt="alt text" width="200" height="200"/></p>
-</li>
-</ol>
-<div id="总结" class="anchor"></div>
-<h2 class="relative group">总结 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e6%80%bb%e7%bb%93" aria-label="锚点">#</a></span>        
-    
-</h2>
-<p><code>Lottie</code>是一个非常优秀的动画解决方案，项目GIF既能极大的减少文件的大小，又可以高保真的还原动画效果，同时具有极大的灵活性。它的开发时间会比较高，需要较高的综合能力，所以对于大多数个人开发者步太适合，除非这个动画是项目中的核心部分，可以进行大胆尝试！</p>
 
         </div>
                 
@@ -1029,8 +949,8 @@ child: Lottie.asset(
       </div>
      
      <script>
-        var oid = "views_blog\/lottie\/index.md"
-        var oid_likes = "likes_blog\/lottie\/index.md"
+        var oid = "views_blog\/haptic\/index.md"
+        var oid_likes = "likes_blog\/haptic\/index.md"
       </script>
       
       
@@ -1052,40 +972,18 @@ child: Lottie.asset(
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/blog/haptic/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >从竞品APP中学到的100个技巧（一）震动反馈</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2024-10-22 16:58:14 &#43;0800 CST">2024-10-22</time>
-                  
-                </span>
-              </span>
-            </a>
-          
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/blog/ai/">
+            <a class="flex text-right group ml-3" href="/blog/lottie/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >独立开发者聊聊自己设计icon/UI的思路</span
+                  >深入浅出聊聊Lottie动画</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-09-20 13:29:42 &#43;0800 CST">2024-09-20</time>
+                    <time datetime="2024-10-09 09:56:50 &#43;0800 CST">2024-10-09</time>
                   
                 </span>
               </span>
@@ -1118,9 +1016,9 @@ child: Lottie.asset(
 <div id="cusdis_thread"
   data-host="https://cusdis.com"
   data-app-id="7f2c28c9-6150-4e27-9bfa-10ee0854ff2b"
-  data-page-id="e3fbb35af2adb169ae5f4e9a5609b1d4"
-  data-page-url="/blog/lottie/"
-  data-page-title="深入浅出聊聊Lottie动画"
+  data-page-id="f7f55a8f8e29a32693d992e883ac56df"
+  data-page-url="/blog/haptic/"
+  data-page-title="从竞品APP中学到的100个技巧（一）震动反馈"
 ></div><script type='text/javascript'>
   (()=>{window.CUSDIS_LOCALE={powered_by:"\u8BC4\u8BBA\u7531 Cusdis \u63D0\u4F9B",post_comment:"\u53D1\u9001",loading:"\u52A0\u8F7D\u4E2D",email:"\u90AE\u7BB1\u5730\u5740 (\u53EF\u9009)",nickname:"\u6635\u79F0",reply_placeholder:"\u56DE\u590D\u5185\u5BB9\u2026",reply_btn:"\u56DE\u590D",sending:"\u53D1\u9001\u4E2D\u2026",mod_badge:"\u7BA1\u7406\u5458",content_is_required:"\u5185\u5BB9\u4E0D\u80FD\u4E3A\u7A7A",nickname_is_required:"\u6635\u79F0\u4E0D\u80FD\u4E3A\u7A7A",comment_has_been_sent:"\u8BC4\u8BBA\u5DF2\u53D1\u9001\uFF0C\u7BA1\u7406\u5458\u5BA1\u6838\u901A\u8FC7\u540E\u4F1A\u5C55\u793A"};})();
 

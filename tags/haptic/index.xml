@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>haptic on 超级浩码</title>
+    <link>https://vastzh.com/tags/haptic/</link>
+    <description>Recent content in haptic on 超级浩码</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 超级浩码</copyright>
+    <lastBuildDate>Tue, 22 Oct 2024 16:58:14 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/haptic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从竞品APP中学到的100个技巧（一）震动反馈</title>
+      <link>https://vastzh.com/blog/haptic/</link>
+      <pubDate>Tue, 22 Oct 2024 16:58:14 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/haptic/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;曾经我只知道「闭门造车」，后来才发现，要想进步就要多看、多学、多想，吸取对手的优点。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于我长时间的「闭门造车」导致有一些后来者居上，吸取了我的产品中的优点和用户需求。凭借他们专业的团队很快就弯道超车从这个细分领域分走了大量的蛋糕。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;所以咱们也应该多学习竞品的优点，说白了就是有好的，值得借鉴的地方就抄过来，因为对方也是这么做的，也算是良性竞争吧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;所以我打算不定期更新一些从竞品中学到的技巧，进行总结和分享。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;回归正题，这一期先从简单，但可以极大提升产品精致感的功能说起 —— &lt;strong&gt;震动反馈&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;不就是简单的震动吗，有什么好说的呢，加不加都不能本质提升APP下载量吧？&lt;/p&gt;
+&lt;p&gt;其实我们的宗旨是多看多学多思考，如果没用，为什么大多数体验感极好的APP会有呢，何况加震动又能耽误多久呢？&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;让我们先看看GPT对震动反馈的作用的总结，作为进一步了解。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;增强交互感
+震动反馈可以让用户在点击或触摸按钮时感受到物理响应，从而增强互动的真实感。这种反馈让用户感知到系统正在响应他们的操作，提升触感体验，尤其是在虚拟按钮上。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;确认操作
+在用户需要作出重要决策或执行关键操作时（如支付、删除内容、确认提交等），震动反馈可以向用户提供额外的确认提示，减少误操作的可能性。例如，按下“确认”或“提交”按钮时，震动可以让用户意识到他们的操作已成功执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无视觉提示时提供反馈
+当用户在使用设备时无法完全依赖视觉（如环境光线太暗、外部光线反射导致屏幕不清晰，或者用户眼睛没有直接看着屏幕）时，震动反馈可以代替视觉反馈来通知用户某个动作已经发生。这在盲人或有视力障碍的用户使用时也非常有帮助。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提升用户体验的精致感
+震动反馈通常与细致的设计结合在一起，可以让产品显得更加高端。例如，苹果设备中使用的 Taptic Engine 就是一种通过震动反馈增强用户体验的技术，让每一次操作感觉更自然和直观。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;纠正错误或警告
+震动反馈不仅可以用于操作确认，还可以用于告知用户某些错误。例如，用户输入错误密码时，可以通过短促的震动反馈让用户立即知道出错了，而不需要依赖屏幕上的文字提示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提高无声环境下的操作体验
+在一些不适合发出声音的场景（如会议室、电影院、安静的场合）中，震动反馈可以提供无声的操作确认。这让用户无需依赖声音反馈，也能清楚地知道操作是否成功。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提高游戏和娱乐中的沉浸感
+在游戏或娱乐类应用中，震动反馈可以用于增强沉浸感。例如，当玩家在游戏中完成任务或遇到危险时，通过震动来传达紧张感或成就感。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;不得不承认，GPT总结都是非常专业且实用的，我本来想划一下重点，但感觉没必要，因为句句都是。&lt;/p&gt;
+&lt;p&gt;要在APP中使用震动反馈，我建议大家可以了解一下 &lt;strong&gt;Haptic&lt;/strong&gt; 和 &lt;strong&gt;Vibration&lt;/strong&gt;。
+虽然在功能上有些重叠，但它们有一些细微的区别：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Vibration (震动):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;是最常见的手机反馈方式，通过手机的振动电机产生连续或间断的物理震动。&lt;/li&gt;
+&lt;li&gt;震动通常比较粗糙，常用于提醒通知、来电、消息等。&lt;/li&gt;
+&lt;li&gt;设计较为简单，无法精细控制不同的震动模式和强度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Haptic (触觉反馈):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Haptic 是触觉反馈技术的总称，它不仅包含简单的震动，还包括更加精细和复杂的反馈形式。&lt;/li&gt;
+&lt;li&gt;Haptic feedback 通常通过更精确的马达或驱动器，产生更复杂和细腻的振动，能够模拟触感，如按键按下、滑动、碰撞等。&lt;/li&gt;
+&lt;li&gt;常用于提升用户体验，如游戏中的模拟触感、虚拟按键点击反馈，给人更丰富的感知体验。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最初在我的项目中，我使用的是 &lt;strong&gt;Vibration&lt;/strong&gt;。从某些角度来说，它的震动设置更灵活，但缺乏精细的控制。无论怎么调节频率都无法满足我在那些大神APP中的触觉感受。它的另一个缺点是它的底层在IOS和Anroid上是不一样的，所以当我在Android上测试时，震动效果达到预期，但是在IOS上会差很多。&lt;/p&gt;
+&lt;p&gt;相比之下，Haptic在IOS上是一个更好的选择，尤其当想要实现高质量的震动效果时，提供更精细的触觉响应。在 Android 上，虽然没有与 iOS 的 Haptic Feedback 完全一样的机制。但是也提供了类似的功能，称为 VibrationEffect，最后出现的效果也差不多。&lt;/p&gt;
+&lt;p&gt;对于不同的场景，Haptic也提供了不同的方法和类型。大致包括：&lt;/p&gt;
+&lt;p&gt;iOS 和 Android 通用的 Flutter 实现：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;// 轻度冲击反馈
+HapticFeedback.lightImpact();
+
+// 中等冲击反馈
+HapticFeedback.mediumImpact();
+
+// 重度冲击反馈
+HapticFeedback.heavyImpact();
+
+// 成功通知反馈
+HapticFeedback.vibrate(); // 用于成功/错误等场景
+
+// 选择切换反馈
+HapticFeedback.selectionClick();
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;总结 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;我们可以在不同的场景给用户提供不同的震动反馈，让用户形成一种记忆，提高用户的沉浸感。&lt;/p&gt;
+&lt;p&gt;人类是一种非常依赖反馈的生物。反馈不仅帮助我们理解和调整自己的行为，还能增强我们与环境之间的互动。&lt;/p&gt;
+&lt;p&gt;这种反馈需求贯穿于人类的各个生活和工作场景中，无论是物理世界还是数字世界。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;感谢阅读本文
+如果有什么建议，请在评论中让我知道。我很乐意改进。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
