@@ -7,7 +7,120 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 超级浩码</copyright>
-    <lastBuildDate>Tue, 22 Oct 2024 16:58:14 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Nov 2024 16:20:43 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从竞品APP中学到的100个技巧（二）正向反馈</title>
+      <link>https://vastzh.com/blog/feedback/</link>
+      <pubDate>Tue, 26 Nov 2024 16:20:43 +0800</pubDate>
+      
+      <guid>https://vastzh.com/blog/feedback/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;曾经我只知道「闭门造车」，后来才发现，要想进步就要多看、多学、多想，吸取对手的优点。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于我长时间的「闭门造车」导致有一些后来者居上，吸取了我的产品中的优点和用户需求。凭借他们专业的团队很快就弯道超车从这个细分领域分走了大量的蛋糕。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;所以咱们也应该多学习竞品的优点，说白了就是有好的，值得借鉴的地方就抄过来，因为对方也是这么做的，也算是良性竞争吧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;所以我打算不定期更新一些从竞品中学到的技巧，进行总结和分享。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div id=&#34;正向反馈&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;正向反馈 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%ad%a3%e5%90%91%e5%8f%8d%e9%a6%88&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;当我们克服了开发的各种困难，反复的审核未通过后的修改提交。APP终于上架了，这是否意味着我们完成了所有工作？&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;答案显然不是。对于这个产品，我觉得这只是完成第一步。如何运营，如何推广，如何盈利，如何留住用户等等。这些都是后面需要我们考虑的。&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;作为独立开发，我们常常听到一些前辈说，先做一个MVP版本上线，然后再慢慢迭代。
+&lt;span style=&#34;font-size:14px;color:gray;&#34;&gt;&lt;em&gt;（MVP版本，即最小可行性产品版本，是产品开发过程中的一个关键阶段，它包含了产品最基本的核心功能，但并不包括所有可能的特性或功能。 MVP版本的主要目的是快速地获取市场反馈，以便于进一步改进和完善产品。）&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;我们应该如何着手迭代？不妨听听用户的建议。通过优质用户的反馈，可以帮助我们快速定位应用中不足或缺失的功能并快速迭代。&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;我们需要收集用户反馈，想方设法与其进行更多的互动越多越好。这是我们需要的正向反馈。&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;我之前也踩了不少坑。刚开始我的APP对于这方面的考虑并不多。只是在设置页增加了打分入口和邮箱入口。
+&lt;img src=&#34;image.png&#34; alt=&#34;alt text&#34; width=&#34;200&#34; height=&#34;200&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;导致比较多的情况，当用户遇到想要的功能或是BUG又或者对于某个功能的不满，常常会直接通过应用商店的评论功能进行反馈。客气点的给个三四星评价，并在下方发出吐槽。有的可能直接就是一星差评。&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;更让人灰心的是，苦干了十几天上架的功能被用户说 &lt;em&gt;“还不如原来的版本，太XXX了”&lt;/em&gt; 等等。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div id=&#34;怎么做&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;怎么做？ 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%80%8e%e4%b9%88%e5%81%9a&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;怎么做才算是一个比较好的方法呢？不妨看看是怎么做的。我总结了以下几条。&lt;br/&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;创建一个小红书账号&lt;br/&gt;
+当下比较热门的推广手段，我们一方面可以通过小红书进行产品的发布推广，并创建一个讨论群。目的是吸引一批种子用户。为他们设立一些优惠渠道。通过这个方式不仅有利于推广，而且可以收集到一些用户反馈。
+&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在应用内设置反馈入口&lt;br/&gt;
+这个我之前也做了只是不够好，我原先的做法是一个反馈意见的按钮，点击后跳转到手机邮箱，自动设置了主题，收件人，以及设备信息版本号，用户可以直接填写建议。但是效果只能说比较一般，可能用户认为只有给差评才会得到重视吧。所以我建议关闭评分的入口。另一方面加强反馈的体验，我们可以使用如腾讯兔小巢这类的专业的反馈工具。他更类似一个论坛，用户反馈所有人都能看到的并可以进行评论讨论。
+我们甚至可以做一些策略，例如为登录的游客我们视为不重要的用户，从而只跳转邮箱。登录后的用户跳转至&lt;a href=&#34;https://txc.qq.com/&#34;   target=&#34;_blank&#34;&gt;
+    兔小巢&lt;/a&gt;。&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关闭直接的评分入口&lt;br/&gt;
+原因刚才已经说了，有的用户认为只有给差评才会得到重视。并且评分我们只需要优质用户的，这样好评的概率也会高一些。&lt;/p&gt;
+&lt;p&gt;关闭设置页的评分入口不代表我们不需要呀。我们可以在APP中其他关卡隐藏出现。例如，当用户记了一条日记，或者用户完成了某个关卡后。我们可可以设置当用户连续打卡或登入多少天等等的。反正一切的目的是为了把评分入口暴露给优质用户。&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;评分入口优化&lt;br/&gt;
+为了进一步得到好的建议，并降低差评率。我们可以在打分跳转应用商店前设置一个APP内部的打分界面，当用户给予4分以下的评价时，让用户直接在APP内输入，这样提交后的内部逻辑就不是上传到应用商店，而是我们自己的后台了。而那些好评则可以直接跳转商店的评分界面。&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置客服入口&lt;br/&gt;
+我们还可以设置一个客服入口，当用户反馈问题时，直接跳转到我们的客服QQ或微信。这样用户可以直接和客服进行沟通，并得到及时的回复。这个优先级不高，因为实现起来相当麻烦。&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;总结 
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;积极的收集用户反馈确实可以增强产品信心、提升开发者士气、精准优化产品、建立良好的用户关系、提高用户留存和传播等等。
+通过有效利用正向反馈，不仅能提升产品品质，还能实现用户和开发团队的双赢。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;感谢阅读本文
+如果有什么建议，请在评论中让我知道。我很乐意改进。
+
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        src=&#34;https://vastzh.com/img/wc-search.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
     <item>
       <title>从竞品APP中学到的100个技巧（一）震动反馈</title>
       <link>https://vastzh.com/blog/haptic/</link>

@@ -7,21 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 超级浩码</copyright>
-    <lastBuildDate>Tue, 22 Oct 2024 16:58:14 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>haptic</title>
-      <link>https://vastzh.com/tags/haptic/</link>
-      <pubDate>Tue, 22 Oct 2024 16:58:14 +0800</pubDate>
-      
-      <guid>https://vastzh.com/tags/haptic/</guid>
-      <description></description>
-      
-    </item>
-    
+    <lastBuildDate>Tue, 26 Nov 2024 16:20:43 +0800</lastBuildDate><atom:link href="https://vastzh.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>独立开发</title>
       <link>https://vastzh.com/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Tue, 22 Oct 2024 16:58:14 +0800</pubDate>
+      <pubDate>Tue, 26 Nov 2024 16:20:43 +0800</pubDate>
       
       <guid>https://vastzh.com/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/</guid>
       <description></description>
@@ -31,9 +21,19 @@
     <item>
       <title>用户体验</title>
       <link>https://vastzh.com/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Tue, 22 Oct 2024 16:58:14 +0800</pubDate>
+      <pubDate>Tue, 26 Nov 2024 16:20:43 +0800</pubDate>
       
       <guid>https://vastzh.com/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>haptic</title>
+      <link>https://vastzh.com/tags/haptic/</link>
+      <pubDate>Tue, 22 Oct 2024 16:58:14 +0800</pubDate>
+      
+      <guid>https://vastzh.com/tags/haptic/</guid>
       <description></description>
       
     </item>
